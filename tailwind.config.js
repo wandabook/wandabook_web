@@ -5,13 +5,16 @@ module.exports = {
     extend: {
       colors: {
         'brand-white': 'hsl(0, 0%, 100%)',
-        'brand-black': 'hsl(0, 0%, 0%)',
-        'brand-dark-blue': 'hsl(220, 13%, 13%)',
-        'brand-light-grayish-blue': 'hsl(223, 64%, 98%)',
-        'brand-dark-grayish-blue': 'hsl(219, 9%, 45%)',
-        'brand-grayish-blue': 'hsl(220, 14%, 75%)',
-        'brand-orange': 'hsl(26, 100%, 55%)',
-        'brand-pale-orange': 'hsl(25, 100%, 94%)',
+        'brand-lighter-gray': 'hsl(0, 0%, 98%)',
+        'brand-light-grayish-blue': ' hsl(220, 16%, 96%)',
+        'brand-grayish-blue': 'hsl(233, 8%, 62%)',
+        'brand-dark-blue': 'hsl(233, 26%, 24%)',
+        'brand-lime-green': 'hsl(136, 65%, 51%)',
+        'brand-bright-cyan': 'hsl(192, 70%, 51%)',
+      },
+      fontSize: {
+        md: '16px',
+        body: '18px',
       },
     },
   },

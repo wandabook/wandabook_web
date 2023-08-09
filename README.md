@@ -1,8 +1,8 @@
-# E-commerce Product Page
+# Easybank Landing Page
 
 ## Project Brief
 
-The E-commerce product page project, using Vue 3, Vite, and Tailwind with Typescript support.
+Easybank landing page project, using Vue 3, Vite, and Tailwind with Typescript support.
 
 ## Project Technologies
 

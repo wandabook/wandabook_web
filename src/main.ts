@@ -13,7 +13,7 @@ app.use(router)
 
 app.mount('#app')
 
-const defaultTitle: string = 'Sneakers'
+const defaultTitle: string = 'Easybank'
 
 router.beforeEach((data) => {
   document.title = ((data.meta.title && `${data.meta.title}-${defaultTitle}`) ||
