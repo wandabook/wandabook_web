@@ -1,10 +1,18 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import CtaComponent from './CtaComponent.vue'
+import MobileMenuComponent from './MobileMenuComponent.vue'
+
+const showMenu = ref(false)
 
 const links = ['home', 'about', 'contact', 'blog', 'careers']
 </script>
 
 <template>
+  <MobileMenuComponent
+    :showMenu="showMenu"
+    @close-menu="() => (showMenu = false)"
+  />
   <header class="w-full h-16 lg:h-[84px] bg-brand-white">
     <div
       class="flex justify-between items-center w-full max-w-[1440px] h-full px-6 md:px-20 xl:px-40 mx-auto"
@@ -22,7 +30,14 @@ const links = ['home', 'about', 'contact', 'blog', 'careers']
         >
       </nav>
       <CtaComponent class="hidden lg:block" />
-      <button class="md:hidden">
+      <button
+        v-if="showMenu"
+        class="md:hidden"
+        @click="() => (showMenu = false)"
+      >
+        <img src="/images/icon-close.svg" alt="" />
+      </button>
+      <button v-else class="md:hidden" @click="() => (showMenu = true)">
         <img src="/images/icon-hamburger.svg" alt="" />
       </button>
     </div>
