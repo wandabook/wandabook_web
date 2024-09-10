@@ -5,4 +5,4 @@ import "aos/dist/aos.css"
 
 
 
- createApp(App).mount('#app');
+createApp(App).mount('#app');

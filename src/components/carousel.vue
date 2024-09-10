@@ -1,89 +1,135 @@
 <template>
-    
-    <div class=" flex flex-row justify-center space-x-0 h-full ">
-          <!-- Flèche gauche en dehors de l'image -->
-          <button @click="prev" class="relative h-16 w-16 mt-[25%]  transform -translate-y-1/2  text-black border-none hover:-translate-x-2 hover:bg-amber-400/200 rounded-full">
-            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368">
-                <path d="M400-80 0-480l400-400 61 61.67L122.67-480 461-141.67 400-80Z"/>
-            </svg>
-          </button>
-    <div class="relative w-[1200px]   mx-auto overflow-hidden rounded-md shadow-2xl  ">
-      
-       
-           <transition name="fade" mode="out-in">
-          <div
-            key="carousel-item"
-            class="flex transition-transform duration-500 "
-            :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
-          >
+  <div class="carousel bg-gray-500 relative container mx-auto" style="max-width:800px;">
+    <div class="carousel-inner relative overflow-hidden w-full">
+      <!--Slide 1-->
+      <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+        checked="checked">
+      <div class="carousel-item absolute opacity-0" style="height:60vh;">
+        <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+          style="background-image: url('https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzMzcwMDYyNw&ixlib=rb-1.2.1&q=85;  ">
 
-            <div
-              v-for="(item, index) in items"
-              :key="index"
-              class="min-w-full "
-            >
-              <img :src="item.image" :alt="item.alt" class="w-full" />
-            </div>
-            
-          </div>
-         
-        </transition>
-   
+          <!--  add any content in this box  -->
+          <div class="container mx-auto"> </div>
 
-        <!-- Indicateurs -->
-        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          <span
-            v-for="(item, index) in items"
-            :key="index"
-            class="h-2 w-2 rounded-full cursor-pointer"
-            :class="currentIndex === index ? 'bg-blue-500' : 'bg-gray-300'"
-            @click="currentIndex = index"
-          ></span>
         </div>
       </div>
-      
-        <!-- Flèche droite en dehors de l'image -->
-        <button @click="next" class="relative h-16 w-16 mt-[25%] transform -translate-y-1/2 text-black  justify-center flex  border-none hover:translate-x-2 hover:bg-amber-400/20 rounded-full">
-            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368">
-                <path d="m309.67-81.33-61-61.67L587-481.33 248.67-819.67l61-61.66 400 400-400 400Z"/>
-            </svg>
-          </button>
-      
+
+      <label for="carousel-3"
+        class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+      <label for="carousel-2"
+        class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+      <!--Slide 2-->
+      <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+      <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:60vh;">
+        <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+          style="background-image: url(https://images.unsplash.com/photo-1617434108848-6a1e827124ef?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzMzcxODE3MA&ixlib=rb-1.2.1&q=85)">
+
+        </div>
+      </div>
+      <label for="carousel-1"
+        class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+      <label for="carousel-3"
+        class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+      <!--Slide 3-->
+      <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+      <div class="carousel-item absolute opacity-0" style="height:60vh;">
+        <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-center"
+          style="background-image: url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzMzcwMDk1NA&ixlib=rb-1.2.1&q=85;">
+        </div>
+      </div>
+      <label for="carousel-2"
+        class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+      <label for="carousel-1"
+        class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-opacity-20 bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+      <!-- slide indicators -->
+      <ol class="carousel-indicators">
+        <li class="inline-block mr-3">
+          <label for="carousel-1"
+            class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+        </li>
+        <li class="inline-block mr-3">
+          <label for="carousel-2"
+            class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+        </li>
+        <li class="inline-block mr-3">
+          <label for="carousel-3"
+            class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+        </li>
+      </ol>
+
     </div>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted } from 'vue';
-  import lecture7 from "../assets/images/lecture7.gif"
-  import lecture3 from "../assets/images/lecture3.gif"
-  import lecture6 from "../assets/images/lecture6.gif"
+  </div>
+
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import lecture7 from "../assets/images/lecture7.gif"
+import lecture3 from "../assets/images/lecture3.gif"
+import lecture6 from "../assets/images/lecture6.gif"
 
 
-  
-  const currentIndex = ref(0);
-  const items = ref([
-    { image: lecture7, alt: 'Image 1' },
-    { image: lecture3, alt: 'Image 2' },
-    { image: lecture6, alt: 'Image 3' },
-  ]);
-  
-  const next = () => {
-    currentIndex.value = (currentIndex.value + 1) % items.value.length;
-  };
-  
-  const prev = () => {
-    currentIndex.value = (currentIndex.value - 1 + items.value.length) % items.value.length;
-  };
-  
-  const autoSlide = () => {
-    setInterval(next, 8000); // Change d'image toutes les 3 secondes
-  };
-  
-  onMounted(() => {
-    autoSlide();
-  });
-  </script>
-  
-  <style scoped>
-  </style>
-  
+
+const currentIndex = ref(0);
+const items = ref([
+  { image: lecture7, alt: 'Image 1' },
+  { image: lecture3, alt: 'Image 2' },
+  { image: lecture6, alt: 'Image 3' },
+]);
+
+const next = () => {
+  currentIndex.value = (currentIndex.value + 1) % items.value.length;
+};
+
+const prev = () => {
+  currentIndex.value = (currentIndex.value - 1 + items.value.length) % items.value.length;
+};
+
+const autoSlide = () => {
+  setInterval(next, 8000); // Change d'image toutes les 3 secondes
+};
+
+onMounted(() => {
+  autoSlide();
+});
+</script>
+
+<style scoped>
+.carousel-open:checked+.carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #000;
+  /*Set to match the Tailwind colour you want the active one to be */
+}
+</style>
