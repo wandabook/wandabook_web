@@ -33,6 +33,10 @@
       </div>
     </div>
   </section>
+  <WProductSection title="Categories" />
+  <WProductSection title="Top Products" />
+  <WProductSection title="Products En ventes" />
+
   <section>
     <div class="h-[50%]">
       <Livres :livres="Livre"></Livres>
@@ -67,6 +71,7 @@ import inconnue3 from "../assets/livres/premiereExpo/livre3.jpg";
 import inconnue4 from "../assets/livres/premiereExpo/livre4.jpg";
 import inconnue5 from "../assets/livres/premiereExpo/livre5.jpg";
 import inconnue6 from "../assets/livres/premiereExpo/livre6.jpg";
+import WProductSection from "./products/WProductSection.vue";
 
 const Livre = [
   {
