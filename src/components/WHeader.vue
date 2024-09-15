@@ -35,10 +35,10 @@ var monnaies = [
     </section>
 
     <section class="bg-white ">
-      <div class="py-4">
+      <div class="py-14">
         <div class="flex flex-row justify-center text-center items-center">
           <div class="w-2/12">
-            <img src="../assets/images/logo.png" alt="" height="0" width="125" />
+            <img src="../assets/images/logo16.png" alt="" height="0" width="225" />
           </div>
           <div class="flex border w-6/12  bg-gray-100">
             <select class="outline-none rounded-none  w-3/12 ps-2  bg-gray-100">
@@ -48,7 +48,7 @@ var monnaies = [
             <input type="search" class="grow outline-none bg-gray-100 text-black placeholder:text-black"
               placeholder="Search here ..." />
             <button
-              class="btn btn-xssm:btn-sm md:btn-md lg:w-[20%] bg-amber-600/90 rounded-none text-white uppercase hover:bg-black  py-2">
+              class="btn btn-xssm:btn-sm md:btn-md lg:w-[20%] bg-[#E01520] rounded-none text-white uppercase hover:bg-black  py-2">
               Search
             </button>
           </div>
@@ -90,8 +90,8 @@ var monnaies = [
     </section>
 
     <section>
-      <div class=" flex flex-row bg-[#24303F] px-24">
-        <div class="flex justify-center bg-amber-500/80 items-center uppercase px-5 py-2">
+      <div class=" flex flex-row bg-[#24303F] px-24 ">
+        <div class="flex justify-center bg-[#E01520] items-center uppercase px-5 py-2 w-60">
           <span class="text-white me-10">
             Categories
           </span>
@@ -102,13 +102,13 @@ var monnaies = [
         </div>
 
         <div class=" flex text-white items-center justify-center ms-5">
-          <div class="px-8 py-1 hover:bg-amber-500/80 active:bg-amber-500/90 border-e border-gray-800"><a href=""
+          <div class="px-8 py-1 hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a href=""
               class="dropdown-item ">ACCUEIL</a></div>
-          <div class="px-8  py-1  hover:bg-amber-500/80 active:bg-amber-500/90 border-e border-gray-800"><a
+          <div class="px-8  py-1  hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a
               href="">LIVRAISON</a></div>
-          <div class="px-8  py-1  hover:bg-amber-500/80 active:bg-amber-500/90 border-e border-gray-800"><a href="">A
+          <div class="px-8  py-1  hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a href="">A
               PROPOS</a></div>
-          <div class="px-8  py-1  hover:bg-amber-500/80 active:bg-amber-300/90 border-e border-gray-800"><a
+          <div class="px-8  py-1  hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a
               href="">BLOG</a></div>
         </div>
       </div>

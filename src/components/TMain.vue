@@ -4,7 +4,7 @@
       <div class="w-2/12 " style="height:60vh;">
         <Simple_Menu></Simple_Menu>
       </div>
-      <div class="w-7/12 justify-center ms-10">
+      <div class="lg:w-7/12 justify-center lg:ms-10">
         <div>
           <carousel></carousel>
         </div>
@@ -24,7 +24,7 @@
                 </svg>
               </span>
               <div class="service-description">
-                <div class="h1 uppercase"><a href="#">free world delivery</a></div>
+                <div class="h1 uppercase font-heading"><a href="#">free world delivery</a></div>
                 <div class="text-sm opacity-20">on your $100 order</div>
               </div>
             </div>
@@ -35,29 +35,12 @@
   </section>
   <WCategorySection />
   <WProductSection title="Top Products" />
-  <WProductSection title="Products En ventes" />
-
-  <section>
-    <div class="h-[50%]">
-      <Livres :livres="Livre"></Livres>
-    </div>
-  </section>
-  <section>
-    <ExpoLivres :expo_livres="Expo_livres"></ExpoLivres>
-  </section>
-
-  <section>
-    <Best_Autor></Best_Autor>
-  </section>
+  <WProductSection title="Products En ventes" class="mt-14 mb-20" />
 </template>
 
 <script setup>
 import carousel from "../components/carousel.vue";
-import Best_Autor from "../components/Best_Autor.vue";
-import Livres from "../components/Livres.vue";
 import Simple_Menu from "./Simple_Menu.vue";
-import Solde from "./solde.vue";
-import ExpoLivres from "./ExpoLivres.vue";
 
 /*importation des livres*/
 import apologie_socrate from "../assets/livres/apologie_socrate.jpg";

@@ -1,17 +1,17 @@
 <template>
 
-    <div class="mx-20">
+    <div class="mx-0">
         <div class="title-block mt-20 ">
-            <h1 class="products-section-title uppercase">
+            <h1 class="products-section-title uppercase font-heading font-bold">
                 Categories
             </h1>
         </div>
         <div class="">
-            <div class="px-4">
-                <div class="relative h-[400px]  text-center flex justify-center bg-white space-x-4 px-2 py-12">
+            <div class="">
+                <div class="text-center flex justify-center bg-white space-x-4 px-2 py-12">
                     <button @click="previous" :disabled="currentPage === 0"
-                        class="bg-blue text-white text-center cursor-pointer  px-2 h-12 mt-24">Previous
-                        <svg class="fill-current hover:-translate-x-4 ml-2" xmlns="http://www.w3.org/2000/svg"
+                        class=" text-white text-center cursor-pointer  px-2 h-12 mt-24">
+                        <svg class="fill-red-600 ml-2 hover:translate-x-1" xmlns="http://www.w3.org/2000/svg"
                             height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
                             <path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z" />
                         </svg>
@@ -22,7 +22,7 @@
                     </template>
                     <button @click="next" :disabled="currentPage >= maxPage"
                         class="bg-blue text-white px-4  h-12 mt-24">Next
-                        <svg class="fill-current hover:translate-x-4" xmlns="http://www.w3.org/2000/svg" height="24px"
+                        <svg class="fill-red-600 hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" height="24px"
                             viewBox="0 -960 960 960" width="24px" fill="#5f6368">
                             <path d="m700-300-57-56 84-84H120v-80h607l-83-84 57-56 179 180-180 180Z" />
                         </svg>
@@ -37,29 +37,18 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import apologie_socrate from "../../assets/livres/apologie_socrate.jpg";
-import livre_damso from "../../assets/livres/dictionnaire_critique.jpg";
-import B_dames from "../../assets/livres/zola.jpg";
-import towa from "../../assets/livres/essai.jpg";
-import inconnue1 from "../../assets/livres/premiereExpo/livre1.jpg";
-import inconnue2 from "../../assets/livres/premiereExpo/livre2.jpg";
-import inconnue3 from "../../assets/livres/premiereExpo/livre3.jpg";
-import inconnue4 from "../../assets/livres/premiereExpo/livre4.jpg";
-import inconnue5 from "../../assets/livres/premiereExpo/livre5.jpg";
-import inconnue6 from "../../assets/livres/premiereExpo/livre6.jpg";
 import WCategoryItem from './WCategoryItem.vue';
 
 const produits = [
-    { title: "Livre1", img: apologie_socrate, description: "Description 1", link: '' },
-    { title: "Livre2", img: livre_damso, description: "Description 2", link: '' },
-    { title: "Livre3", img: B_dames, description: "Description 3", link: '' },
-    { title: "Livre4", img: towa, description: "Description 4", link: '' },
-    { title: "Livre5", img: inconnue1, description: "Description 5", link: '' },
-    { title: "Livre6", img: inconnue2, description: "Description 6", link: '' },
-    { title: "Livre7", img: inconnue3, description: "Description 7", link: '' },
-    { title: "Livre8", img: inconnue4, description: "Description 8", link: '' },
-    { title: "Livre9", img: inconnue5, description: "Description 9", link: '' },
-    { title: "Livre10", img: inconnue6, description: "Description 10", link: '' },
+    { title: "COOKBOOKS", img: 'https://templates-demo.in/prestashop/naomi//img/cms/feature1.jpg', description: "Chefs, Famous, ethnic, Professional, Diet, Kitchen, Meal", link: '' },
+    { title: "Travel", img: 'https://templates-demo.in/prestashop/naomi//img/cms/feature3.jpg', description: "Chefs, Famous, ethnic, Professional, Diet, Kitchen, Meal", link: '' },
+    { title: "Horror", img: 'https://templates-demo.in/prestashop/naomi//img/cms/feature2.jpg', description: "Chefs, Famous, ethnic, Professional, Diet, Kitchen, Meal", link: '' },
+    { title: "COOKBOOKS", img: 'https://templates-demo.in/prestashop/naomi//img/cms/feature1.jpg', description: "Chefs, Famous, ethnic, Professional, Diet, Kitchen, Meal", link: '' },
+    { title: "COOKBOOKS", img: 'https://templates-demo.in/prestashop/naomi//img/cms/feature1.jpg', description: "Chefs, Famous, ethnic, Professional, Diet, Kitchen, Meal", link: '' },
+    { title: "COOKBOOKS", img: 'https://templates-demo.in/prestashop/naomi//img/cms/feature1.jpg', description: "Chefs, Famous, ethnic, Professional, Diet, Kitchen, Meal", link: '' },
+    { title: "COOKBOOKS", img: 'https://templates-demo.in/prestashop/naomi//img/cms/feature1.jpg', description: "Chefs, Famous, ethnic, Professional, Diet, Kitchen, Meal", link: '' },
+
+
 ];
 
 const currentPage = ref(0);
