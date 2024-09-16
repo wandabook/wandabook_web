@@ -4,7 +4,8 @@
       <div class="mx-auto  px-4 sm:px-6 lg:px-8 container">
         <!--Grid-->
         <div class=" flex max-sm:max-w-sm max-sm:mx-auto">
-          <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0 border-r border-gray-700">
+          <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0 border-r border-gray-700" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" data-aos-duration="3000">
             <img src="../assets/images/logo18.png" alt="" height="0" width="225" />
             <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">Trusted in more than 100
               countries & 5 million customers. Have any query ?</p>
@@ -14,7 +15,8 @@
             </a>
           </div>
           <!--End Col-->
-          <div class="text-center border-r border-gray-700 px-20">
+          <div class="text-center border-r border-gray-700 px-20" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" data-aos-duration="3000">
             <h4 class="text-lg text-white font-bold mb-7 uppercase font-heading">Votre compte</h4>
             <ul class="text-sm  transition-all duration-500">
               <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-gray-900">Home</a></li>
@@ -23,7 +25,8 @@
             </ul>
           </div>
           <!--End Col-->
-          <div class="text-center border-r border-gray-700 px-16">
+          <div class="text-center border-r border-gray-700 px-16" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" data-aos-duration="3000">
             <h4 class="text-lg text-white font-bold mb-7 uppercase font-heading">Informations</h4>
             <ul class="text-sm  transition-all duration-500">
               <li class="mb-6"><a href="javascript:;" class="text-gray-600 hover:text-gray-900">Figma UI System</a>
@@ -35,7 +38,8 @@
             </ul>
           </div>
           <!--End Col-->
-          <div class="text-center px-16 block_newsletter ">
+          <div class="text-center px-16 block_newsletter" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+            data-aos-duration="3000">
             <h4 class="text-lg text-white font-bold mb-7 uppercase font-heading">Lettre d'informations
             </h4>
             <p class="lg:max-w-xs text-sm  transition-all duration-500 text-gray-600">Vous pouvez
@@ -56,7 +60,8 @@
       </div>
     </footer>
     <footer>
-      <div class="py-7 border-t border-gray-200 ">
+      <div class="py-7 border-t border-gray-200 " data-aos="zoom-in" data-aos-anchor-placement="top-bottom"
+        data-aos-duration="2000">
         <div class="container flex items-center justify-center flex-col lg:justify-between lg:flex-row">
           <span class="text-sm text-gray-500 ">©<a href="https://pagedone.io/">pagedone</a> 2024, All rights
             reserved.</span>

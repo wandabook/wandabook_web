@@ -21,7 +21,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { CATEGORIES } from "./products/categories";
+import { CATEGORIES } from "../view/products/categories";
 const active1 = ref(true);
 
 

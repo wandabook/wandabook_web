@@ -1,14 +1,15 @@
 <script setup>
-import WHeader from './components/WHeader.vue';
-import TFooter from './components/TFooter.vue';
-import WHome from './Pages/WHome.vue';
-
+const WHeader = defineAsyncComponent(() => import('./components/WHeader.vue'));
+const TFooter = defineAsyncComponent(() => import('./components/TFooter.vue'))
+import Aos from "aos";
+import { defineAsyncComponent } from 'vue';
+Aos.init({ once: true });
 </script>
 
 <template>
   <WHeader>
   </WHeader>
-  <WHome></WHome>
+  <router-view></router-view>
   <TFooter> </TFooter>
 
 </template>

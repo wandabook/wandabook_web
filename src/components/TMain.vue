@@ -24,7 +24,7 @@
     </div>
   </section>
   <section class="mx-24 mt-5">
-    <div class="bg-[#24303F]">
+    <div class="bg-[#24303F]" data-aos="fade-right" data-aos-duration="200">
       <div class="mx-20">
         <div class="flex justify-between">
           <div class="flex text-white my-4 px-10 border-e border-gray-700" v-for="i in 4">
@@ -45,9 +45,9 @@
       </div>
     </div>
   </section>
-  <WCategorySection />
-  <WProductSection title="Top Products" />
-  <WProductSection title="Products En ventes" class="mt-14 mb-20" />
+  <WCategorySection data-aos="fade-right" />
+  <WProductSection title="Top Products" data-aos="fade-right" />
+  <WProductSection title="Products En ventes" class="mt-14 mb-20" data-aos="fade-right" />
 </template>
 
 <script setup>
@@ -66,9 +66,8 @@ import inconnue3 from "../assets/livres/premiereExpo/livre3.jpg";
 import inconnue4 from "../assets/livres/premiereExpo/livre4.jpg";
 import inconnue5 from "../assets/livres/premiereExpo/livre5.jpg";
 import inconnue6 from "../assets/livres/premiereExpo/livre6.jpg";
-import WProductSection from "./products/WProductSection.vue";
-import WCategorySection from "./products/WCategorySection.vue";
-
+import WProductSection from "../view/products/WProductSection.vue";
+import WCategorySection from "../view/products/WCategorySection.vue";
 const Livre = [
   {
     Title: "MON LIVRE1",

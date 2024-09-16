@@ -11,7 +11,7 @@ var languages = [
 ];
 
 var monnaies = [
-  { monnaie: "Euros", value: "EUR" },
+  { monnaie: "EUR", value: "EUR" },
   { monnaie: "USD", value: "USD" },
   { monnaie: "XAF", value: "XAF" },
 ];
@@ -27,15 +27,15 @@ var monnaies = [
           <Lang_Devise :langues="languages" :monnaies="monnaies"> </Lang_Devise>
         </div>
         <div class="gap-x-4 flex uppercase">
-          <button class="uppercase text-sm">Connexion</button>
-          <button class="uppercase text-sm">S'inscrire</button>
+          <button class="uppercase text-sm font-heading">Connexion</button>
+          <button class="uppercase text-sm font-heading">S'inscrire</button>
 
         </div>
       </div>
     </section>
 
     <section class="bg-white ">
-      <div class="py-14">
+      <div class="py-14 px-24">
         <div class="flex flex-row justify-center text-center items-center">
           <div class="w-2/12">
             <img src="../assets/images/logo16.png" alt="" height="0" width="225" />
@@ -52,8 +52,10 @@ var monnaies = [
               Search
             </button>
           </div>
+          <div class="w-1/12">
 
-          <div class="flex justify-between ms-8 gap-5">
+          </div>
+          <div class="flex ms-8 gap-5 w-3/12">
             <div class="flex flex-row  hover:text-amber-800  cursor-pointer ">
               <div
                 class="border border-gray-100 rounded-full py-2 text-center justify-center items-center  h-12 w-12 hover:bg-accent ">
@@ -90,26 +92,28 @@ var monnaies = [
     </section>
 
     <section>
-      <div class=" flex flex-row bg-[#24303F] px-24 ">
-        <div class="flex justify-center bg-[#E01520] items-center uppercase px-5 py-2 w-60">
-          <span class="text-white me-10">
-            Categories
-          </span>
-          <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960"
-            width="30px" fill="#FFFFFF">
-            <path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
-          </svg>
-        </div>
+      <div class="bg-[#24303F]">
+        <div class="container flex flex-row  px-24 ">
+          <div class="flex justify-center bg-[#E01520] items-center uppercase px-5 py-2 w-60">
+            <span class="text-white me-10">
+              Categories
+            </span>
+            <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960"
+              width="30px" fill="#FFFFFF">
+              <path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+            </svg>
+          </div>
 
-        <div class=" flex text-white items-center justify-center ms-5">
-          <div class="px-8 py-1 hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a href=""
-              class="dropdown-item ">ACCUEIL</a></div>
-          <div class="px-8  py-1  hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a
-              href="">LIVRAISON</a></div>
-          <div class="px-8  py-1  hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a href="">A
-              PROPOS</a></div>
-          <div class="px-8  py-1  hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a
-              href="">BLOG</a></div>
+          <div class=" flex text-white items-center justify-center ms-5">
+            <div class="px-8 py-1 hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a href=""
+                class="dropdown-item ">ACCUEIL</a></div>
+            <div class="px-8  py-1  hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a
+                href="">LIVRAISON</a></div>
+            <div class="px-8  py-1  hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a href="">A
+                PROPOS</a></div>
+            <div class="px-8  py-1  hover:bg-[#E01520] active:bg-[#E01520]/60 border-e border-gray-800"><a
+                href="">BLOG</a></div>
+          </div>
         </div>
       </div>
 
