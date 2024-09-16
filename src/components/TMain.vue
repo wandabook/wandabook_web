@@ -1,12 +1,24 @@
 <template>
   <section class="px-24">
-    <div class="flex mt-5">
-      <div class="w-2/12 " style="height:60vh;">
+    <div class="flex justify-between mt-5">
+      <div class="w-1.5/12 " style="height:60vh;">
         <Simple_Menu></Simple_Menu>
       </div>
-      <div class="lg:w-7/12 justify-center lg:ms-10">
+      <div class="lg:w-7/12 justify-center ">
         <div>
           <carousel></carousel>
+        </div>
+      </div>
+      <div class="lg:w-2/12 flex flex-col justify-between">
+        <div class="custom-home-block">
+          <div class="custom-banner-inner"><a class="cms-image" href="#"> <img
+                src="https://templates-demo.in/prestashop/naomi//img/cms/home-block-1.jpg" alt="banner"></a>
+          </div>
+        </div>
+        <div class="custom-home-block mt-auto">
+          <div class="custom-banner-inner"><a class="cms-image" href="#"> <img
+                src="https://templates-demo.in/prestashop/naomi//img/cms/home-block-1.jpg" alt="banner"></a>
+          </div>
         </div>
       </div>
     </div>
@@ -126,4 +138,14 @@ const Expo_livres = [
 console.log(Expo_livres.value);
 </script>
 
-<style scoped></style>
+<style scoped>
+.custom-home-block .custom-description {
+  text-transform: uppercase;
+  position: absolute;
+  left: auto;
+  right: 25px;
+  top: 30%;
+  bottom: auto;
+  text-align: center
+}
+</style>

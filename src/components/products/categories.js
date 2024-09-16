@@ -63,11 +63,6 @@ const CATEGORIES = [{
     "name": "auteurs/authors",
     "subcategories": []
 },
-{
-    "name": "Cook",
-    "subcategories": [
-    ]
-},
 ];
 
 export { CATEGORIES }
