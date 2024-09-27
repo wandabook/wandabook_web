@@ -1,5 +1,5 @@
 <template>
-  <section class="px-24">
+  <section class="container mx-auto ">
     <div class="flex justify-between mt-5">
       <div class="w-1.5/12 " style="height:60vh;">
         <Simple_Menu></Simple_Menu>
@@ -23,7 +23,7 @@
       </div>
     </div>
   </section>
-  <section class="mx-24 mt-5">
+  <section class="container mx-auto mt-5">
     <div class="bg-[#24303F]" data-aos="fade-right" data-aos-duration="200">
       <div class="mx-20">
         <div class="flex justify-between">
@@ -45,9 +45,12 @@
       </div>
     </div>
   </section>
-  <WCategorySection data-aos="fade-right" />
-  <WProductSection title="Top Products" data-aos="fade-right" />
-  <WProductSection title="Products En ventes" class="mt-14 mb-20" data-aos="fade-right" />
+  <section class="container mx-auto ">
+    <WCategorySection data-aos="fade-right" />
+    <WProductSection title="Top Products" data-aos="fade-right" />
+    <WProductSection title="Products En ventes" class="mt-14 mb-20" data-aos="fade-right" />
+  </section>
+
 </template>
 
 <script setup>

@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <div class="bg-white w-screen font-sans text-gray-900 mb-8 mt-8">
-        <header class="page-header px-24 font-bold text-xl">
+    <div class="bg-white w-screen font-sans text-gray-900 container md:mx-auto">
+        <header class="page-header pt-5 font-bold text-xl">
             <h1>
                 Connection
             </h1>
