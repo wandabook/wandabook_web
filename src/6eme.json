@@ -1,0 +1,1062 @@
+[
+    {
+        "title": "SOUS-SYSTÈME FRANCOPHONE",
+        "school_types": [
+            {
+                "id": "01",
+                "type": "ENSEIGNEMENT GÉNÉRAL",
+                "classes": [
+                    {
+                        "id": "",
+                        "title": "6emes",
+                        "courses": [
+                            {
+                                "id": 1,
+                                "matiere": "Français",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 (litterature) lecture methodique du texte",
+                                    "Leçon 2 (grammaire) elements de la communication",
+                                    "Leçon 3 Orthographe - les lettres majuscules et minuscules",
+                                    "Leçon 4 Conjugaison - les verbes du premier groupe",
+                                    "Leçon 5 phonetique consonnes, voyelles, sémi-voyelles",
+                                    "Leçon 7 (litterature) lecture methodique du texte",
+                                    "Leçon 8  communication verbale et communication non verbale .",
+                                    "Leçon 9 (vocabulaire) synonymes et homonymes",
+                                    "Leçon 10 (littérature) lecture méthodique du texte",
+                                    "Leçon 11 (expression écrite) intégration",
+                                    "Leçon 12 lecture methodique du texte  litterature",
+                                    "Leçon 13 (grammaire) verbes d’état et d'action",
+                                    "Leçon 15 (litterature) lecture suivie",
+                                    "Leçon 17 accord sujet verbe grammaire",
+                                    "Leçon 18 les homophones lexicaux orthographe",
+                                    "Leçon 22 Les structures des phrases - grammaire",
+                                    "Leçon 23 Le participe passe employe avec etre (orthographe)",
+                                    "Leçon 24 le complement d'objet (grammaire)",
+                                    "Leçon 25  lecture methodique  litterature",
+                                    "Leçon 26 les temps du recit grammaire",
+                                    "Leçon 27 le vocabulaire de la vie quotidienne vocabulaire",
+                                    "Leçon 28  l'accord des adjectifs de couleur orthographe",
+                                    "Leçon 29 la phrase imperative grammaire",
+                                    "Leçon 30  la phrase interrogative grammaire",
+                                    "Leçon 31 lecture methodique litterature",
+                                    "Leçon 32 La phrase déclarative (grammaire)",
+                                    "Leçon 33 La phrase exclamative (grammaire)",
+                                    "Leçon 34 vocabulaire  Sens propre - sens figure",
+                                    "Leçon 35 Les temps simples de l'indicatif (conjugaison)",
+                                    "Leçon 36 Le discours rapporté (grammaire)",
+                                    "Leçon 37 Les temps composés de l'indicatif (conjugaison)",
+                                    "Leçon 38 champ lexical du milieu scolaire vocabulaire",
+                                    "Leçon 38 vocabulaire champ lexical du milieu scolaire",
+                                    "Leçon 39 conjugaison les verbes du deuxieme groupe",
+                                    "Leçon 40 grammaire  Le complement circonstanciel",
+                                    "Leçon 41 le schema narratif expression ecrite",
+                                    "Leçon 43 grammaire   le pluriel des noms composes",
+                                    "Leçon 44 lecture methodique",
+                                    "Leçon 45 vocabulaire le champ lexical des medias et communication",
+                                    "Leçon 46 lecture methodique-la desertification 2023"
+                                ]
+                            },
+                            {
+                                "id": 2,
+                                "matiere": "Anglais",
+                                "modules": [],
+                                "leçons": [
+                                    "Lesson 1 short simple text to find names and relation in a family",
+                                    "Lesson 2 vocabulary family members and numbers 1-50",
+                                    "Lesson 3 grammar the simple present tense of the verb to be",
+                                    "Lesson 6 (writing) scrambled letters to words and scrambled words to sentences."
+                                ]
+                            },
+                            {
+                                "id": 3,
+                                "matiere": "Mathématiques",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 0 session introductive",
+                                    "Leçon 1 Entiers naturels et ordre",
+                                    "Leçon 2 multiple et diviseur d'un nombre entier naturel",
+                                    "Leçon 3 critère de divisibilité par 10, 100, 1000",
+                                    "Leçon 4 critère de divisibilité par 2 et 5",
+                                    "Leçon 6 numérateur, dénominateur et fractions égales",
+                                    "Leçon 7 multiplication de deux fractions",
+                                    "Leçon 8 inverse d'une fraction",
+                                    "Leçon 9 divisions des fractions",
+                                    "Leçon 10 addition de deux fractions",
+                                    "Leçon 11 soustraction de deux fractions",
+                                    "Leçon 12 comparaison des fractions",
+                                    "Leçon 13 lecture et écriture des nombres décimaux",
+                                    "Leçon 14 addition des nombres décimaux",
+                                    "Leçon 15 soustraction des nombres décimaux",
+                                    "Leçon 16 lecture et écriture des nombres décimaux",
+                                    "Leçon 17 appartenance d'un point à une droite, points alignés",
+                                    "Leçon 18 droite passant par un point, par deux points distincts",
+                                    "Leçon 19 régionnement d'un plan par une droite, demi-droite, droites sécantes",
+                                    "Leçon 20 droites perpendiculaires",
+                                    "Leçon 21 droites parallèles",
+                                    "Leçon 22 segments support d'un segment",
+                                    "Leçon 23 longueur d'un segment distance entre deux points",
+                                    "Leçon 24 appartenance d'un point à un segment",
+                                    "Leçon 25 milieu d'un segment",
+                                    "Leçon 26 médiatrice d'un segment",
+                                    "Leçon 27 cercle, disque",
+                                    "Leçon 28 périmètre du cercle",
+                                    "Leçon 29 aire d'un disque",
+                                    "Leçon 30 positions d'un point par rapport à un cercle",
+                                    "Leçon 31 Aire d'un disque",
+                                    "Leçon 32 Positions d'un point par rapport à un cercle",
+                                    "Leçon 33 tableau de proportionnalité",
+                                    "Leçon 34 coefficients de proportionnalité",
+                                    "Leçon 35 suite de nombres proportionnels",
+                                    "Leçon 36 quatrième proportionnelle",
+                                    "Leçon 37 pourcentages",
+                                    "Leçon 38 echelles",
+                                    "Leçon 39 propriétés des nombres proportionnels",
+                                    "Leçon 40 notion d'angle, vocabulaire, notation",
+                                    "Leçon 41 mesures d'angles",
+                                    "Leçon 42 angles particuliers",
+                                    "Leçon 43 triangles vocabulaire",
+                                    "Leçon 44 construction de triangles",
+                                    "Leçon 45 triangles particuliers",
+                                    "Leçon 46 droites particulières d'un triangle",
+                                    "Leçon 47 périmètre et aire d'un triangle",
+                                    "Leçon 48 points symétriques par rapport à un point",
+                                    "Leçon 49 propriétés des symétries centrales",
+                                    "Leçon 50 présentation des nombres décimaux relatifs",
+                                    "Leçon 56 points symétriques par rapport à une droite",
+                                    "Leçon 57 propriétés des symétries orthogonales",
+                                    "Leçon 58 expressions littérales",
+                                    "Leçon 59 règles de priorité des opérations additions sans parenthèses",
+                                    "Leçon 60 règles de priorité des opérations opérations additions et multiplications sans parenthèses",
+                                    "Leçon 61 règles de priorité des opérations additions, multiplications",
+                                    "Leçon 62 règles de priorité des opérations chaînes d'opérations avec parenthèses",
+                                    "Leçon 63 repérage d'un point sur une droite",
+                                    "Leçon 64 description d'un pavé droit",
+                                    "Leçon 65 aires et volume d'un pavé droit",
+                                    "Leçon 66 observation et description d'un cylindre droit",
+                                    "Leçon 67 aires et volume d'un cylindre droit"
+                                ]
+                            },
+                            {
+                                "id": 4,
+                                "matiere": "Sciences",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 influence du climat sur la production végétale leçon 1 la pluviométrie",
+                                    "Leçon 2 influence du climat sur la production végétale 2 La temperature et la lumiere",
+                                    "Leçon 3 influence du sol sur la production végétale",
+                                    "Leçon 4 la competition",
+                                    "Leçon 8 les plantes médicinales",
+                                    "Leçon 12 etats physiques, formes, perméabilité, solubilité  et température de la matière 1",
+                                    "Leçon 13 Etats physiques, formes, perméabilité, solubilité, ph et température de la matière 2",
+                                    "Leçon 14 volume, masse volumique et concentration massique 1 La masse",
+                                    "Leçon 15 volume, masse volumique et concentration massique 2 Le volume",
+                                    "Leçon 16 volume, masse volumique et concentration mas",
+                                    "Leçon 17 les formes d'energie",
+                                    "Leçon 18 les sources d'energie",
+                                    "Leçon 19. l'energie et environnement cas des combustions",
+                                    "Leçon 21 la chaleur mode de transfert",
+                                    "Leçon 22 l'électricité",
+                                    "Leçon 24 identification des actions mécaniques et schématisation d'une force á partir de ses effets 1",
+                                    "Leçon 25 identification des actions mécaniques et schématisation d'une force á partir de ses effets 2",
+                                    "Leçon 28 protection des personnes contre les risques liés à l’utilisation de l’énergie 1",
+                                    "Leçon 29 protection des personnes contre les risques liés à l'utilisation de l'énergie 2",
+                                    "Leçon 29 protection des personnes contre les risques liés à l’utilisation de l’énergie 2",
+                                    "Leçon 31 la puberté, la fécondation et la grossesse 1",
+                                    "Leçon 32 la puberté, la fécondation et la grossesse 2",
+                                    "Leçon 33 les pratiques néfastes à la santé de reproduction 1",
+                                    "Leçon 34 les pratiques néfastes à la santé de reproduction 2",
+                                    "Leçon 35 les ist, le vih et le sida",
+                                    "Leçon 36 les ist, le vih et le sida 2",
+                                    "Leçon 37 les différentes catégories d’aliments et leurs origines"
+                                ]
+                            },
+                            {
+                                "id": 5,
+                                "matiere": "Informatique",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 Principaux composants de l'environnement informatique",
+                                    "Leçon 2  Les composants matériels et leurs rôles",
+                                    "Leçon 3 Les composants logiciels",
+                                    "Leçon 4 domaine d'utilisation de l'ordinateur",
+                                    "Leçon 6 elements d'une salle informatique 1",
+                                    "Leçon 7 mise en place d'une salle informatique",
+                                    "Leçon 8 Bonnes pratiques dans la salle informatique",
+                                    "Leçon 9 activités d'intégration theme 2",
+                                    "Leçon 10 peripheriques d'entrée1",
+                                    "Leçon 11 les peripheriques de sortie",
+                                    "Leçon 12 peripheriques mixtes1",
+                                    "Leçon 13 le boitier de l'unité centrale",
+                                    "Leçon 14 relation entre les composants",
+                                    "Leçon 15 interconnexion marche arrêt"
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "matiere": "ECM",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 notion d'education a la citoyennete partie 1",
+                                    "Leçon 1 notion d'education à la citoyenneté partie 2",
+                                    "Leçon 2  La famille",
+                                    "Leçon 3  le mariage",
+                                    "Leçon 4 la ceremonie de la dot",
+                                    "Leçon 6 l'état civil  Les trois actes",
+                                    "Leçon 9 le patrimoine  familial",
+                                    "Leçon 10 la route",
+                                    "Leçon 12 cas pratiques de comportements irresponsables sur la route",
+                                    "Leçon 14 Environnement scolaire",
+                                    "Leçon 15 Le divorce",
+                                    "Leçon 16 La procedure de la succession",
+                                    "Leçon 17 les conflits de succession",
+                                    "Leçon 19 les conflits entre les frères",
+                                    "Leçon 20 droits de la personne humaine",
+                                    "Leçon 21 les instruments de protection des droits de l'homme",
+                                    "Leçon 22 les formes d'exploitation et d'abus sur les enfants",
+                                    "Leçon 23  la delinquance juvenile"
+                                ]
+                            },
+                            {
+                                "id": 7,
+                                "matiere": "Histoire",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 introduction à l'étude de l'histoire corrigé",
+                                    "Leçon 2 dossier 1 collecte et classification des vestiges historiques",
+                                    "Lecon 3 Td1&nbsp;enquête sur le comptage du temps dans votre région",
+                                    "Leçon 4 les premiers hommes et leur mode de vie",
+                                    "Leçon 6 la civilisation du néolithique",
+                                    "Leçon 7 Dossier 2 l'hominisation",
+                                    "Leçon 8 les civilisations du néolithique au cameroun",
+                                    "Leçon 9 travaux diriges 3 les pygmées au cameroun",
+                                    "Leçon 10 l'egypte une société structurée",
+                                    "Leçon 11 la vie quotidienne en egypte",
+                                    "Leçon 12 les symboles du pouvoir traditionnel dans votre région",
+                                    "Leçon 13 les avancees scientifiques et techniques en egypte",
+                                    "Leçon 14 la religion de l'egypte ancienne",
+                                    "Leçon 15 le culte des morts dans l'egypte ancienne",
+                                    "Leçon 16 méroe koush et axoum",
+                                    "Leçon 17 le travail des métaux",
+                                    "Leçon 18 la grèce antique",
+                                    "Leçon 19 rome",
+                                    "Leçon 20 la chine",
+                                    "Leçon 21 l'apport de l'inde",
+                                    "Leçon 22 le judaisme et le christianisme",
+                                    "Leçon 24 les apports du judaïsme et du christianisme dans le monde actuel",
+                                    "Leçon 25 l'islam",
+                                    "Leçon 26 l'expansion de l'islam en afrique",
+                                    "Leçon 27 l' apport de l'islam dans le monde actuel",
+                                    "Leçon 28 les pelerinages dans les religions christienne et musulmane"
+                                ]
+                            },
+                            {
+                                "id": 8,
+                                "matiere": "Géographie",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 la geographie",
+                                    "Leçon 2 Notre planete la terre",
+                                    "Leçon 3  localiser un lieu sur la carte",
+                                    "Leçon 4 la terre  Une planète en mouvement dans l'espace",
+                                    "Leçon 5 le calcul de l'heure",
+                                    "Leçon 6 l'influence de la lune sur le mileu et les activités",
+                                    "Leçon 7 La terre une planete bleue",
+                                    "Leçon 8 le relief de la terre",
+                                    "Leçon 9 les formes de representation de la terre",
+                                    "Leçon 10 la carte du relief du cameroun",
+                                    "Leçon 11 la notion de l'environnement",
+                                    "Leçon 12 observation du temps",
+                                    "Leçon 14 construction et lecture d'un diagramme ombrothermique",
+                                    "Leçon 15-les milieux bioclimatiques du cameroun",
+                                    "Leçon 16 les agressions contre les milieux bioclimatiques",
+                                    "Leçon 17 Les  agressions contre les milieux de la localité ou se trouve l'etablissement",
+                                    "Leçon 18 La gestion des déchets",
+                                    "Leçon 19 l'atmosphère",
+                                    "Lecon 20 les perturbations atmosphériques",
+                                    "Leçon 22 les mécanismes de la pluie",
+                                    "Leçon 23 les changements climatiques et leurs conséquences",
+                                    "Leçon 25 autres catastrophes",
+                                    "Leçon 26 les mouvements tectoniques"
+                                ]
+                            },
+                            {
+                                "id": 9,
+                                "matiere": "Latin",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1  L'alphabet et prononciation",
+                                    "Leçon 2  Lecture - le dialogue",
+                                    "Leçon 3  Les catégories grammaticales",
+                                    "Leçon 5  Fonctions de l'adjectif qualificatif",
+                                    "Leçon 6 grammaire  Les fonctions cod, coi et cat",
+                                    "Leçon 7 la fonction complément d'agent",
+                                    "Leçon 8  le complement circonstanciel",
+                                    "Leçon 9 Introduction a la declinaison",
+                                    "Leçon 10 La premiere déclinaison",
+                                    "Leçon 11 La premiere déclinaison",
+                                    "Leçon 12 Introduction à la conjugaison",
+                                    "Leçon 13 Esse à l'infectum et au perfectum",
+                                    "Leçon 14 la religion romaine"
+                                ]
+                            },
+                            {
+                                "id": 10,
+                                "matiere": "EPS",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1  L'alphabet et prononciation",
+                                    "Leçon 2  Lecture - le dialogue",
+                                    "Leçon 3  Les catégories grammaticales",
+                                    "Leçon 5  Fonctions de l'adjectif qualificatif",
+                                    "Leçon 6 grammaire  Les fonctions cod, coi et cat",
+                                    "Leçon 7 la fonction complément d'agent",
+                                    "Leçon 8  le complement circonstanciel",
+                                    "Leçon 9 Introduction a la declinaison",
+                                    "Leçon 10 La premiere déclinaison",
+                                    "Leçon 11 La premiere déclinaison",
+                                    "Leçon 12 Introduction à la conjugaison",
+                                    "Leçon 13 Esse à l'infectum et au perfectum",
+                                    "Leçon 14 la religion romaine"
+                                ]
+                            },
+                            {
+                                "id": 11,
+                                "matiere": "T.M.",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 choix du site",
+                                    "Leçon 2 outils de jardinage",
+                                    "Lecon 3 Préparation du sol defrichage Labour",
+                                    "Leçon 4  production du compost"
+                                ]
+                            },
+                            {
+                                "id": 12,
+                                "matiere": "Orientation conseil",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 le rôle administratif du chef de l'établissement scolaire",
+                                    "Leçon 2 les responsabilités pédagogiques et financières du chef de l'établissement",
+                                    "Leçon 3  le censorat et la surveillance générale",
+                                    "Leçon 4 L'intendance et la comptabilité matières",
+                                    "Leçon 5 La bibliotheque  le service de l action sociale et l infirmerie 1",
+                                    "Leçon 6 les activités de formation et les services adapté",
+                                    "Leçon 7 Les services des activites post et periscolaire des sports et de l'education physique",
+                                    "Leçon 8 Le reglement interieur",
+                                    "Leçon 9 Les devoirs",
+                                    "Leçon 10 les droits des eleves dans un etablissement scolaire",
+                                    "Leçon 11 les sanctions dans l'etablissement scolaire",
+                                    "Leçon 12 importance de l'orientation conseil",
+                                    "Leçon 13 la jnos probleme survenu",
+                                    "Leçon 16 les activités administratives du conseiller d'orientation",
+                                    "Leçon 17 les activités de recherche",
+                                    "Leçon 18 les groupes de matières",
+                                    "Leçon 19 les matières scientifiques"
+                                ]
+                            },
+                            {
+                                "id": 13,
+                                "matiere": "Langues et cultures nationales",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 définition des concepts",
+                                    "Leçon 2 presentation des aires culturelles bətí-faŋ et grassfield",
+                                    "Leçon 3 les noms des langues camerounaises partie 1",
+                                    "Leçon 3 présentation des aires culturelles",
+                                    "Leçon 4 integration n°1",
+                                    "Leçon 4 Les noms des langues camerounaises partie 2",
+                                    "Leçon 5 Les dialectes de quelques langues camerounaises partie 1",
+                                    "Leçon 6 classification des langues en familles linguistiques",
+                                    "Leçon 7 situation geographique de quelques langues camerouna",
+                                    "Leçon 8 integration n°1"
+                                ]
+                            },
+                            {
+                                "id": 14,
+                                "matière": "Éducation artistique",
+                                "modules": [],
+                                "leçons": [
+                                    "Leçon 1 Introduction aux arts plastiques",
+                                    "Leçon 2 Les mots clés en arts plastiques"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Classe de 5ème"
+                    },
+                    {
+                        "title": "Classe de 4ème"
+                    },
+                    {
+                        "title": "Classe de 3ème"
+                    },
+                    {
+                        "title": "Classes De 2nde",
+                        "series": [
+                            {
+                                "title": "Seconde A"
+                            },
+                            {
+                                "title": "Seconde C"
+                            },
+                            {
+                                "title": "Seconde E"
+                            },
+                            {
+                                "title": "Seconde SH"
+                            },
+                            {
+                                "title": "Seconde AC"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Classes De 1ère",
+                        "series": [
+                            {
+                                "title": "Première A"
+                            },
+                            {
+                                "title": "Première C"
+                            },
+                            {
+                                "title": "Première D"
+                            },
+                            {
+                                "title": "Première TI"
+                            },
+                            {
+                                "title": "Première E"
+                            },
+                            {
+                                "title": "Première SH"
+                            },
+                            {
+                                "title": "Première AC"
+                            },
+                            {
+                                "title": "Première ABI"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Classes De Tle",
+                        "series": [
+                            {
+                                "title": "Terminale C"
+                            },
+                            {
+                                "title": "Terminale D"
+                            },
+                            {
+                                "title": "Terminale A"
+                            },
+                            {
+                                "title": "Terminale TI"
+                            },
+                            {
+                                "title": "Terminale E"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "02",
+                "type": "ENSEIGNEMENT TECHNIQUE",
+                "sub_types": [
+                    {
+                        "id": "01",
+                        "title": "TECHNIQUES INDUSTRIELLES",
+                        "filieres": [
+                            {
+                                "title": "Genie Mécanique",
+                                "classes": [
+                                    {
+                                        "title": "1ére année"
+                                    },
+                                    {
+                                        "title": "2éme année"
+                                    },
+                                    {
+                                        "title": "3éme année"
+                                    },
+                                    {
+                                        "title": "4éme année"
+                                    },
+                                    {
+                                        "title": "Classe de 2nd"
+                                    },
+                                    {
+                                        "title": "Classe de 1ére"
+                                    },
+                                    {
+                                        "title": "Classe de Terminale"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Genie Civil",
+                                "classes": [
+                                    {
+                                        "title": "1ére année"
+                                    },
+                                    {
+                                        "title": "2éme année"
+                                    },
+                                    {
+                                        "title": "3éme année"
+                                    },
+                                    {
+                                        "title": "4éme année"
+                                    },
+                                    {
+                                        "title": "Classe de 2nde"
+                                    },
+                                    {
+                                        "title": "Classe de 1ére"
+                                    },
+                                    {
+                                        "title": "Classe de Terminale"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Genie Electrique",
+                                "classes": [
+                                    {
+                                        "title": "1ére année"
+                                    },
+                                    {
+                                        "title": "2éme année"
+                                    },
+                                    {
+                                        "title": "3éme année"
+                                    },
+                                    {
+                                        "title": "4éme année"
+                                    },
+                                    {
+                                        "title": "Classe de 2nd"
+                                    },
+                                    {
+                                        "title": "Classe de 1ére"
+                                    },
+                                    {
+                                        "title": "Classe de Terminale"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Arts et Modes",
+                                "classes": [
+                                    {
+                                        "title": "1ére année"
+                                    },
+                                    {
+                                        "title": "2éme année"
+                                    },
+                                    {
+                                        "title": "3éme année"
+                                    },
+                                    {
+                                        "title": "4éme année"
+                                    },
+                                    {
+                                        "title": "Classe de 2nd"
+                                    },
+                                    {
+                                        "title": "Classe de 1ére"
+                                    },
+                                    {
+                                        "title": "Classe de Terminale"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Enseignement général",
+                                "classes": [
+                                    {
+                                        "title": "1ère Année"
+                                    },
+                                    {
+                                        "title": "2ème Année"
+                                    },
+                                    {
+                                        "title": "3ème Année"
+                                    },
+                                    {
+                                        "title": "4ème Année"
+                                    },
+                                    {
+                                        "title": "Classe de 2nde"
+                                    },
+                                    {
+                                        "title": "Classe de 1ère"
+                                    },
+                                    {
+                                        "title": "Classe de Terminale"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "02",
+                        "title": "SCIENCES ET TECHNOLOGIES DU TERTIAIRE",
+                        "filieres": [
+                            {
+                                "title": "Enseignement Géneral",
+                                "classes": [
+                                    {
+                                        "title": "1ère année"
+                                    },
+                                    {
+                                        "title": "2ème année"
+                                    },
+                                    {
+                                        "title": "3ème année"
+                                    },
+                                    {
+                                        "title": "4ème année"
+                                    },
+                                    {
+                                        "title": "Classe de 2nde"
+                                    },
+                                    {
+                                        "title": "Classe de 1ère"
+                                    },
+                                    {
+                                        "title": "Classe de Terminale"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Action et communication administrative et commerciale",
+                                "classes": [
+                                    {
+                                        "title": "1 ére Année"
+                                    },
+                                    {
+                                        "title": "2 éme Année"
+                                    },
+                                    {
+                                        "title": "3 éme Année"
+                                    },
+                                    {
+                                        "title": "4 éme Année"
+                                    },
+                                    {
+                                        "title": "Classe de 2nde"
+                                    },
+                                    {
+                                        "title": "Classe de 1ére"
+                                    },
+                                    {
+                                        "title": "Classe de Terminale"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Science et Technique economique et de Gestion",
+                                "classes": [
+                                    {
+                                        "title": "1ére année"
+                                    },
+                                    {
+                                        "title": "2éme année"
+                                    },
+                                    {
+                                        "title": "3éme année"
+                                    },
+                                    {
+                                        "title": "4éme année"
+                                    },
+                                    {
+                                        "title": "Classe de 2nde"
+                                    },
+                                    {
+                                        "title": "Classe de 1ére"
+                                    },
+                                    {
+                                        "title": "Classe de Terminale"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "01",
+                "type": "ENSEIGNEMENT GÉNÉRAL",
+                "filieres": [
+                    {
+                        "title": "ENIEG",
+                        "classes": [
+                            {
+                                "title": "BEPC 1"
+                            },
+                            {
+                                "title": "BACC/PROB 2/BEPC 3"
+                            },
+                            {
+                                "title": "PROB 1 / BEPC 2"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "ENIET",
+                        "classes": [
+                            {
+                                "title": "1 ère Année"
+                            },
+                            {
+                                "title": "2 ème Année"
+                            },
+                            {
+                                "title": "3 ème Année"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "SOUS-SYSTÈME FRANCOPHONE",
+        "school_types": [
+            {
+                "title": "GENERAL EDUCATION",
+                "sub_types": [
+                    {
+                        "title": "1ST CYCLE",
+                        "filieres": [
+                            {
+                                "title": "General",
+                                "classes": [
+                                    {
+                                        "title": "Form 1"
+                                    },
+                                    {
+                                        "title": "Form 2"
+                                    },
+                                    {
+                                        "title": "Form 3"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Arts",
+                                "classes": [
+                                    {
+                                        "title": "form 4"
+                                    },
+                                    {
+                                        "title": "form 5"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Science",
+                                "classes": [
+                                    {
+                                        "title": "form 4"
+                                    },
+                                    {
+                                        "title": "form 5"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "2ND CYCLE",
+                        "filieres": [
+                            {
+                                "title": "Arts",
+                                "classes": [
+                                    {
+                                        "title": "lower sixth"
+                                    },
+                                    {
+                                        "title": "upper sixth"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Science",
+                                "classes": [
+                                    {
+                                        "title": "lower sixth"
+                                    },
+                                    {
+                                        "title": "upper sixth"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "TECHNICAL EDUCATION",
+                "sub_types": [
+                    {
+                        "title": "INDUSTRIAL TECHNIQUES",
+                        "filieres": [
+                            {
+                                "title": "FASHION AND ARTS",
+                                "classes": [
+                                    {
+                                        "title": "FORM 1"
+                                    },
+                                    {
+                                        "title": "FORM 2"
+                                    },
+                                    {
+                                        "title": "FORM 3"
+                                    },
+                                    {
+                                        "title": "FORM 4"
+                                    },
+                                    {
+                                        "title": "FORM 5"
+                                    },
+                                    {
+                                        "title": "LOWER SIXTH"
+                                    },
+                                    {
+                                        "title": "UPPER SIXTH"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "MECHANICAL ENGINEERING",
+                                "classes": [
+                                    {
+                                        "title": "FORM 1"
+                                    },
+                                    {
+                                        "title": "FORM 2"
+                                    },
+                                    {
+                                        "title": "FORM 3"
+                                    },
+                                    {
+                                        "title": "FORM 4"
+                                    },
+                                    {
+                                        "title": "FORM 5"
+                                    },
+                                    {
+                                        "title": "LOWER SIXTH"
+                                    },
+                                    {
+                                        "title": "UPPER SIXTH"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "ELECTRICAL ENGINEERING",
+                                "classes": [
+                                    {
+                                        "title": "FORM 1"
+                                    },
+                                    {
+                                        "title": "FORM 2"
+                                    },
+                                    {
+                                        "title": "FORM 3"
+                                    },
+                                    {
+                                        "title": "FORM 4"
+                                    },
+                                    {
+                                        "title": "FORM 5"
+                                    },
+                                    {
+                                        "title": "LOWER SIXTH"
+                                    },
+                                    {
+                                        "title": "UPPER SIXTH"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "CIVIL ENGINEERING",
+                                "classes": [
+                                    {
+                                        "title": "FORM 1"
+                                    },
+                                    {
+                                        "title": "FORM 2"
+                                    },
+                                    {
+                                        "title": "FORM 3"
+                                    },
+                                    {
+                                        "title": "FORM 4"
+                                    },
+                                    {
+                                        "title": "FORM 5"
+                                    },
+                                    {
+                                        "title": "LOWER SIXTH"
+                                    },
+                                    {
+                                        "title": "UPPER SIXTH"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "GENERAL EDUCATION",
+                                "classes": [
+                                    {
+                                        "title": "FORM 1"
+                                    },
+                                    {
+                                        "title": "FORM 2"
+                                    },
+                                    {
+                                        "title": "FORM 3"
+                                    },
+                                    {
+                                        "title": "FORM 4"
+                                    },
+                                    {
+                                        "title": "FORM 5"
+                                    },
+                                    {
+                                        "title": "LOWER SIXTH"
+                                    },
+                                    {
+                                        "title": "UPPER SIXTH"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "TECHNOLOGIES AND TERTIARY SCIENCES",
+                        "filieres": [
+                            {
+                                "title": "ACCOUNTING AND MANAGEMENT SCIENCES",
+                                "classes": [
+                                    {
+                                        "title": "FORM 1"
+                                    },
+                                    {
+                                        "title": "FORM 2"
+                                    },
+                                    {
+                                        "title": "FORM 3"
+                                    },
+                                    {
+                                        "title": "FORM 4"
+                                    },
+                                    {
+                                        "title": "FORM 5"
+                                    },
+                                    {
+                                        "title": "LOWER SIXTH"
+                                    },
+                                    {
+                                        "title": "UPPER SIXTH"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "ADMINISTRATION AND COMMUNICATION SCIENCES",
+                                "classes": [
+                                    {
+                                        "title": "FORM 1"
+                                    },
+                                    {
+                                        "title": "FORM 2"
+                                    },
+                                    {
+                                        "title": "FORM 3"
+                                    },
+                                    {
+                                        "title": "FORM 4"
+                                    },
+                                    {
+                                        "title": "FORM 5"
+                                    },
+                                    {
+                                        "title": "LOWER SIXTH"
+                                    },
+                                    {
+                                        "title": "UPPER SIXTH"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "GENERAL COURSES",
+                                "classes": [
+                                    {
+                                        "title": "Form 1"
+                                    },
+                                    {
+                                        "title": "Form 2"
+                                    },
+                                    {
+                                        "title": "Form 3"
+                                    },
+                                    {
+                                        "title": "Form 4"
+                                    },
+                                    {
+                                        "title": "Form 5"
+                                    },
+                                    {
+                                        "title": "UPPER SIXTH"
+                                    },
+                                    {
+                                        "title": "LOWER SIXTH"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "TEACHER TRAINING",
+                "filieres": [
+                    {
+                        "title": "GTTC",
+                        "classes": [
+                            {
+                                "title": "Level 1"
+                            },
+                            {
+                                "title": "Level 2"
+                            },
+                            {
+                                "title": "Level 3"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "GTTTC",
+                        "classes": [
+                            {
+                                "title": "Year 1"
+                            },
+                            {
+                                "title": "Year 2"
+                            },
+                            {
+                                "title": "Year 3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

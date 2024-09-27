@@ -12,6 +12,16 @@ const router = createRouter({
             name: "bookDetail",
             component: () => import('../view/products/WBookDetail.vue'),
         },
+        {
+            path: "/sign_up",
+            name: "CreateAccount",
+            component: () => import('../view/authentication/WSignUp.vue'),
+        },
+        {
+            path: "/login",
+            name: "login",
+            component: () => import('../view/authentication/WLogin.vue'),
+        }
     ],
 });
 
