@@ -44,7 +44,7 @@ const user = ref({
                             v-model="user.last_name" /><span class="my-2 block"></span>
                     </div>
                 </div>
-                <div class="mb-4"><label class="mb-2 block text-sm font-bold" for="email">E-mail</label><input
+                <div class="mb-4"><label class=" mb-2 block text-sm font-bold" for="email">E-mail</label><input
                         class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none ring-blue-500 focus:ring"
                         id="email" type="email" placeholder="email" required="" v-model="user.email" /><span
                         class="my-2 block"></span></div>
