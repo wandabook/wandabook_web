@@ -3,7 +3,7 @@ import axios from "axios";
 const userId = import.meta.env.VITE_LIBIB_API_KEY_USER;
 const apiKey = import.meta.env.VITE_LIBIB_API_KEY;
 
-export const createUser = (data) => {
+export const createUser = (data: any) => {
 
     const baseUrl = 'https://api.libib.com/patrons';
 
@@ -19,7 +19,7 @@ export const createUser = (data) => {
             });
 
             console.log('API Response:', response.data); // Access the response data
-        } catch (error) {
+        } catch (error: any) {
             console.error('Error:', error.message || error);
         }
     })();

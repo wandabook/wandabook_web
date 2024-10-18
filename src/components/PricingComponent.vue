@@ -11,24 +11,6 @@
             <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl font-heading">The right price for
                 you, whoever
                 you are</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <article v-for="article in articles" :key="article.id"
-                    class="w-full h-auto rounded-md bg-brand-white overflow-hidden">
-                    <img :src="`/images/${article.cover}`" class="w-full h-[200px]" alt="cover" />
-                    <div class="p-6">
-                        <h6 class="text-[11px] text-brand-grayish-blue mb-2">
-                            By {{ article.author }}
-                        </h6>
-                        <h4
-                            class="text-body text-brand-dark-blue leading-snug font-normal mb-2 transition-all duration-200 ease hover:text-brand-lime-green">
-                            <router-link to="/">
-                                {{ article.title }}
-                            </router-link>
-                        </h4>
-                        <p class="text-brand-grayish-blue text-sm">{{ article.content }}</p>
-                    </div>
-                </article>
-            </div>
             <div class="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-5 mt-10">
                 <div class="relative flex w-full p-1 bg-red-400 dark:bg-slate-900 rounded-full">
                     <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
