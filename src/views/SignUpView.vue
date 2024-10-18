@@ -34,32 +34,33 @@ const user = ref({
                     <div class="mb-4 w-6/12"><label class="mb-2 block text-sm font-bold" for="email">First
                             Name</label><input
                             class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none ring-blue-500 focus:ring"
-                            id="firstName" type="text" placeholder="First Name" required=""
+                            id="firstName" type="text" placeholder="First Name" :required="true"
                             v-model="user.first_name" /><span class="my-2 block"></span>
                     </div>
                     <div class="mb-4 w-6/12"><label class="mb-2 block text-sm font-bold" for="email">Last
                             Name</label><input
                             class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none ring-blue-500 focus:ring"
-                            id="lastName" type="text" placeholder="Last Name" required=""
+                            id="lastName" type="text" placeholder="Last Name" :required="true"
                             v-model="user.last_name" /><span class="my-2 block"></span>
                     </div>
                 </div>
                 <div class="mb-4"><label class=" mb-2 block text-sm font-bold" for="email">E-mail</label><input
                         class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none ring-blue-500 focus:ring"
-                        id="email" type="email" placeholder="email" required="" v-model="user.email" /><span
+                        id="email" type="email" placeholder="email" :required="true" v-model="user.email" /><span
                         class="my-2 block"></span></div>
                 <div class="mb-4"><label class="mb-2 block text-sm font-bold" for="password">Password</label><input
                         class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none ring-blue-500 focus:ring"
-                        id="password" type="password" placeholder="******************" required=""
+                        id="password" type="password" placeholder="******************" :required="true"
                         v-model="user.password" /></div>
                 <div class="mb-4"><label class="mb-2 block text-sm font-bold" for="password">Confirm
                         Password</label><input
                         class="shadow-sm w-full cursor-text appearance-none rounded border border-gray-300 py-2 px-3 leading-tight outline-none ring-blue-500 focus:ring"
-                        id="confirm_pass" type="password" placeholder="******************" required=""
+                        id="confirm_pass" type="password" placeholder="******************" :required="true"
                         v-model="confirm_pass" /></div>
 
                 <div class="mb-6">
-                    <label class="mb-2 flex text-sm"><input type="checkbox" name="accept" class="mr-2" required="" />
+                    <label class="mb-2 flex text-sm"><input type="checkbox" name="accept" class="mr-2"
+                            :required="true" />
                         <div class="text-gray-800">
                             <p class="">
                                 I accept the
