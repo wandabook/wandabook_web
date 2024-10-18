@@ -11,6 +11,7 @@ module.exports = {
         'brand-dark-blue': 'hsl(233, 26%, 24%)',
         'brand-lime-green': 'hsl(136, 65%, 51%)',
         'brand-bright-cyan': 'hsl(192, 70%, 51%)',
+        'brand-lime-red': 'hsl(0, 100%, 50%)',
       },
       fontSize: {
         md: '16px',

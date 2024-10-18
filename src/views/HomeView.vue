@@ -4,6 +4,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import HeroComponent from '@/components/HeroComponent.vue'
 import LatestArticlesComponent from '@/components/LatestArticlesComponent.vue'
+import PricingComponent from '../components/PricingComponent.vue'
 </script>
 
 <template>
@@ -11,5 +12,6 @@ import LatestArticlesComponent from '@/components/LatestArticlesComponent.vue'
   <HeroComponent />
   <FeaturesComponent />
   <LatestArticlesComponent />
+  <PricingComponent id="" />
   <FooterComponent />
 </template>
