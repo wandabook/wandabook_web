@@ -1,6 +1,28 @@
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: "normal";
+  font-weight: 400;
+  src: url('./fonts/Poppins-Light.ttf');
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins-bold';
+  font-style: 'normal';
+  font-weight: 400;
+  src: url('./fonts/Poppins-SemiBold.ttf');
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -12,5 +34,5 @@ body {
 }
 
 .bg-gradient {
-  background: linear-gradient(45deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  background: linear-gradient(45deg, (#07C0EA), hsl(192, 70%, 51%));
 }
