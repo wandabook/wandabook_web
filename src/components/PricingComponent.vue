@@ -95,88 +95,94 @@
       -->
                 <div
                     class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                    <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                        <div class="sm:flex sm:items-start">
+                    <form @submit.prevent="adddNewUser">
+                        <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                            <div class="sm:flex sm:items-start">
 
-                            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                                <h3 class="text-base font-heading leading-6 text-gray-900" id="modal-title">Create
-                                    account</h3>
-                                <div class="mt-10">
-                                    <form class=" mb-4 rounded-lg px-0 text-left" @submit.prevent="adddNewUser">
-                                        <div class="flex justify-between flex-wrap">
-                                            <div class="mb-4 w-full md:w-5/12"><label
-                                                    class="mb-2 block text-sm font-bold" for="firstname">First
-                                                    Name</label>
-                                                <WInput :required="true" id="firstname" />
-                                            </div>
-                                            <div class="mb-4 md:w-6/12 w-full"><label
-                                                    class="mb-2 block text-sm font-bold" for="lastname">Last
-                                                    Name</label>
-                                                <WInput :required="true" id="lastname" />
-                                            </div>
-                                        </div>
-                                        <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                for="email">E-mail</label>
-                                            <WInput type="email" :required="true" id="email" />
-                                        </div>
-                                        <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                for="phone">Phone</label>
-                                            <WInput type="text" :required="true" id="phone" />
-                                        </div>
-                                        <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                for="address">Address</label>
-                                            <WInput type="text" :required="true" id="address" />
-                                        </div>
-                                        <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                for="city">City</label>
-                                            <WInput type="text" :required="true" id="city" />
-                                        </div>
-                                        <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                for="cni">CNI</label>
-                                            <WInput type="text" :required="true" id="cni" />
-                                        </div>
-
-                                        <div class="mb-4"><label class="mb-2 block text-sm font-bold"
-                                                for="password">Password</label>
-                                            <WInput type="password" :required="true" placeholder="******************"
-                                                id="password" />
-                                        </div>
-                                        <div class="mb-4"><label class="mb-2 block text-sm font-bold"
-                                                for="confirm_password">Confirm
-                                                Password</label>
-                                            <WInput type="password" :required="true" placeholder="******************"
-                                                id="confirm_password" />
-                                        </div>
-
-                                        <div class="mb-6">
-                                            <label class="mb-2 flex text-sm"><input type="checkbox" name="accept"
-                                                    class="mr-2" :required="true" />
-                                                <div class="text-gray-800">
-                                                    <p class="">
-                                                        I accept the
-                                                        <a href="#" class="cursor-pointer text-blue-500 underline">terms
-                                                            of use</a>
-                                                        and
-                                                        <a href="#"
-                                                            class="cursor-pointer text-blue-500 underline">privacy
-                                                            policy</a>
-                                                    </p>
+                                <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                                    <h3 class="text-base font-heading leading-6 text-gray-900" id="modal-title">Create
+                                        account</h3>
+                                    <div class="mt-10">
+                                        <div class=" mb-4 rounded-lg px-0 text-left">
+                                            <div class="flex justify-between flex-wrap">
+                                                <div class="mb-4 w-full md:w-5/12"><label
+                                                        class="mb-2 block text-sm font-bold" for="firstname">First
+                                                        Name</label>
+                                                    <WInput :required="true" id="firstname" v-model="user.first_name" />
                                                 </div>
-                                            </label>
+                                                <div class="mb-4 md:w-6/12 w-full"><label
+                                                        class="mb-2 block text-sm font-bold" for="lastname">Last
+                                                        Name</label>
+                                                    <WInput :required="true" id="lastname" v-model="user.last_name" />
+                                                </div>
+                                            </div>
+                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
+                                                    for="email">E-mail</label>
+                                                <WInput type="email" :required="true" id="email" v-model="user.email" />
+                                            </div>
+                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
+                                                    for="phone">Phone</label>
+                                                <WInput type="text" :required="true" id="phone" v-model="user.phone" />
+                                            </div>
+                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
+                                                    for="address">Address</label>
+                                                <WInput type="text" :required="true" id="address"
+                                                    v-model="user.address1" />
+                                            </div>
+                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
+                                                    for="city">City</label>
+                                                <WInput type="text" :required="true" id="city" v-model="user.city" />
+                                            </div>
+                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
+                                                    for="cni">CNI</label>
+                                                <WInput type="text" :required="true" id="cni" />
+                                            </div>
+
+                                            <div class="mb-4"><label class="mb-2 block text-sm font-bold"
+                                                    for="password">Password</label>
+                                                <WInput type="password" :required="true"
+                                                    placeholder="******************" id="password"
+                                                    v-model="user.password" />
+                                            </div>
+                                            <div class="mb-4"><label class="mb-2 block text-sm font-bold"
+                                                    for="confirm_password">Confirm
+                                                    Password</label>
+                                                <WInput type="password" :required="true"
+                                                    placeholder="******************" v-model="confirm_pass"
+                                                    id="confirm_password" />
+                                            </div>
+
+                                            <div class="mb-6">
+                                                <label class="mb-2 flex text-sm"><input type="checkbox" name="accept"
+                                                        class="mr-2" :required="true" />
+                                                    <div class="text-gray-800">
+                                                        <p class="">
+                                                            I accept the
+                                                            <a href="#"
+                                                                class="cursor-pointer text-blue-500 underline">terms
+                                                                of use</a>
+                                                            and
+                                                            <a href="#"
+                                                                class="cursor-pointer text-blue-500 underline">privacy
+                                                                policy</a>
+                                                        </p>
+                                                    </div>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                        <button type="button"
-                            class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Create
-                            account</button>
-                        <button type="button" @click="isCreation = false"
-                            class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
-                            Cancel</button>
-                    </div>
+                        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                            <button type="submit"
+                                class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Create
+                                account</button>
+                            <button type="button" @click="isCreation = false"
+                                class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
+                                Cancel</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -227,6 +233,7 @@ import { startPayment } from '../cinetpays_service';
 import type { PaymentData } from 'cinetpay-node-sdk';
 const isLoading = ref(false);
 const adddNewUser = () => {
+    console.log('information about the users', user.value)
     if (confirm_pass.value === user.value.password) {
         isLoading.value = true;
         user.value.notification_email = user.value.email;
@@ -240,7 +247,11 @@ const user = ref({
     last_name: '',
     email: '',
     notification_email: '',
-    password: ''
+    password: '',
+    phone: "",
+    address1: "",
+    city: ''
+
 });
 
 const paymentData = <PaymentData>{
