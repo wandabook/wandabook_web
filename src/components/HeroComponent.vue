@@ -18,7 +18,7 @@ const onResize = () => {
 
 <template>
   <section
-    class="relative w-full h-[80vh] pb-30 pt-30 lg:h-[66vh] px-6 md:px-20 lg:px-0 flex flex-col-reverse lg:flex-row lg:justify-between items-center overflow-x-clip">
+    class="relative w-full pb-30 pt-30 lg:h-[80vh] px-6 md:px-20 lg:px-0 flex flex-col-reverse lg:flex-row lg:justify-between items-center overflow-x-clip">
     <div class="absolute top-0 bottom-0 right-0 left-0 bg-brand-lighter-gray -z-30"></div>
 
     <div class="lg:ml-20 xl:ml-40 2xl:ml-52">

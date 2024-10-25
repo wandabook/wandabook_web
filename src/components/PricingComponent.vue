@@ -29,11 +29,11 @@
                         :aria-pressed="isAnnual">Monthly</button>
                 </div>
             </div>
-            <div class="relative isolate bg-white px-6 py-5 sm:py-10 lg:px-8">
+            <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
                 <div
                     class="mx-auto mt-1 grid max-w-lg grid-cols-1 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
                     <div v-for="(tier, tierIdx) in tiers" :key="tier.id"
-                        :class="['relative shadow-2xl mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10']">
+                        :class="['relative shadow-2xl md:mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10']">
                         <h3 :id="tier.id"
                             :class="[tier.featured ? 'text-indigo-400' : 'text-indigo-600', 'text-base font-semibold leading-7']">
                             {{ tier.name }}</h3>
@@ -99,18 +99,18 @@
                         <div class="sm:flex sm:items-start">
 
                             <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                                <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Deactivate
+                                <h3 class="text-base font-heading leading-6 text-gray-900" id="modal-title">Create
                                     account</h3>
                                 <div class="mt-10">
-                                    <form class=" mb-4 rounded-lg px-0" @submit.prevent="adddNewUser">
-                                        <div class="flex justify-between">
-                                            <div class="mb-4 w-5/12"><label class="mb-2 block text-sm font-bold"
-                                                    for="firstname">First
+                                    <form class=" mb-4 rounded-lg px-0 text-left" @submit.prevent="adddNewUser">
+                                        <div class="flex justify-between flex-wrap">
+                                            <div class="mb-4 w-full md:w-5/12"><label
+                                                    class="mb-2 block text-sm font-bold" for="firstname">First
                                                     Name</label>
                                                 <WInput :required="true" id="firstname" />
                                             </div>
-                                            <div class="mb-4 w-6/12"><label class="mb-2 block text-sm font-bold"
-                                                    for="lastname">Last
+                                            <div class="mb-4 md:w-6/12 w-full"><label
+                                                    class="mb-2 block text-sm font-bold" for="lastname">Last
                                                     Name</label>
                                                 <WInput :required="true" id="lastname" />
                                             </div>

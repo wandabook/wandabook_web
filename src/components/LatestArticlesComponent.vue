@@ -13,7 +13,7 @@ const articles = [
     author: 'Claire Robinson',
     content:
       "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
-    cover: harlequin,
+    cover: manga,
   },
   {
     id: 2,
