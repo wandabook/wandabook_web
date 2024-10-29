@@ -10,5 +10,9 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  build: {
+
+  },
+  optimizeDeps: { exclude: ["node_libcurl"] },
 })

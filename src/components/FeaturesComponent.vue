@@ -43,14 +43,14 @@ const features = [
         <br />
         Control your finances like never before.
       </p>
-      <div class="flex flex-col lg:flex-row lg:justify-items-auto gap-10 w-full">
+      <div class="grid grid-cols-2 justify-between md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         <div v-for="feature in features" :key="feature.id"
-          class="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-3/12">
+          class="flex flex-col items-center lg:items-center text-center lg:text-left">
           <img :src="`/images/${feature.icon}`" class="mb-8" alt="online" />
-          <h4 class="text-xl xl:text-2xl font-normal text-brand-dark-blue mb-4 lg:mb-6">
+          <h4 class="text-xl xl:text-2xl font-normal text-brand-dark-blue mb-4 lg:mb-6 text-center">
             {{ feature.title }}
           </h4>
-          <p class="text-brand-grayish-blue font-normal">
+          <p class="text-brand-grayish-blue font-normal text-center">
             {{ feature.content }}
           </p>
         </div>

@@ -31,28 +31,29 @@
             </div>
             <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
                 <div
-                    class="mx-auto mt-1 grid max-w-lg grid-cols-1 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
+                    class="mx-auto mt-1 grid max-w-lg grid-cols-2 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-3">
                     <div v-for="(tier, tierIdx) in tiers" :key="tier.id"
-                        :class="['relative shadow-2xl md:mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10']">
+                        :class="['relative shadow-2xl md:mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl md:p-8 p-3 ring-1 ring-gray-900/10 sm:p-10']">
                         <h3 :id="tier.id"
                             :class="[tier.featured ? 'text-indigo-400' : 'text-indigo-600', 'text-base font-semibold leading-7']">
                             {{ tier.name }}</h3>
                         <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
-                            <span :class="['text-gray-900', 'text-5xl font-bold tracking-tight']">{{
+                            <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
                                 tier.priceYearly }}</span>
-                            <span :class="['text-gray-500', 'text-base']">/year</span>
+                            <span :class="['text-gray-500', 'md:text-base text-sm']">/year</span>
                         </p>
                         <p class="mt-4 flex items-baseline gap-x-2" v-else>
-                            <span :class="['text-gray-900', 'text-5xl font-bold tracking-tight']">{{
+                            <span :class="['text-gray-900', 'lg:text-5xl text-sm font-bold tracking-tight']">{{
                                 tier.priceMonthly }}</span>
-                            <span :class="['text-gray-500', 'text-base']">/month</span>
+                            <span :class="['text-gray-500', 'md:text-base  text-sm']">/month</span>
                         </p>
-                        <p :class="['text-gray-600', 'mt-6 text-base leading-7']">{{
+                        <p :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7']">{{
                             tier.description }}</p>
-                        <ul role="list" :class="['text-gray-600', 'mt-8 space-y-3 text-sm leading-6 sm:mt-10']">
+                        <ul role="list"
+                            :class="['text-gray-600', 'md:mt-8 mt-2 md:space-y-3 space-x-1 text-sm leading-6 sm:mt-10']">
                             <li v-for="feature in tier.features" :key="feature" class="flex gap-x-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6">
+                                    stroke-width="1.5" stroke="currentColor" class="w-3 md:w-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                 </svg>
 
