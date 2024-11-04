@@ -5,6 +5,9 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 import HeroComponent from '@/components/HeroComponent.vue'
 import LatestArticlesComponent from '@/components/LatestArticlesComponent.vue'
 import PricingComponent from '../components/PricingComponent.vue'
+import FAQ from '@/components/FAQ.vue'
+
+
 </script>
 
 <template>
@@ -13,5 +16,6 @@ import PricingComponent from '../components/PricingComponent.vue'
   <FeaturesComponent />
   <LatestArticlesComponent />
   <PricingComponent id="" />
+  <FAQ></FAQ>
   <FooterComponent />
 </template>

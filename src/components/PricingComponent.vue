@@ -96,13 +96,18 @@
       -->
                 <div
                     class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                    <form @submit.prevent="adddNewUser">
+                    <form @submit.prevent="createUserAccount">
                         <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                             <div class="sm:flex sm:items-start">
 
                                 <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                                     <h3 class="text-base font-heading leading-6 text-gray-900" id="modal-title">Create
                                         account</h3>
+                                    <div class="mt-3">
+                                        <div v-if="errorMessage" class="text-red-700">
+                                            {{ errorMessage }}
+                                        </div>
+                                    </div>
                                     <div class="mt-10">
                                         <div class=" mb-4 rounded-lg px-0 text-left">
                                             <div class="flex justify-between flex-wrap">
@@ -136,7 +141,7 @@
                                             </div>
                                             <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
                                                     for="cni">CNI</label>
-                                                <WInput type="text" :required="true" id="cni" />
+                                                <WInput type="text" :required="true" id="cni" v-model="user.cni" />
                                             </div>
 
                                             <div class="mb-4"><label class="mb-2 block text-sm font-bold"
@@ -177,8 +182,18 @@
                         </div>
                         <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                             <button type="submit"
-                                class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Create
-                                account</button>
+                                class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">
+                                <svg aria-hidden="true" role="status" v-if="isLoading"
+                                    class="inline w-4 h-4 me-3 text-white animate-spin" viewBox="0 0 100 101"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                        fill="#E5E7EB" />
+                                    <path
+                                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                        fill="currentColor" />
+                                </svg>
+                                Create account</button>
                             <button type="button" @click="isCreation = false"
                                 class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
                                 Cancel</button>
@@ -197,6 +212,7 @@ import { ref } from 'vue';
 
 const isAnnual = ref(false);
 const isCreation = ref(false);
+const errorMessage = ref("");
 const tiers = [
     {
         name: 'Basic',
@@ -228,30 +244,49 @@ const tiers = [
     },
 
 ]
-import { createUser } from '@/views/service';
 import WInput from '../components/ui/WInput.vue';
 import { startPayment } from '../cinetpays_service';
 import type { PaymentData } from 'cinetpay-node-sdk';
+import { addNewUser } from '../lib/appwrite';
 const isLoading = ref(false);
-const adddNewUser = () => {
-    console.log('information about the users', user.value)
+const createUserAccount = async () => {
+    console.log('information about the users', user.value);
+    errorMessage.value = "";
     if (confirm_pass.value === user.value.password) {
         isLoading.value = true;
         user.value.notification_email = user.value.email;
-        createUser({});
+        console.log('This is the user information', user.value);
+        const result = await addNewUser(JSON.stringify(user.value));
+        console.log("Models.Execution: ", result.responseBody);
+        console.log("result.errors: ", result.errors);
+        console.log("result.status: ", result.status);
+        if (result.status === 'failed') {
+            errorMessage.value = 'an error occur. please try again or contact the support'
+        } else if (result.status === 'completed') {
+            const response = JSON.parse(result.responseBody);
+            if (response.result && response.result.error) {
+                errorMessage.value = 'an error occur. please try again or contact the support'
+            } else {
+                // Present the popup
+                window.location.href = 'https://www.libib.com/u/wandabook'
+            }
+            // if the user is created succesfully, you I have to duisplay the record
+        }
+        console.log('message ', result);
         isLoading.value = false;
     }
 }
 const confirm_pass = ref('');
 const user = ref({
-    first_name: '',
+    first_name: 'user',
     last_name: '',
     email: '',
     notification_email: '',
     password: '',
     phone: "",
     address1: "",
-    city: ''
+    city: '',
+    cni: "",
 
 });
 
@@ -276,4 +311,5 @@ const paymentData = <PaymentData>{
 const pay = () => {
     startPayment(paymentData);
 }
+pay();
 </script>

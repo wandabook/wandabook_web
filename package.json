@@ -10,6 +10,7 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "appwrite": "^14.0.1",
     "axios": "^1.3.4",
     "cinetpay-node-sdk": "^1.0.3",
     "node-cinetpay": "^1.0.6",
