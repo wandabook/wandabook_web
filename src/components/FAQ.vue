@@ -87,8 +87,6 @@
 </template>
 <script lang="ts" setup>
 import { onMounted } from 'vue';
-
-
 onMounted(() => {
     // JavaScript to toggle the answers and rotate the arrows
     document.querySelectorAll('[id^="question"]').forEach(function (button, index) {

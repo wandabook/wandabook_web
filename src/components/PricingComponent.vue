@@ -311,5 +311,4 @@ const paymentData = <PaymentData>{
 const pay = () => {
     startPayment(paymentData);
 }
-pay();
 </script>

@@ -4,14 +4,14 @@ const features = [
     id: 1,
     title: 'Create account',
     content:
-      'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.',
+      'to unlock a world of knowledge. Access our vast collection of books, articles, and more.',
     icon: 'icon-online.svg',
   },
   {
     id: 2,
     title: 'Visite catalogue',
     content:
-      "See exactly where you money goes each month. Receive notifications when you're close to hitting your limits.",
+      "Find your perfect match. Search our vast collection of books, articles, and more.",
     icon: 'icon-budgeting.svg',
   },
   {

@@ -1,7 +1,8 @@
 import Cinetpay, { type PaymentData } from 'cinetpay-node-sdk';
-const cinetpay = new Cinetpay('', '');
 
 export const startPayment = (paymentData: PaymentData) => {
+    const cinetpay = new Cinetpay('', '');
+
     cinetpay
         .initiatePayment(paymentData)
         .then((response) => {

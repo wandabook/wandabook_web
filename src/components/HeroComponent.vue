@@ -28,11 +28,11 @@ const onResize = () => {
         digital Library
       </h2>
       <p class="text-brand-grayish-blue text-md lg:text-body font-normal text-center lg:text-left mb-8">
-        Take your financial life online. Your Easybank account
+        Embrace the future of knowledge access with
         <br class="hidden lg:block" />
-        will be a one-stop-shop for spending, saving,
+        our cutting-edge digital library. Explore a vast collection of
         <br class="hidden lg:block" />
-        budgeting, investing, and much more.
+        books, articles, and research papers, all at your fingertips.
       </p>
       <div class="flex justify-center lg:justify-start">
         <CtaComponent />

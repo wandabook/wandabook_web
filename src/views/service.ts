@@ -35,6 +35,3 @@ export const createUser = (data: any) => {
 
     xhr.send();
 }
-
-
-createUser({});
