@@ -7,6 +7,6 @@ const gotoWandaBook = () => {
 <template>
   <button @click="gotoWandaBook"
     class="h-11 px-8 rounded-full bg-brand-lime-red text-brand-white font-normal capitalize transition-all duration-200 ease hover:opacity-60">
-    Visite Catalogue
+    {{ $t('visiteCatalogue') }}
   </button>
 </template>

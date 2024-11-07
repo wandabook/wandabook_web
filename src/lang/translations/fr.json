@@ -1,0 +1,29 @@
+{
+  "login": "Connexion",
+  "home": "Accueil",
+  "about": "À propos",
+  "connexion": "Connexion",
+  "signUp": "S'inscrire",
+  "title_1": "La prochaine génération",
+  "title_2": "bibliothèque numérique",
+  "title_description": "Embrassez l'avenir de l'accès au savoir avec notre bibliothèque numérique de pointe. Explorez une vaste collection de livres, d'articles et de documents de recherche, le tout à portée de main.",
+  "visiteCatalogue": "Visiter le catalogue",
+  "howItWorks": "Comment ça marche ?",
+  "howItWorks_desciption": "Emprunter un livre est aussi simple que de se rendre à votre bibliothèque locale, de trouver le livre que vous voulez et de l'emprunter avec votre carte de bibliothèque.",
+  "howItWorks_d": {
+    "l1": "Créer un compte",
+    "l1_des": "pour déverrouiller un monde de connaissances. Accédez à notre vaste collection de livres, d'articles et plus encore.",
+    "l2": "Visiter le catalogue",
+    "l2_des": "Trouvez votre match parfait. Recherchez dans notre vaste collection de livres, d'articles et plus encore.",
+    "l3": "Réserver un livre",
+    "l3_des": "Réservez un livre pour le récupérer dans la succursale de votre bibliothèque préférée.",
+    "l4": "Retirer un livre",
+    "l4_des": "Récupérez votre livre réservé dans la succursale de votre bibliothèque choisie."
+  },
+  "price": "Prix",
+  "price_description": "Le prix idéal pour vous, quel que soit votre profil",
+  "yearly": "Annuel",
+  "monthly": "Mensuel",
+  "year": "an",
+  "month": "mois"
+}

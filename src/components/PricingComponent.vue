@@ -6,11 +6,10 @@
         <div class="w-full px-6 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
             <h3
                 class="text-[32px] lg:text-[42px] text-brand-dark-blu capitalize text-center lg:text-left mb-8 lg:mb-12 font-thin">
-                Pricing
+                {{ $t('price') }}
             </h3>
-            <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl font-heading">The right price for
-                you, whoever
-                you are</p>
+            <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl font-heading">{{
+                $t('price_description') }}</p>
             <div class="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-5 mt-10">
                 <div class="relative flex w-full p-1 bg-brand-default dark:bg-slate-900 rounded-full">
                     <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
@@ -21,12 +20,12 @@
                     <button
                         class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
                         :class="isAnnual ? 'text-white' : 'text-white dark:text-slate-400'" @click="isAnnual = true"
-                        :aria-pressed="isAnnual">Yearly <span
+                        :aria-pressed="isAnnual">{{ $t('yearly') }}<span
                             :class="isAnnual ? 'text-indigo-200' : 'text-white dark:text-slate-500'">-20%</span></button>
                     <button
                         class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
                         :class="isAnnual ? 'text-white dark:text-slate-400' : 'text-white'" @click="isAnnual = false"
-                        :aria-pressed="isAnnual">Monthly</button>
+                        :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
                 </div>
             </div>
             <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
@@ -40,12 +39,12 @@
                         <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
                             <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
                                 tier.priceYearly }}</span>
-                            <span :class="['text-gray-500', 'md:text-base text-sm']">/year</span>
+                            <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ $t('year') }}</span>
                         </p>
                         <p class="mt-4 flex items-baseline gap-x-2" v-else>
                             <span :class="['text-gray-900', 'lg:text-5xl text-sm font-bold tracking-tight']">{{
                                 tier.priceMonthly }}</span>
-                            <span :class="['text-gray-500', 'md:text-base  text-sm']">/month</span>
+                            <span :class="['text-gray-500', 'md:text-base  text-sm']">/{{ $t('month') }}</span>
                         </p>
                         <p :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7']">{{
                             tier.description }}</p>
@@ -57,7 +56,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                 </svg>
 
-                                {{ feature }}
+                                {{ $t(feature) }}
                             </li>
                         </ul>
                         <a :aria-describedby="tier.id" @click="isCreation = true"
