@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import LanguageButton from './LanguageButton.vue';
+
 defineProps(['showMenu'])
 
 defineEmits(['closeMenu'])
@@ -17,7 +19,7 @@ defineEmits(['closeMenu'])
           @click="$emit('closeMenu')">Contact</router-link>
         <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-lime-green"
           @click="$emit('closeMenu')">Blog</router-link>
-
+        <LanguageButton />
       </div>
     </div>
   </div>
