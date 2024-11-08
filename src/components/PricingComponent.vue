@@ -218,8 +218,8 @@ const tiers = [
         name: 'basic',
         id: 'tier-basic',
         href: '/create_account',
-        priceMonthly: 'XAF 2000',
-        priceYearly: 'XAF 20000',
+        priceMonthly: '2000 CFA',
+        priceYearly: '20000 CFA',
         description: 'Dedicated support and infrastructure for your company.',
         features: [
             'Book limit per loan: 1',
@@ -232,8 +232,8 @@ const tiers = [
         name: 'standard',
         id: 'tier-standard',
         href: '/create_account',
-        priceMonthly: 'XAF 5000',
-        priceYearly: 'XAF 50000',
+        priceMonthly: '5000 CFA',
+        priceYearly: '50000 CFA',
         description: 'Dedicated support and infrastructure for your company.',
         features: [
             'Book limit per loan: 3',
