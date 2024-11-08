@@ -6,128 +6,112 @@ import romance_thriller from "@/assets/categories/romance_thriller.jpg"
 import marvel from "@/assets/categories/marvel.webp"
 import manga from "@/assets/categories/manga.jpg"
 
+
 const articles = [
   {
     id: 1,
-    title: 'harlequin',
-    author: 'Claire Robinson',
+    title: 'CLASSIC LITTERATURE',
     content:
-      "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+      "c1.content",
     cover: manga,
   },
   {
     id: 2,
-    title: 'hot romance + 18 ans/years',
-    author: 'Claire Robinson',
+    title: 'ROMANCE HARLEQUINS',
     content:
-      "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+      "c2.content",
     cover: hot_romance,
   },
   {
     id: 3,
-    title: 'romans thriller',
-    author: 'Claire Robinson',
-    content:
-      "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+    title: 'POLICE THRILLER',
+    content: "c3.content",
     cover: romance_thriller,
   },
   {
     id: 4,
-    title: 'marvel',
-    author: 'Claire Robinson',
-    content:
-      "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+    title: 'NOBEL PRIZE',
+    content: "c4.content",
     cover: marvel,
   },
   {
-    id: 4,
-    title: 'comics',
-    author: 'Claire Robinson',
+    id: 5,
+    title: 'JEUNESSE YOUTH 15-21',
     content:
-      "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+      "c5.content",
     cover: comics,
   },
 
   {
-    id: 4,
-    title: 'mangas',
-    author: 'Claire Robinson',
+    id: 6,
+    title: 'ENFANTS KIDS 8-14',
     content:
-      "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+      "c6.content",
     cover: manga,
   },
   {
-    id: 4,
-    title: 'japan heroes',
-    author: 'Claire Robinson',
+    id: 7,
+    title: 'ENFANTS KIDS 1-7',
     content:
-      "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+      "c7.content",
     cover: manga,
   },
   {
-    id: 4,
-    title: 'classic',
-    author: 'Claire Robinson',
+    id: 8,
+    title: 'MEDECINE INFIRMERIE',
     content:
-      "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+      "c8.content",
     cover: manga,
+  },
+  {
+    id: 9,
+    title: 'TECHNOLOGY SCIENCES',
+    content:
+      "c9.content",
+    cover: manga,
+  },
+  {
+    id: 10,
+    title: 'COMICS MARVEL',
+    content:
+      "c10.content", cover: manga,
+  },
+  {
+    id: 11,
+    title: 'AFRICA AUTHORS',
+    content:
+      "c11.content", cover: manga,
+  },
+  {
+    id: 12,
+    title: 'MANGAS BD',
+    content:
+      "c12.content", cover: manga,
   },
   /*{
-  id: 4,
-  title: 'litterature',
-  author: 'Claire Robinson',
-  content:
-    "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
-  cover: 'image-confetti.jpg',
-},
-{
-  id: 4,
-  title: 'prix nobel literature',
-  author: 'Claire Robinson',
-  content:
-    "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
-  cover: 'image-confetti.jpg',
-},
-{
-  id: 4,
-  title: 'jeunesse/youth',
-  author: 'Claire Robinson',
-  content:
-    "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
-  cover: 'image-confetti.jpg',
-},
-{
-  id: 4,
-  title: 'adventures',
-  author: 'Claire Robinson',
-  content:
-    "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
-  cover: 'image-confetti.jpg',
-},
-{
-  id: 4,
-  title: 'jeunesse/youth academic',
-  author: 'Claire Robinson',
-  content:
-    "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
-  cover: 'image-confetti.jpg',
-},
-{
-  id: 4,
-  title: 'enfants/kids 1-7 ans/years',
-  author: 'Claire Robinson',
-  content:
-    "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
-  cover: 'image-confetti.jpg',
-},
-{
-  id: 4,
-  title: '7-14 ans/years',
-  author: 'Claire Robinson',
-  content:
-    "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
-  cover: 'image-confetti.jpg',
-},*/
+   id: 4,
+   title: 'jeunesse/youth academic',
+   author: 'Claire Robinson',
+   content:
+     "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+   cover: manga,
+ },
+ {
+   id: 4,
+   title: 'enfants/kids 1-7 ans/years',
+   author: 'Claire Robinson',
+   content:
+     "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+   cover: manga,
+ },
+ {
+   id: 4,
+   title: '7-14 ans/years',
+   author: 'Claire Robinson',
+   content:
+     "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
+   cover: manga,
+ },*/
 ]
 </script>
 
@@ -136,7 +120,7 @@ const articles = [
     <div class="w-full px-6 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
       <h3
         class="text-[32px] lg:text-[42px] text-brand-dark-blue font-normal capitalize text-center lg:text-left mb-8 lg:mb-12 font-heading">
-        Categories
+        {{ $t('categories') }}
       </h3>
       <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         <article v-for="article in articles" :key="article.id"
@@ -149,7 +133,7 @@ const articles = [
                 {{ article.title }}
               </a>
             </h4>
-            <p class="text-brand-grayish-blue text-sm hidden md:block">{{ article.content }}</p>
+            <p class="text-brand-grayish-blue text-sm hidden md:block">{{ $t(article.content) }}</p>
           </div>
         </article>
       </div>

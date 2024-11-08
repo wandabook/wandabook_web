@@ -25,5 +25,61 @@
   "yearly": "Annuel",
   "monthly": "Mensuel",
   "year": "an",
-  "month": "mois"
+  "month": "mois",
+  "c1": {
+    "id": 1,
+    "content": "Explorez les œuvres littéraires les plus célèbres du monde, des épopées anciennes aux chefs-d'œuvre modernes"
+  },
+  "c2": {
+    "content": "Une collection d'histoires d'amour captivantes pour les romantiques."
+  },
+  "c3": {
+    "content": "Un roman rapide et suspenseful qui suit un détective déterminé alors qu'il démêle un réseau complexe de tromperie et de danger dans une enquête policière à haut risque..."
+  },
+  "c4": {
+    "content": "Le prix Nobel est décerné chaque année dans six catégories : Physique, Chimie, Physiologie ou Médecine, Littérature, Paix et Sciences économiques. ..."
+  },
+  "c5": {
+    "content": ""
+  },
+  "c6": {
+    "content": ""
+  },
+  "c7": {
+    "content": ""
+  },
+  "c8": {
+    "content": "Livres sur l'anatomie humaine, la physiologie, la pathologie, la pharmacologie, et plus encore..."
+  },
+  "c9": {
+    "content": "L'étude des ordinateurs et des systèmes informatiques, y compris le matériel, les logiciels et les algorithmes..."
+  },
+  "c10": {
+    "content": "Vivez des aventures palpitantes, explorez des intrigues déconcertantes et assistez au combat du bien contre le mal dans ces séries de bandes dessinées captivantes..."
+  },
+  "c11": {
+    "content": "Voyagez à travers les voix et les perspectives diverses des écrivains africains..."
+  },
+  "c12": {
+    "content": ""
+  },
+  "categories": "Catégories",
+  "basic": "Basique",
+  "standard": "Standard",
+  "firstName": "Prénom",
+  "lastName": "Nom",
+  "email": "E-mail",
+  "phone": "Téléphone",
+  "address": "Adresse",
+  "city": "Ville",
+  "cni": "CNI",
+  "password": "Mot de passe",
+  "confirmPassword": "Confirmer mot de passe",
+  "createAccount": "Créer un compte",
+  "cancel": "Annuler",
+  "acceptT": "J'accepte les",
+  "termsOfUse": "conditions d'utilisation",
+  "and": "et",
+  "privacy": "politique de confidentialité",
+  "subscribeNow": "S'inscrire maintenant"
 }

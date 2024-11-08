@@ -3,6 +3,8 @@
   "home": "Home",
   "about": "About",
   "connexion": "Connexion",
+  "contact": "Contact",
+  "blog": "blog",
   "signUp": "Sign Up",
   "title_1": "Next generation",
   "title_2": "digital Library",
@@ -25,5 +27,61 @@
   "yearly": "Yearly",
   "monthly": "Monthly",
   "year": "year",
-  "month": "month"
+  "month": "month",
+  "c1": {
+    "id": 1,
+    "content": "Explore the world's most celebrated literary works, from ancient epics to modern masterpieces"
+  },
+  "c2": {
+    "content": "A collection of captivating love stories for the romantic at heart."
+  },
+  "c3": {
+    "content": "A fast-paced, suspenseful novel that follows a determined detective as they unravel a complex web of deceit and danger in a high-stakes police investigation...."
+  },
+  "c4": {
+    "content": "The Nobel Prize is awarded annually in six categories: Physics, Chemistry, Physiology or Medicine, Literature, Peace, and Economic Sciences. ..."
+  },
+  "c5": {
+    "content": ""
+  },
+  "c6": {
+    "content": ""
+  },
+  "c7": {
+    "content": ""
+  },
+  "c8": {
+    "content": "Books on Human Anatomy, Physiology, Pathology, Pharmacology, and More..."
+  },
+  "c9": {
+    "content": "The study of computers and computational systems, including hardware, software, and algorithms..."
+  },
+  "c10": {
+    "content": "Experience thrilling adventures, explore mind-bending storylines, and witness the clash of good and evil in these captivating comic book series ..."
+  },
+  "c11": {
+    "content": "Journey through the diverse voices and perspectives of African writers ..."
+  },
+  "c12": {
+    "content": ""
+  },
+  "categories": "Categories",
+  "basic": "Basic",
+  "standard": "Standard",
+  "firtName": "First Name",
+  "lastName": "Last Name",
+  "email": "E-mail",
+  "phone": "Phone",
+  "address": "Address",
+  "city": "City",
+  "cni": "CNI",
+  "password": "Password",
+  "confirmPassword": "Confirm Password",
+  "createAccount": "Create account",
+  "cancel": "Cancel",
+  "acceptT": " I accept the",
+  "termsOfUse": "terms of use",
+  "and": "and",
+  "privacy": "privacy policy",
+  "subscribeNow": "Subscribe now"
 }

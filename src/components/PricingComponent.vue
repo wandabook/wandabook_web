@@ -3,13 +3,15 @@
 
 
     <section class="w-full">
-        <div class="w-full px-6 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
+        <div class="w-full px-3 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
             <h3
                 class="text-[32px] lg:text-[42px] text-brand-dark-blu capitalize text-center lg:text-left mb-8 lg:mb-12 font-thin">
                 {{ $t('price') }}
             </h3>
-            <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl font-heading">{{
-                $t('price_description') }}</p>
+            <p
+                class="mt-2 md:text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl font-heading text-center lg:text-left">
+                {{
+                    $t('price_description') }}</p>
             <div class="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-5 mt-10">
                 <div class="relative flex w-full p-1 bg-brand-default dark:bg-slate-900 rounded-full">
                     <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
@@ -35,7 +37,7 @@
                         :class="['relative shadow-2xl md:mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl md:p-8 p-3 ring-1 ring-gray-900/10 sm:p-10']">
                         <h3 :id="tier.id"
                             :class="[tier.featured ? 'text-indigo-400' : 'text-indigo-600', 'text-base font-semibold leading-7']">
-                            {{ tier.name }}</h3>
+                            {{ $t(tier.name) }}</h3>
                         <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
                             <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
                                 tier.priceYearly }}</span>
@@ -60,8 +62,10 @@
                             </li>
                         </ul>
                         <a :aria-describedby="tier.id" @click="isCreation = true"
-                            :class="['bg-red-600 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">Get
-                            started today</a>
+                            :class="['bg-red-600 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
+                            {{ $t('subscribeNow') }}
+
+                        </a>
                     </div>
                 </div>
             </div>
@@ -100,8 +104,8 @@
                             <div class="sm:flex sm:items-start">
 
                                 <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                                    <h3 class="text-base font-heading leading-6 text-gray-900" id="modal-title">Create
-                                        account</h3>
+                                    <h3 class="text-base font-heading leading-6 text-gray-900" id="modal-title">{{
+                                        $t('createAccount') }}</h3>
                                     <div class="mt-3">
                                         <div v-if="errorMessage" class="text-red-700">
                                             {{ errorMessage }}
@@ -111,47 +115,46 @@
                                         <div class=" mb-4 rounded-lg px-0 text-left">
                                             <div class="flex justify-between flex-wrap">
                                                 <div class="mb-4 w-full md:w-5/12"><label
-                                                        class="mb-2 block text-sm font-bold" for="firstname">First
-                                                        Name</label>
+                                                        class="mb-2 block text-sm font-bold" for="firstname">{{
+                                                            $t('firstName') }}</label>
                                                     <WInput :required="true" id="firstname" v-model="user.first_name" />
                                                 </div>
                                                 <div class="mb-4 md:w-6/12 w-full"><label
-                                                        class="mb-2 block text-sm font-bold" for="lastname">Last
-                                                        Name</label>
+                                                        class="mb-2 block text-sm font-bold" for="lastname">{{
+                                                            $t('lastName') }}</label>
                                                     <WInput :required="true" id="lastname" v-model="user.last_name" />
                                                 </div>
                                             </div>
                                             <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                    for="email">E-mail</label>
+                                                    for="email">{{ $t('email') }}</label>
                                                 <WInput type="email" :required="true" id="email" v-model="user.email" />
                                             </div>
                                             <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                    for="phone">Phone</label>
+                                                    for="phone">{{ $t('phone') }}</label>
                                                 <WInput type="text" :required="true" id="phone" v-model="user.phone" />
                                             </div>
                                             <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                    for="address">Address</label>
+                                                    for="address">{{ $t('address') }}</label>
                                                 <WInput type="text" :required="true" id="address"
                                                     v-model="user.address1" />
                                             </div>
-                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                    for="city">City</label>
+                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold" for="city">{{
+                                                $t('city') }}</label>
                                                 <WInput type="text" :required="true" id="city" v-model="user.city" />
                                             </div>
-                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
-                                                    for="cni">CNI</label>
+                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold" for="cni">{{
+                                                $t('cni') }}</label>
                                                 <WInput type="text" :required="true" id="cni" v-model="user.cni" />
                                             </div>
 
                                             <div class="mb-4"><label class="mb-2 block text-sm font-bold"
-                                                    for="password">Password</label>
+                                                    for="password">{{ $t('password') }}</label>
                                                 <WInput type="password" :required="true"
                                                     placeholder="******************" id="password"
                                                     v-model="user.password" />
                                             </div>
                                             <div class="mb-4"><label class="mb-2 block text-sm font-bold"
-                                                    for="confirm_password">Confirm
-                                                    Password</label>
+                                                    for="confirm_password">{{ $t('confirmPassword') }}</label>
                                                 <WInput type="password" :required="true"
                                                     placeholder="******************" v-model="confirm_pass"
                                                     id="confirm_password" />
@@ -162,14 +165,13 @@
                                                         class="mr-2" :required="true" />
                                                     <div class="text-gray-800">
                                                         <p class="">
-                                                            I accept the
+                                                            {{ $t('acceptT') }}
                                                             <a href="#"
-                                                                class="cursor-pointer text-blue-500 underline">terms
-                                                                of use</a>
-                                                            and
-                                                            <a href="#"
-                                                                class="cursor-pointer text-blue-500 underline">privacy
-                                                                policy</a>
+                                                                class="cursor-pointer text-blue-500 underline">{{
+                                                                    $t('termsOfUse') }}</a>
+                                                            {{ $t('and') }}
+                                                            <a href="#" class="cursor-pointer text-blue-500 underline">
+                                                                {{ $t('privacy') }}</a>
                                                         </p>
                                                     </div>
                                                 </label>
@@ -192,10 +194,10 @@
                                         d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
                                         fill="currentColor" />
                                 </svg>
-                                Create account</button>
+                                {{ $t('createAccount') }}</button>
                             <button type="button" @click="isCreation = false"
                                 class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
-                                Cancel</button>
+                                {{ $t('cancel') }}</button>
                         </div>
                     </form>
                 </div>
@@ -205,8 +207,7 @@
 
 
 </template>
-
-<script setup lang="ts">
+<script setup lang="ts" type="module">
 import { ref } from 'vue';
 
 const isAnnual = ref(false);
@@ -214,7 +215,7 @@ const isCreation = ref(false);
 const errorMessage = ref("");
 const tiers = [
     {
-        name: 'Basic',
+        name: 'basic',
         id: 'tier-basic',
         href: '/create_account',
         priceMonthly: 'XAF 2000',
@@ -228,7 +229,7 @@ const tiers = [
         featured: true,
     },
     {
-        name: 'Standard',
+        name: 'standard',
         id: 'tier-standard',
         href: '/create_account',
         priceMonthly: 'XAF 5000',
@@ -244,7 +245,7 @@ const tiers = [
 
 ]
 import WInput from '../components/ui/WInput.vue';
-import { startPayment } from '../cinetpays_service';
+
 import type { PaymentData } from 'cinetpay-node-sdk';
 import { addNewUser } from '../lib/appwrite';
 const isLoading = ref(false);
@@ -308,6 +309,16 @@ const paymentData = <PaymentData>{
     channels: 'ALL', // ou 'CREDIT_CARD', 'MOBILE_MONEY', 'WALLET'
 };
 const pay = () => {
-    startPayment(paymentData);
+
+    /* CinetPay.setConfig({
+         apikey: 'YOUR_API_KEY',
+         site_id: "YOUR_SITE_ID",
+         notify_url: 'https://mondomaine.com/notify/',
+         close_after_response: true,
+     });*/
+
+
+
 }
+pay();
 </script>
