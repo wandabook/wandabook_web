@@ -23,7 +23,7 @@ const onResize = () => {
 
     <div class="lg:ml-20 xl:ml-40 2xl:ml-52 lg:w-4/12">
       <h2
-        class="text-[40px] xl:text-6xl text-brand-dark-blue leading-[3rem] xl:leading-[4.5rem] text-center lg:text-left mb-6">
+        class=" xl:text-6xl text-brand-dark-blue leading-[3rem] xl:leading-[4.5rem] text-center lg:text-left mb-6 text-2xl">
         {{ $t('title_1') }} <br class="hidden lg:block" />
         {{ $t('title_2') }}
       </h2>
