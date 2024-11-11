@@ -99,10 +99,10 @@
                 <div
                     class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-7 sm:w-full sm:max-w-lg">
                     <form @submit.prevent="createUserAccount">
-                        <div class="bg-white px-4  sm:p-6 sm:pb-2">
+                        <div class="bg-white px-4 sm:p-6 sm:pb-2">
                             <div class="sm:flex sm:items-start">
                                 <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                                    <h3 class="text-base font-heading leading-6 text-gray-900" id="modal-title">{{
+                                    <h3 class="text-base font-heading leading-6 text-gray-900 mb-5" id="modal-title">{{
                                         $t('createAccount') }}</h3>
                                     <div class="mt-3" v-if="errorMessage">
                                         <div class="text-red-700">
