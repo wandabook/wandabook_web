@@ -32,11 +32,10 @@
             </div>
             <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
                 <div
-                    class="mx-auto mt-1 grid max-w-lg grid-cols-2 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-3">
+                    class="mx-auto mt-1 grid max-w-lg grid-cols-2 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-2">
                     <div v-for="(tier, tierIdx) in tiers" :key="tier.id"
                         :class="['relative shadow-2xl md:mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl md:p-8 p-3 ring-1 ring-gray-900/10 sm:p-10']">
-                        <h3 :id="tier.id"
-                            :class="[tier.featured ? 'text-indigo-400' : 'text-indigo-600', 'text-base font-semibold leading-7']">
+                        <h3 :id="tier.id" :class="['text-brand-default font-extrabold uppercase leading-7']">
                             {{ $t(tier.name) }}</h3>
                         <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
                             <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
@@ -62,7 +61,7 @@
                             </li>
                         </ul>
                         <a :aria-describedby="tier.id" @click="isCreation = true"
-                            :class="['bg-red-600 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
+                            :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
                             {{ $t('subscribeNow') }}
 
                         </a>
@@ -72,7 +71,7 @@
         </div>
     </section>
 
-    <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" v-if="isCreation">
+    <div class="relative z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true" v-if="isCreation">
         <!--
     Background backdrop, show/hide based on modal state.
 
@@ -98,62 +97,62 @@
           To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       -->
                 <div
-                    class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                    class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-7 sm:w-full sm:max-w-lg">
                     <form @submit.prevent="createUserAccount">
-                        <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="bg-white px-4  sm:p-6 sm:pb-2">
                             <div class="sm:flex sm:items-start">
-
                                 <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                                     <h3 class="text-base font-heading leading-6 text-gray-900" id="modal-title">{{
                                         $t('createAccount') }}</h3>
-                                    <div class="mt-3">
-                                        <div v-if="errorMessage" class="text-red-700">
+                                    <div class="mt-3" v-if="errorMessage">
+                                        <div class="text-red-700">
                                             {{ errorMessage }}
                                         </div>
                                     </div>
-                                    <div class="mt-10">
-                                        <div class=" mb-4 rounded-lg px-0 text-left">
+                                    <div class="mt-1">
+                                        <div class="mb-1 rounded-lg px-0 text-left">
                                             <div class="flex justify-between flex-wrap">
-                                                <div class="mb-4 w-full md:w-5/12"><label
-                                                        class="mb-2 block text-sm font-bold" for="firstname">{{
+                                                <div class="mb-2  w-5/12"><label class="mb-2 block text-sm font-bold"
+                                                        for="firstname">{{
                                                             $t('firstName') }}</label>
                                                     <WInput :required="true" id="firstname" v-model="user.first_name" />
                                                 </div>
-                                                <div class="mb-4 md:w-6/12 w-full"><label
-                                                        class="mb-2 block text-sm font-bold" for="lastname">{{
+                                                <div class="mb-2 w-6/12"><label class="mb-2 block text-sm font-bold"
+                                                        for="lastname">{{
                                                             $t('lastName') }}</label>
                                                     <WInput :required="true" id="lastname" v-model="user.last_name" />
                                                 </div>
                                             </div>
-                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
+                                            <div class="mb-2"><label class=" mb-2 block text-sm font-bold"
                                                     for="email">{{ $t('email') }}</label>
                                                 <WInput type="email" :required="true" id="email" v-model="user.email" />
                                             </div>
-                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
+                                            <div class="mb-2"><label class=" mb-2 block text-sm font-bold"
                                                     for="phone">{{ $t('phone') }}</label>
                                                 <WInput type="text" :required="true" id="phone" v-model="user.phone" />
                                             </div>
-                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold"
+                                            <div class="mb-2"><label class=" mb-2 block text-sm font-bold"
                                                     for="address">{{ $t('address') }}</label>
                                                 <WInput type="text" :required="true" id="address"
                                                     v-model="user.address1" />
                                             </div>
+                                            <!--
                                             <div class="mb-4"><label class=" mb-2 block text-sm font-bold" for="city">{{
-                                                $t('city') }}</label>
+                                                    $t('city') }}</label>
                                                 <WInput type="text" :required="true" id="city" v-model="user.city" />
-                                            </div>
-                                            <div class="mb-4"><label class=" mb-2 block text-sm font-bold" for="cni">{{
+                                            </div>-->
+                                            <div class="mb-2"><label class=" mb-2 block text-sm font-bold" for="cni">{{
                                                 $t('cni') }}</label>
                                                 <WInput type="text" :required="true" id="cni" v-model="user.cni" />
                                             </div>
 
-                                            <div class="mb-4"><label class="mb-2 block text-sm font-bold"
+                                            <div class="mb-2"><label class="mb-2 block text-sm font-bold"
                                                     for="password">{{ $t('password') }}</label>
                                                 <WInput type="password" :required="true"
                                                     placeholder="******************" id="password"
                                                     v-model="user.password" />
                                             </div>
-                                            <div class="mb-4"><label class="mb-2 block text-sm font-bold"
+                                            <div class="mb-2"><label class="mb-2 block text-sm font-bold"
                                                     for="confirm_password">{{ $t('confirmPassword') }}</label>
                                                 <WInput type="password" :required="true"
                                                     placeholder="******************" v-model="confirm_pass"
@@ -181,9 +180,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <div class="md:bg-gray-50 px-4 py-3 flex flex-row sm:px-6 justify-between w-full">
+                            <button type="button" @click="isCreation = false"
+                                class="mt-2 inline-flex justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
+                                {{ $t('cancel') }}</button>
                             <button type="submit"
-                                class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">
+                                class=" justify-center rounded-md bg-brand-default px-3 py- text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">
                                 <svg aria-hidden="true" role="status" v-if="isLoading"
                                     class="inline w-4 h-4 me-3 text-white animate-spin" viewBox="0 0 100 101"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -195,9 +197,6 @@
                                         fill="currentColor" />
                                 </svg>
                                 {{ $t('createAccount') }}</button>
-                            <button type="button" @click="isCreation = false"
-                                class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
-                                {{ $t('cancel') }}</button>
                         </div>
                     </form>
                 </div>
@@ -215,28 +214,26 @@ const isCreation = ref(false);
 const errorMessage = ref("");
 const tiers = [
     {
-        name: 'basic',
+        name: 'onBook',
         id: 'tier-basic',
         href: '/create_account',
-        priceMonthly: '2000 CFA',
-        priceYearly: '20000 CFA',
+        priceMonthly: '2.000 FCFA',
+        priceYearly: '20.000 FCFA',
         description: 'Dedicated support and infrastructure for your company.',
         features: [
-            'Book limit per loan: 1',
             'Unlimited borrowing',
             '24/24 assistance ',
         ],
         featured: true,
     },
     {
-        name: 'standard',
+        name: 'threeBooks',
         id: 'tier-standard',
         href: '/create_account',
-        priceMonthly: '5000 CFA',
-        priceYearly: '50000 CFA',
+        priceMonthly: '5.000 FCFA',
+        priceYearly: '50.000 FCFA',
         description: 'Dedicated support and infrastructure for your company.',
         features: [
-            'Book limit per loan: 3',
             'Unlimited borrowing',
             '24/24 assistance ',
         ],

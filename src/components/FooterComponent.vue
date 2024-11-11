@@ -9,7 +9,7 @@ import YoutubeIcon from './icons/YoutubeIcon.vue'
 </script>
 
 <template>
-  <footer class="w-full bg-brand-dark-blue">
+  <footer class="w-full bg-brand-default">
     <div
       class="flex flex-col lg:flex-row lg:justify-between items-center lg:items-start gap-6 lg:gap-0 w-full px-6 md:px-20 xl:px-40 py-10 max-w-[1440px] mx-auto">
       <div class="flex flex-col lg:flex-row items-center lg:items-start gap-0 lg:gap-20 xl:gap-32 h-full">
@@ -50,7 +50,7 @@ import YoutubeIcon from './icons/YoutubeIcon.vue'
       </div>
       <div class="flex flex-col justify-between items-center lg:items-end gap-6 lg:gap-7 mt-3 lg:mt-0">
         <CtaComponent />
-        <h6 class="text-brand-grayish-blue font-normal">
+        <h6 class="text-white font-normal">
           &copy wandabook. All Rights Reserved
         </h6>
       </div>

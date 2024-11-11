@@ -18,19 +18,18 @@ const onResize = () => {
 
 <template>
   <section
-    class="relative w-full pb-30 pt-30 lg:h-[80vh] px-6 md:px-20 lg:px-0 flex flex-col-reverse lg:flex-row lg:justify-between items-center overflow-x-clip">
-    <div class="absolute top-0 bottom-0 right-0 left-0 bg-brand-lighter-gray -z-30"></div>
+    class="relative w-full pb-30 h-[70vh] lg:h-[100vh] px-6 md:px-20 lg:px-0 flex flex-col-reverse lg:flex-row lg:justify-between items-center overflow-x-clip">
+    <div class="absolute top-0 bottom-0 right-0 left-0 bg-brand-default -z-30"></div>
 
     <div class="lg:ml-20 xl:ml-40 2xl:ml-52 lg:w-4/12">
-      <h2
-        class=" xl:text-6xl text-brand-dark-blue leading-[3rem] xl:leading-[4.5rem] text-center lg:text-left mb-6 text-2xl">
+      <h2 class=" xl:text-5xl text-white leading-[3rem] xl:leading-[4.5rem] text-center lg:text-left mb-6 text-2xl">
         {{ $t('title_1') }} <br class="hidden lg:block" />
         {{ $t('title_2') }}
       </h2>
-      <p class="text-brand-grayish-blue text-md lg:text-body font-normal text-center lg:text-left mb-8">
+      <p class="text-white text-md lg:text-body font-normal text-center lg:text-left mb-8">
         {{ $t('title_description') }}
       </p>
-      <div class="flex justify-center lg:justify-start">
+      <div class="flex justify-center lg:justify-start mb-10">
         <CtaComponent />
       </div>
     </div>

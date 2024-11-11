@@ -36,7 +36,7 @@ const articles = [
   },
   {
     id: 5,
-    title: 'JEUNESSE YOUTH 15-21',
+    title: 'JEUNES YOUTH 15-21',
     content:
       "c5.content",
     cover: comics,
