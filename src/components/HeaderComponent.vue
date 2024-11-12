@@ -11,7 +11,7 @@ const links = ['home', 'about', 'contact',]
 <template>
   <MobileMenuComponent :showMenu="showMenu" @close-menu="() => (showMenu = false)" />
   <header class="w-full h-16 lg:h-[84px] fixed z-50 bg-brand-default">
-    <div class="flex justify-between items-center w-full max-w-[1440px] h-full px-6 md:px-20 xl:px-40 mx-auto">
+    <div class="flex justify-between items-center w-full max-w-[1440px] h-full px-2 md:px-20 xl:px-40 mx-auto">
       <button v-if="showMenu" class="md:hidden" @click="() => (showMenu = false)">
         <img src="/images/icon-close.svg" alt="close" class="fill-white" />
       </button>
@@ -19,7 +19,7 @@ const links = ['home', 'about', 'contact',]
         <img src="/images/icon-hamburger.svg" alt="close" class="fill-white" />
       </button>
       <router-link to="/">
-        <img src="@/assets/images/logo18.png" alt="logo" class="md:w-52 w-28" />
+        <img src="@/assets/images/logo18.png" alt="logo" class="md:w-52 w-32" />
       </router-link>
 
       <nav class="hidden md:flex items-center h-full gap-7 ">
@@ -29,11 +29,12 @@ const links = ['home', 'about', 'contact',]
       </nav>
 
       <div class="gap-x-4 flex uppercase justify-center align-middle self-center  ">
-        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white"
+        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white hidden md:block"
           href="https://www.libib.com/login">{{
-            $t('connexion') }}</a><a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white">{{
-            $t('signUp')
-          }}</a>
+            $t('connexion') }}</a>
+        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white">{{
+          $t('signUp')
+        }}</a>
       </div>
 
 
