@@ -2,7 +2,7 @@
   "login": "Login",
   "home": "Home",
   "about": "About",
-  "connexion": "Connexion",
+  "connexion": "Login",
   "contact": "Contact",
   "blog": "blog",
   "signUp": "Sign Up",
@@ -85,5 +85,53 @@
   "privacy": "privacy policy",
   "subscribeNow": "Subscribe now",
   "onBook": "1 book",
-  "threeBooks": "3 books"
+  "threeBooks": "3 books",
+  "faqTitle": "Explore Common Questions",
+  "faq": [
+    {
+      "question": "How do I register for the online library?",
+      "response": "To register, go to our website and click on the 'Sign Up' button. Follow the steps to enter your personal information, create a password, and choose your subscription plan. Once registered, you can log in and start reserving books."
+    },
+    {
+      "question": "What are the subscription fees?",
+      "response": "We offer two types of subscriptions:\n1. Subscription for 1 book at a time: 2000 F CFA per month or 20,000 F CFA per year.\n2. Subscription for 3 books at a time: 5000 F CFA per month or 50,000 F CFA per year. You can borrow as many times as you want during the subscription period, as long as you respect the maximum number of books allowed by your plan."
+    },
+    {
+      "question": "How can I make a payment for my subscription?",
+      "response": "You can pay for your subscription via MT Money or Orange Money directly from our website. After selecting your subscription plan, you will be guided to complete the payment using one of these mobile payment services."
+    },
+    {
+      "question": "How do I borrow a book?",
+      "response": "Once logged in, browse our book catalog and choose the ones you want to borrow. Click 'Reserve' for each book. You can reserve up to 1 book with the basic subscription or 3 books with the premium subscription. Reserved books will be ready for pickup the next day at the library."
+    },
+    {
+      "question": "How do I pick up reserved books?",
+      "response": "Once your reservation is made, visit our library the next day to pick up your books. Make sure to bring an ID for verification when you collect your reservation."
+    },
+    {
+      "question": "Can I borrow multiple times in a month?",
+      "response": "Yes, you can borrow as many books as you like during your subscription period, but the number of books you can have at once depends on your subscription: either 1 book (basic subscription) or 3 books (premium subscription). You must return the current books before borrowing new ones."
+    },
+    {
+      "question": "How do I return borrowed books?",
+      "response": "To return your books, simply bring them directly to our library. Once returned, you can borrow other books according to your subscription."
+    },
+    {
+      "question": "What happens if I don’t return the book on time?",
+      "response": "If you exceed the allowed borrowing time, late fees may apply. Please check your subscription terms for details and avoid penalties by returning your books on time."
+    },
+    {
+      "question": "Can I change my subscription?",
+      "response": "Yes, you can switch to a different subscription type at any time from your account. The new fees will be calculated based on the change date, and you can immediately enjoy the new benefits of your subscription."
+    },
+    {
+      "question": "How can I contact customer support?",
+      "response": "For assistance, contact our customer support through the 'Contact' tab on our website, or call us directly at the provided phone number. You can also email us, and our team will respond as soon as possible."
+    }
+  ],
+  "stillHaveQuestion": "Still have questions?",
+  "contactOurSupport": "Contact our support",
+  "paymentSuccess": "Payment Successful!",
+  "paymentSuccessMessage": "Thank you for your payment. You can now borrow books and explore the catalog.",
+  "gotoLoginPage": "Go to login page"
 }

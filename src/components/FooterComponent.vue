@@ -34,17 +34,17 @@ import YoutubeIcon from './icons/YoutubeIcon.vue'
           </div>
         </div>
         <div class="flex flex-col items-center lg:items-start gap-3 mt-8 lg:mt-0">
-          <router-link v-for="link in ['about us', 'contact', 'blog']" :key="link"
+          <router-link v-for="link in ['home', 'about', 'contact']" :key="link"
             class="capitalize text-brand-light-grayish-blue font-light transition-all duration-200 ease hover:text-brand-lime-green"
             to="/">
-            {{ link }}
+            {{ $t(link) }}
           </router-link>
         </div>
         <div class="flex flex-col items-center lg:items-start gap-3 mt-3 lg:mt-0">
           <router-link v-for="link in ['careers', 'support', 'privacy policy']" :key="link"
             class="capitalize text-brand-light-grayish-blue font-light transition-all duration-200 ease hover:text-brand-lime-green"
             to="/">
-            {{ link }}
+            {{ $t(link) }}
           </router-link>
         </div>
       </div>

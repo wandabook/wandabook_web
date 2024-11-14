@@ -39,12 +39,18 @@
                             {{ $t(tier.name) }}</h3>
                         <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
                             <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
-                                tier.priceYearly }}</span>
+                                new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
+                                    tier.priceYearly,
+                                )
+                            }}</span>
                             <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ $t('year') }}</span>
                         </p>
                         <p class="mt-4 flex items-baseline gap-x-2" v-else>
                             <span :class="['text-gray-900', 'lg:text-5xl text-sm font-bold tracking-tight']">{{
-                                tier.priceMonthly }}</span>
+                                new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
+                                    tier.priceMonthly,
+                                )
+                            }}</span>
                             <span :class="['text-gray-500', 'md:text-base  text-sm']">/{{ $t('month') }}</span>
                         </p>
                         <p :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7']">{{
@@ -60,7 +66,7 @@
                                 {{ $t(feature) }}
                             </li>
                         </ul>
-                        <a :aria-describedby="tier.id" @click="isCreation = true"
+                        <a :aria-describedby="tier.id" @click="onSelectSubscription(tier)"
                             :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
                             {{ $t('subscribeNow') }}
 
@@ -72,33 +78,13 @@
     </section>
 
     <div class="relative z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true" v-if="isCreation">
-        <!--
-    Background backdrop, show/hide based on modal state.
-
-    Entering: "ease-out duration-300"
-      From: "opacity-0"
-      To: "opacity-100"
-    Leaving: "ease-in duration-200"
-      From: "opacity-100"
-      To: "opacity-0"
-  -->
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
 
         <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                <!--
-        Modal panel, show/hide based on modal state.
-
-        Entering: "ease-out duration-300"
-          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          To: "opacity-100 translate-y-0 sm:scale-100"
-        Leaving: "ease-in duration-200"
-          From: "opacity-100 translate-y-0 sm:scale-100"
-          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-      -->
                 <div
                     class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-7 sm:w-full sm:max-w-lg">
-                    <form @submit.prevent="createUserAccount">
+                    <form @submit.prevent="pay">
                         <div class="bg-white px-4 sm:p-6 sm:pb-2">
                             <div class="sm:flex sm:items-start">
                                 <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
@@ -203,7 +189,44 @@
             </div>
         </div>
     </div>
+    <!-- now Payment and close -->
+    <div class="relative z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true" v-if="isSuccess">
 
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div
+                    class="relative transform overflow-hidden  text-left  transition-all sm:my-7 sm:w-full sm:max-w-lg">
+                    <div class="min-h-screen flex items-center justify-center ">
+                        <div class=" p-8 rounded-lg shadow-lg w-full max-w-md bg-white">
+                            <!-- Success alert with Happy SVG -->
+                            <div class="flex items-center space-x-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500"
+                                    viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M9 1a8 8 0 110 16A8 8 0 019 1zm0 14a6 6 0 100-12 6 6 0 000 12zm3.293-4.707a1 1 0 00-1.414 1.414L9 11.414l-2.879 2.879a1 1 0 00-1.414-1.414L9 9.707l4.293 4.293z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <div>
+                                    <h1 class="text-xl font-semibold text-green-700">{{ $t('paymentSuccess') }}</h1>
+                                    <p class="text-green-500 mt-2">{{ $t('paymentSuccessMessage') }}</p>
+                                </div>
+                            </div>
+
+                            <!-- Redirection Button -->
+                            <div class="mt-6">
+                                <button @click="redirectToLogin"
+                                    class="w-full bg-brand-default text-white py-2 rounded-lg hover:bg-brand-default/80 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                                    {{ $t('gotoLoginPage') }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </template>
 <script setup lang="ts" type="module">
@@ -211,14 +234,15 @@ import { ref } from 'vue';
 
 const isAnnual = ref(false);
 const isCreation = ref(false);
+const isSuccess = ref(false);
 const errorMessage = ref("");
 const tiers = [
     {
         name: 'onBook',
         id: 'tier-basic',
         href: '/create_account',
-        priceMonthly: '2.000 FCFA',
-        priceYearly: '20.000 FCFA',
+        priceMonthly: 2000,
+        priceYearly: 20000,
         description: 'Dedicated support and infrastructure for your company.',
         features: [
             'Unlimited borrowing',
@@ -230,8 +254,8 @@ const tiers = [
         name: 'threeBooks',
         id: 'tier-standard',
         href: '/create_account',
-        priceMonthly: '5.000 FCFA',
-        priceYearly: '50.000 FCFA',
+        priceMonthly: 5000,
+        priceYearly: 50000,
         description: 'Dedicated support and infrastructure for your company.',
         features: [
             'Unlimited borrowing',
@@ -241,22 +265,25 @@ const tiers = [
     },
 
 ]
+const selectedSubscription = ref();
 import WInput from '../components/ui/WInput.vue';
+import { addNewUser, createNewUser } from '../lib/appwrite';
+const redirectToLogin = () => {
+    window.location.href = 'https://www.libib.com/u/wandabook' // Assuming your login route is named "login"
+};
+declare global {
+    interface Window {
+        CinetPay: any; // Typage de CinetPay si le SDK est chargé dans window
+    }
+}
 
-import type { PaymentData } from 'cinetpay-node-sdk';
-import { addNewUser } from '../lib/appwrite';
 const isLoading = ref(false);
 const createUserAccount = async () => {
-    console.log('information about the users', user.value);
     errorMessage.value = "";
     if (confirm_pass.value === user.value.password) {
         isLoading.value = true;
         user.value.notification_email = user.value.email;
-        console.log('This is the user information', user.value);
         const result = await addNewUser(JSON.stringify(user.value));
-        console.log("Models.Execution: ", result.responseBody);
-        console.log("result.errors: ", result.errors);
-        console.log("result.status: ", result.status);
         if (result.status === 'failed') {
             errorMessage.value = 'an error occur. please try again or contact the support'
         } else if (result.status === 'completed') {
@@ -264,58 +291,103 @@ const createUserAccount = async () => {
             if (response.result && response.result.error) {
                 errorMessage.value = 'an error occur. please try again or contact the support'
             } else {
-                // Present the popup
-                window.location.href = 'https://www.libib.com/u/wandabook'
+                await createWandaUser(response.result.barcode);
             }
-            // if the user is created succesfully, you I have to duisplay the record
         }
-        console.log('message ', result);
         isLoading.value = false;
     }
 }
+const onSelectSubscription = (tier: any) => {
+    isCreation.value = true;
+    selectedSubscription.value = tier;
+}
 const confirm_pass = ref('');
 const user = ref({
-    first_name: 'user',
-    last_name: '',
-    email: '',
+    first_name: 'Tchio',
+    last_name: 'Styves',
+    email: 'styvesdaudet@gmail.com',
     notification_email: '',
-    password: '',
-    phone: "",
-    address1: "",
-    city: '',
-    cni: "",
+    password: 'password1234',
+    phone: "650601933",
+    address1: "Message",
+    city: 'Yaounde',
+    cni: "111112",
 
 });
+const createWandaUser = async (barcode: any) => {
+    // Get the current date
+    const now = new Date();
 
-const paymentData = <PaymentData>{
-    transaction_id: '123456789',
-    amount: 1000,
-    currency: 'XAF',
-    description: 'Achat de produits',
-    notify_url: 'https://votresite.com/notify',
-    return_url: 'https://votresite.com/return',
-    customer_name: 'John Doe',
-    customer_surname: 'Doe',
-    customer_phone_number: '+123456789',
-    customer_email: 'john.doe@example.com',
-    customer_address: '123 Rue Exemple',
-    customer_city: 'Abidjan',
-    customer_country: 'CI',
-    customer_state: 'État',
-    customer_zip_code: '00000',
-    channels: 'ALL', // ou 'CREDIT_CARD', 'MOBILE_MONEY', 'WALLET'
-};
-const pay = () => {
+    // Now + 1 month
+    const oneMonthLater = new Date(now);
+    oneMonthLater.setMonth(now.getMonth() + 1);
 
-    /* CinetPay.setConfig({
-         apikey: 'YOUR_API_KEY',
-         site_id: "YOUR_SITE_ID",
-         notify_url: 'https://mondomaine.com/notify/',
-         close_after_response: true,
-     });*/
-
+    // Now + 1 year
+    const oneYearLater = new Date(now);
+    oneYearLater.setFullYear(now.getFullYear() + 1);
+    let userRecord = {
+        first_name: user.value.first_name,
+        last_name: user.value.last_name,
+        email: user.value.email,
+        phone: user.value.phone,
+        address: user.value.address1,
+        city: user.value.city,
+        freeze: false,
+        barcode: barcode,
+        cni: user.value.cni,
+        subcriptionPlan: selectedSubscription.value.name,
+        lastSubcriptionDate: new Date(now),
+        endSubscriptionDate: isAnnual.value ? oneYearLater : oneMonthLater,
+        readCondition: true
+    };
+    try {
+        const userResult = await createNewUser(userRecord);
+        isCreation.value = false;
+        isSuccess.value = true;
+    } catch (e) {
+        console.log("error", e);
+        errorMessage.value = 'errorOccur'
+    }
 
 
 }
-pay();
+const pay = () => {
+
+    window.CinetPay.setConfig({
+        apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
+        site_id: import.meta.env.VITE_APP_CINET_PAY_SITE_Id, // Votre Site ID
+        notify_url: 'http://mondomaine.com/notify/',
+        mode: 'PRODUCTION',
+    });
+    window.CinetPay.getCheckout({
+        transaction_id: Math.floor(Math.random() * 100000000).toString(),
+        amount: isAnnual.value ? selectedSubscription.value.priceYearly : selectedSubscription.value.priceMonthly,
+        currency: 'XAF',
+        channels: 'ALL',
+        description: `Paiement of ${selectedSubscription.value.description}`,
+        customer_name: user.value.last_name,
+        customer_surname: user.value.first_name,
+        customer_email: user.value.email,
+        customer_phone_number: user.value.phone,
+        customer_address: user.value.address1,
+        customer_city: user.value.city,
+        customer_country: 'CM',
+        customer_state: 'CM',
+        // customer_zip_code: '06510',
+    });
+
+    window.CinetPay.waitResponse((data: { status: string }) => {
+        console.log('data value', data);
+        if (data.status === 'REFUSED') {
+            alert('Votre paiement a échoué');
+            createUserAccount();
+        } else if (data.status === 'ACCEPTED') {
+            createUserAccount();
+        }
+    });
+
+    window.CinetPay.onError((data: any) => {
+        console.error('Erreur CinetPay:', data);
+    });
+}
 </script>

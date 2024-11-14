@@ -1,7 +1,7 @@
-import { Client, Account, Functions, ExecutionMethod } from 'appwrite';
-
+import { Client, Account, Functions, ExecutionMethod, Databases, ID } from 'appwrite';
+export { ID } from 'appwrite';
 export const client = new Client();
-
+const databases = new Databases(client);
 client
     .setEndpoint('https://cloud.appwrite.io/v1')
     .setProject('671629940021dc2b8ecb'); // Replace with your project ID
@@ -20,4 +20,12 @@ export const addNewUser = async (data: any) => {
     );
     return result;
 }
-export { ID } from 'appwrite';
+
+export const createNewUser = async (data: any) => {
+    return databases.createDocument(
+        '671bb8f9000c6e9bf6a0',
+        '671bb91d000cd2063080',
+        ID.unique(),
+        data
+    );
+}

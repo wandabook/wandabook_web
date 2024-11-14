@@ -81,5 +81,53 @@
   "termsOfUse": "conditions d'utilisation",
   "and": "et",
   "privacy": "politique de confidentialité",
-  "subscribeNow": "S'inscrire maintenant"
+  "subscribeNow": "S'inscrire maintenant",
+  "faqTitle": "Explorer les questions courantes",
+  "faq": [
+    {
+      "question": "Comment m'inscrire à la bibliothèque en ligne?",
+      "response": "Pour vous inscrire, rendez-vous sur notre site web et cliquez sur le bouton 'Inscription'. Suivez les étapes pour entrer vos informations personnelles, créer un mot de passe et choisir votre plan d'abonnement. Une fois inscrit, vous pourrez vous connecter et commencer à réserver des livres."
+    },
+    {
+      "question": "Quels sont les tarifs d'abonnement?",
+      "response": "Nous offrons deux types d'abonnement : \n1. Abonnement pour 1 livre à la fois : 2000 F CFA par mois ou 20 000 F CFA par an.\n2. Abonnement pour 3 livres à la fois : 5000 F CFA par mois ou 50 000 F CFA par an. Vous pouvez emprunter autant de fois que vous voulez pendant la période d'abonnement, tant que vous respectez le nombre maximum de livres de votre plan."
+    },
+    {
+      "question": "Comment puis-je effectuer un paiement pour mon abonnement?",
+      "response": "Vous pouvez payer votre abonnement via MT Money ou Orange Money, directement depuis notre site web. Après avoir choisi votre plan d'abonnement, vous serez guidé pour effectuer le paiement en utilisant l'un de ces services de paiement mobile."
+    },
+    {
+      "question": "Comment emprunter un livre?",
+      "response": "Une fois connecté, parcourez notre catalogue de livres et choisissez ceux que vous souhaitez emprunter. Cliquez sur 'Réserver' pour chaque livre. Vous pouvez réserver jusqu'à 1 livre pour l'abonnement basique ou 3 livres pour l'abonnement premium. Les livres réservés seront prêts à être récupérés le lendemain à la bibliothèque."
+    },
+    {
+      "question": "Comment récupérer les livres réservés?",
+      "response": "Une fois votre réservation effectuée, rendez-vous à notre bibliothèque le lendemain pour récupérer vos livres. Assurez-vous d'apporter une pièce d'identité pour vérifier votre réservation lors du retrait."
+    },
+    {
+      "question": "Puis-je emprunter plusieurs fois dans le mois?",
+      "response": "Oui, vous pouvez emprunter autant de livres que vous le souhaitez pendant la période de votre abonnement, mais le nombre de livres en votre possession simultanément dépend de votre abonnement : soit 1 livre (abonnement basique) soit 3 livres (abonnement premium). Vous devez retourner les livres en cours avant d'en emprunter de nouveaux."
+    },
+    {
+      "question": "Comment retourner les livres empruntés?",
+      "response": "Pour retourner vos livres, il vous suffit de les ramener directement à notre bibliothèque. Une fois retournés, vous pouvez emprunter d'autres livres en fonction de votre abonnement."
+    },
+    {
+      "question": "Que se passe-t-il si je ne retourne pas le livre à temps?",
+      "response": "Si vous dépassez la durée autorisée pour emprunter un livre, des frais de pénalité peuvent s'appliquer. Veuillez vérifier les conditions de votre abonnement pour connaître les détails et éviter les pénalités en retournant vos livres à temps."
+    },
+    {
+      "question": "Puis-je changer mon abonnement?",
+      "response": "Oui, vous pouvez passer à un autre type d'abonnement à tout moment depuis votre compte. Les nouveaux frais seront calculés en fonction de la date de modification et vous pourrez profiter immédiatement des nouveaux avantages de votre abonnement."
+    },
+    {
+      "question": "Comment puis-je contacter le support client?",
+      "response": "Pour toute assistance, contactez notre service client via l'onglet 'Contact' sur notre site web, ou appelez-nous directement au numéro de téléphone fourni. Vous pouvez également nous envoyer un e-mail, et notre équipe vous répondra dans les plus brefs délais."
+    }
+  ],
+  "stillHaveQuestion": "Vous avez encore des questions ?",
+  "contactOurSupport": "Contactez notre support",
+  "paymentSuccess": "Paiement réussi !",
+  "paymentSuccessMessage": "Merci pour votre paiement. Vous pouvez maintenant emprunter des livres et explorer le catalogue.",
+  "gotoLoginPage": "Aller à la page de connexion"
 }
