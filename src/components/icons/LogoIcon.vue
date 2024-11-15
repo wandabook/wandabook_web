@@ -1,3 +1,3 @@
 <template>
-  <img src="@/assets/images/logo18.png" alt="logo" class="w-52" />
+  <img src="@/assets/images/Plan_de_travail_black.png" alt="logo" class="w-52" />
 </template>
