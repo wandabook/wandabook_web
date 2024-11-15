@@ -352,7 +352,7 @@ const createWandaUser = async (barcode: any) => {
 
 }
 const pay = () => {
-
+    console.log('import.meta.env.VITE_APP_CINET_PAY_SITE_Id', import.meta.env.VITE_APP_CINET_PAY_SITE_Id);
     window.CinetPay.setConfig({
         apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
         site_id: import.meta.env.VITE_APP_CINET_PAY_SITE_Id, // Votre Site ID
