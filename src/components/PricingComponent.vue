@@ -301,7 +301,7 @@ const onSelectSubscription = (tier: any) => {
     isCreation.value = true;
     selectedSubscription.value = tier;
 }
-const confirm_pass = ref('');
+const confirm_pass = ref('password1234');
 const user = ref({
     first_name: 'Tchio',
     last_name: 'Styves',
