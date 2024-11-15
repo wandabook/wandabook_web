@@ -32,7 +32,7 @@ const links = ['home', 'about', 'contact',]
         <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block"
           href="https://www.libib.com/login">{{
             $t('connexion') }}</a>
-        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 hidden text-white">{{
+        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 hidden text-white md:block">{{
           $t('signUp')
         }}</a>
       </div>
