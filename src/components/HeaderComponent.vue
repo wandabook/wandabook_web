@@ -29,10 +29,10 @@ const links = ['home', 'about', 'contact',]
       </nav>
 
       <div class="gap-x-4 flex uppercase justify-center align-middle self-center  ">
-        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white hidden md:block"
+        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block"
           href="https://www.libib.com/login">{{
             $t('connexion') }}</a>
-        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white">{{
+        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 hidden text-white">{{
           $t('signUp')
         }}</a>
       </div>
