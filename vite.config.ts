@@ -15,4 +15,8 @@ export default defineConfig({
 
   },
   optimizeDeps: { exclude: ["node_libcurl"] },
+  define: {
+    'process.env.VITE_APP_CINET_PAY_KEY': JSON.stringify(process.env.VITE_APP_CINET_PAY_KEY),
+    'process.env.VITE_APP_CINET_PAY_SITE_Id': JSON.stringify(process.env.VITE_APP_CINET_PAY_SITE_Id),
+  }
 })
