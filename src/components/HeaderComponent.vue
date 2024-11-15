@@ -19,7 +19,7 @@ const links = ['home', 'about', 'contact',]
         <img src="/images/icon-hamburger.svg" alt="close" class="fill-white" />
       </button>
       <router-link to="/">
-        <img src="@/assets/images/logo18.png" alt="logo" class="md:w-52 w-32" />
+        <img src="@/assets/images/logo18.png" alt="logo" class="md:w-52 w-52" />
       </router-link>
 
       <nav class="hidden md:flex items-center h-full gap-7 ">
