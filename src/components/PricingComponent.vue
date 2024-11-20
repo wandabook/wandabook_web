@@ -351,10 +351,11 @@ const createWandaUser = async (barcode: any) => {
         freeze: false,
         barcode: barcode,
         cni: user.value.cni,
-        subcriptionPlan: selectedSubscription.value.name,
+        subscriptionPlan: selectedSubscription.value.$id,
         lastSubcriptionDate: new Date(now),
         endSubscriptionDate: isAnnual.value ? oneYearLater : oneMonthLater,
-        readCondition: true
+        readCondition: true,
+        isAnnual: isAnnual.value
     };
     try {
         const userResult = await createNewUser(userRecord);
@@ -377,7 +378,7 @@ const pay = () => {
     });
     window.CinetPay.getCheckout({
         transaction_id: Math.floor(Math.random() * 100000000).toString(),
-        amount: isAnnual.value ? selectedSubscription.value.priceYearly : selectedSubscription.value.priceMonthly,
+        amount: isAnnual.value ? selectedSubscription.value.yearly_amount : selectedSubscription.value.monthly_amount,
         currency: 'XAF',
         channels: 'ALL',
         description: `Paiement of ${selectedSubscription.value.description}`,
