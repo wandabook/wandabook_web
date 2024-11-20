@@ -133,5 +133,7 @@
   "contactOurSupport": "Contact our support",
   "paymentSuccess": "Payment Successful!",
   "paymentSuccessMessage": "Thank you for your payment. You can now borrow books and explore the catalog.",
-  "gotoLoginPage": "Go to login page"
+  "gotoLoginPage": "Go to login page",
+  "1 book": "1 book",
+  "3 books": "3 books"
 }

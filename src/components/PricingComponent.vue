@@ -33,14 +33,14 @@
             <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
                 <div
                     class="mx-auto mt-1 grid max-w-lg grid-cols-2 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-2">
-                    <div v-for="(tier, tierIdx) in tiers" :key="tier.id"
+                    <div v-for="(tier, tierIdx) in subscriptions" :key="tier.id"
                         :class="['relative shadow-2xl md:mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl md:p-8 p-3 ring-1 ring-gray-900/10 sm:p-10']">
                         <h3 :id="tier.id" :class="['text-brand-default font-extrabold uppercase leading-7']">
-                            {{ $t(tier.name) }}</h3>
+                            {{ $t(tier.title) }}</h3>
                         <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
                             <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
                                 new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
-                                    tier.priceYearly,
+                                    tier.yearly_amount,
                                 )
                             }}</span>
                             <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ $t('year') }}</span>
@@ -48,13 +48,14 @@
                         <p class="mt-4 flex items-baseline gap-x-2" v-else>
                             <span :class="['text-gray-900', 'lg:text-5xl text-sm font-bold tracking-tight']">{{
                                 new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
-                                    tier.priceMonthly,
+                                    tier.monthly_amount,
                                 )
                             }}</span>
                             <span :class="['text-gray-500', 'md:text-base  text-sm']">/{{ $t('month') }}</span>
                         </p>
                         <p :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7']">{{
                             tier.description }}</p>
+                        <!--
                         <ul role="list"
                             :class="['text-gray-600', 'md:mt-8 mt-2 md:space-y-3 space-x-1 text-sm leading-6 sm:mt-10']">
                             <li v-for="feature in tier.features" :key="feature" class="flex gap-x-3">
@@ -66,6 +67,7 @@
                                 {{ $t(feature) }}
                             </li>
                         </ul>
+                        -->
                         <a :aria-describedby="tier.id" @click="onSelectSubscription(tier)"
                             :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
                             {{ $t('subscribeNow') }}
@@ -236,6 +238,18 @@ const isAnnual = ref(false);
 const isCreation = ref(false);
 const isSuccess = ref(false);
 const errorMessage = ref("");
+
+const subscriptions = ref();
+
+const fetchSubscriptions = async () => {
+    const result = await getDocumentsGlobal(subscriptionCollection);
+    if (result.documents != null && result.documents.length > 0) {
+        subscriptions.value = result.documents;
+    } else {
+        subscriptions.value = [];
+    }
+    console.log(result);
+}
 const tiers = [
     {
         name: 'onBook',
@@ -267,7 +281,8 @@ const tiers = [
 ]
 const selectedSubscription = ref();
 import WInput from '../components/ui/WInput.vue';
-import { addNewUser, createNewUser } from '../lib/appwrite';
+import { addNewUser, createNewUser, getDocumentsGlobal } from '../lib/appwrite';
+import { subscriptionCollection } from '../utilities/constants';
 const redirectToLogin = () => {
     window.location.href = 'https://www.libib.com/u/wandabook' // Assuming your login route is named "login"
 };
@@ -314,6 +329,7 @@ const user = ref({
     cni: "111112",
 
 });
+fetchSubscriptions();
 const createWandaUser = async (barcode: any) => {
     // Get the current date
     const now = new Date();
