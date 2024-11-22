@@ -2,7 +2,7 @@
 
 
 
-    <section class="w-full">
+    <section class="w-full hidden md:block">
         <div class="w-full px-3 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
             <h3
                 class="text-[32px] lg:text-[42px] text-brand-dark-blu capitalize text-center lg:text-left mb-8 lg:mb-12 font-thin">
@@ -70,6 +70,67 @@
                         -->
                         <a :aria-describedby="tier.id" @click="onSelectSubscription(tier)"
                             :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
+                            {{ $t('subscribeNow') }}
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Mobile app-->
+    <section class="w-full md:hidden">
+        <div class="w-full   max-w-[1440px] mx-auto">
+            <h3 class="text-xl px-6 text-left capitalize font-heading">
+                {{ $t('price') }}
+            </h3>
+            <div class="flex justify-center max-w-[14rem] m-auto mb-2  mt-2">
+                <div class="relative flex w-full p-1 bg-brand-default dark:bg-slate-900 rounded-full">
+                    <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
+                        <span
+                            class="absolute inset-0 w-1/2 bg-red-500 rounded-full transform transition-transform duration-150 ease-in-out"
+                            :class="isAnnual ? 'translate-x-0' : 'translate-x-full'"></span>
+                    </span>
+                    <button
+                        class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
+                        :class="isAnnual ? 'text-white' : 'text-white dark:text-slate-400'" @click="isAnnual = true"
+                        :aria-pressed="isAnnual">{{ $t('yearly') }}<span
+                            :class="isAnnual ? 'text-indigo-200' : 'text-white dark:text-slate-500'">-20%</span></button>
+                    <button
+                        class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
+                        :class="isAnnual ? 'text-white dark:text-slate-400' : 'text-white'" @click="isAnnual = false"
+                        :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
+                </div>
+            </div>
+            <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
+                <div
+                    class="mx-auto mt-1 grid max-w-lg grid-cols-2 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-2">
+                    <div v-for="(tier, tierIdx) in subscriptions" :key="tier.id"
+                        :class="['relative md:mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl md:p-8 p-3 ring-1 ring-gray-900/10 sm:p-10']">
+                        <h3 :id="tier.id" :class="['text-brand-default font-extrabold uppercase leading-7']">
+                            {{ $t(tier.title) }}</h3>
+                        <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
+                            <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
+                                new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
+                                    tier.yearly_amount,
+                                )
+                            }}</span>
+                            <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ $t('year') }}</span>
+                        </p>
+                        <p class="mt-4 flex items-baseline gap-x-2" v-else>
+                            <span :class="['text-gray-900', 'lg:text-5xl text-sm font-bold tracking-tight']">{{
+                                new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
+                                    tier.monthly_amount,
+                                )
+                            }}</span>
+                            <span :class="['text-gray-500', 'md:text-base  text-sm']">/{{ $t('month') }}</span>
+                        </p>
+                        <p
+                            :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7, truncate line-clamp-3']">
+                            {{
+                                tier.description }}</p>
+                        <a :aria-describedby="tier.id" @click="onSelectSubscription(tier)"
+                            :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-5']">
                             {{ $t('subscribeNow') }}
 
                         </a>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import CtaComponent from './CtaComponent.vue'
+import SingleScroll from './SingleScroll.vue'
 
 const isMobile = ref(false)
 
@@ -18,7 +19,7 @@ const onResize = () => {
 
 <template>
   <section
-    class="relative w-full pb-30  lg:h-[100vh] px-6 md:px-20 lg:px-0 flex flex-col-reverse lg:flex-row lg:justify-between items-center overflow-x-clip">
+    class="hidden md:flex relative w-full pb-30  lg:h-[100vh] px-6 md:px-20 lg:px-0  flex-col-reverse lg:flex-row lg:justify-between items-center overflow-x-clip">
     <div class="absolute top-0 bottom-0 right-0 left-0 bg-brand-default -z-30"></div>
 
     <div class="lg:ml-20 xl:ml-40 2xl:ml-52 lg:w-4/12">
@@ -36,5 +37,19 @@ const onResize = () => {
     <img src="@/assets/default/lib.png"
       class="lg:w-7/12 -z-10 lg:-mr-32 relative top-[30px] md:top-[-8px] lg:top-0 lg:h-[140%] xl:h-auto lg:right-[30px] xl:right-0"
       alt="mockups" />
+  </section>
+  <section>
+    <div class=" pt-20 pb-7 md:hidden">
+      <SingleScroll>
+        <!-- Contenu pour le défilement horizontal -->
+        <div v-for="item in 10" :key="item"
+          class="w-64 h-40 py-2 bg-blue-500 rounded-md flex flex-col items-center justify-between  text-white bg-[url('@/assets/images/damso.jpg')] bg-cover bg-center ">
+          Item {{ item }}
+          <div class=" flex justify-center lg:justify-start ">
+            <CtaComponent />
+          </div>
+        </div>
+      </SingleScroll>
+    </div>
   </section>
 </template>
