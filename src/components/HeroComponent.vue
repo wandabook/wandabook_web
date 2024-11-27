@@ -2,9 +2,21 @@
 import { ref, onMounted } from 'vue'
 import CtaComponent from './CtaComponent.vue'
 import SingleScroll from './SingleScroll.vue'
+import { getDocumentsGlobal } from '../lib/appwrite';
+import { bookCollection, } from '../utilities/constants';
+const books = ref();
 
+const fetchBooks = async () => {
+  const result = await getDocumentsGlobal(bookCollection);
+  if (result.documents != null && result.documents.length > 0) {
+    books.value = result.documents;
+  } else {
+    books.value = [];
+  }
+  console.log(result);
+}
 const isMobile = ref(false)
-
+fetchBooks();
 onMounted(() => {
   onResize()
   window.addEventListener('resize', onResize)
@@ -14,6 +26,9 @@ const onResize = () => {
   if (window.screen.width <= 425) {
     isMobile.value = true
   }
+}
+const goto = (link: string) => {
+  window.location.href = link;
 }
 </script>
 
@@ -42,11 +57,13 @@ const onResize = () => {
     <div class=" pt-20 pb-7 md:hidden">
       <SingleScroll>
         <!-- Contenu pour le défilement horizontal -->
-        <div v-for="item in 10" :key="item"
-          class="w-64 h-40 py-2 bg-blue-500 rounded-md flex flex-col items-center justify-between  text-white bg-[url('@/assets/images/damso.jpg')] bg-cover bg-center ">
-          Item {{ item }}
+        <div v-for="item in books" :key="item" :style="{ backgroundImage: `url(${item.image})` }"
+          class="w-64 h-40 py-2 font-extrabold rounded-md flex flex-col items-center justify-between  text-brand-default  bg-cover bg-center ">
+          {{ item.title }}
           <div class=" flex justify-center lg:justify-start ">
-            <CtaComponent />
+            <button @click="goto(item.link)"
+              class="h-8 md:hidden text-sm px-4 rounded-full bg-brand-lime-red text-brand-white font-normal capitalize transition-all duration-200 ease hover:opacity-60">
+              {{ $t('view') }}</button>
           </div>
         </div>
       </SingleScroll>

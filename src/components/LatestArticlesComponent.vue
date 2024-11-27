@@ -120,7 +120,7 @@ const articles = [
   <section class="w-full bg-brand-lighter-gray hidden md:block">
     <div class="w-full px-6 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
       <h3
-        class="text-[32px] lg:text-[42px] text-brand-dark-blue font-normal capitalize text-center lg:text-left mb-8 lg:mb-12 font-heading">
+        class="text-[32px] uppercase lg:text-[42px] text-brand-dark-blue font-normal text-center lg:text-left mb-8 lg:mb-12 font-heading">
         {{ $t('categories') }}
       </h3>
       <div class="md:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden">
@@ -142,7 +142,7 @@ const articles = [
   </section>
   <section class="w-full md:hidden mb-5">
     <div class="w-full max-w-[1440px] mx-auto">
-      <h3 class="text-xl px-4 capitalize text-left mb-4 font-heading">
+      <h3 class="text-xl px-4  text-left mb-4 font-heading uppercase font-extrabold">
         {{ $t('categories') }}
       </h3>
       <div class="md:grid  grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden">

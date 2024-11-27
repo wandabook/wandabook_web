@@ -102,10 +102,10 @@
             </div>
             <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
                 <div
-                    class="mx-auto mt-1 grid max-w-lg grid-cols-2 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-2">
-                    <div v-for="(tier, tierIdx) in subscriptions" :key="tier.id"
-                        :class="['relative md:mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl md:p-8 p-3 ring-1 ring-gray-900/10 sm:p-10']">
-                        <h3 :id="tier.id" :class="['text-brand-default font-extrabold uppercase leading-7']">
+                    class="mx-auto mt-1 grid max-w-lg grid-cols-3 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-2">
+                    <div v-for="(tier, tierIdx) in subscriptions" :key="tier.id" @click="onSelectSubscription(tier)"
+                        :class="['relative md:mx-5', 'rounded-3xl p-3 ring-1 ring-gray-900/10 sm:p-10']">
+                        <h3 :id="tier.id" :class="['text-brand-default font-extrabold uppercase  text-sm']">
                             {{ $t(tier.title) }}</h3>
                         <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
                             <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
@@ -113,7 +113,7 @@
                                     tier.yearly_amount,
                                 )
                             }}</span>
-                            <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ $t('year') }}</span>
+                            <!--  <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ $t('year') }}</span>-->
                         </p>
                         <p class="mt-4 flex items-baseline gap-x-2" v-else>
                             <span :class="['text-gray-900', 'lg:text-5xl text-sm font-bold tracking-tight']">{{
@@ -121,9 +121,9 @@
                                     tier.monthly_amount,
                                 )
                             }}</span>
-                            <span :class="['text-gray-500', 'md:text-base  text-sm']">/{{ $t('month') }}</span>
+                            <!--    <span :class="['text-gray-500', 'md:text-base  text-sm']">/{{ $t('month') }}</span> -->
                         </p>
-                        <p
+                        <!-- <p
                             :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7, truncate line-clamp-3']">
                             {{
                                 tier.description }}</p>
@@ -131,7 +131,7 @@
                             :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-5']">
                             {{ $t('subscribeNow') }}
 
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -309,35 +309,7 @@ const fetchSubscriptions = async () => {
     }
     console.log(result);
 }
-const tiers = [
-    {
-        name: 'onBook',
-        id: 'tier-basic',
-        href: '/create_account',
-        priceMonthly: 2000,
-        priceYearly: 20000,
-        description: 'Dedicated support and infrastructure for your company.',
-        features: [
-            'Unlimited borrowing',
-            '24/24 assistance ',
-        ],
-        featured: true,
-    },
-    {
-        name: 'threeBooks',
-        id: 'tier-standard',
-        href: '/create_account',
-        priceMonthly: 5000,
-        priceYearly: 50000,
-        description: 'Dedicated support and infrastructure for your company.',
-        features: [
-            'Unlimited borrowing',
-            '24/24 assistance ',
-        ],
-        featured: true,
-    },
 
-]
 const selectedSubscription = ref();
 import WInput from '../components/ui/WInput.vue';
 import { addNewUser, createNewUser, getDocumentsGlobal } from '../lib/appwrite';
