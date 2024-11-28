@@ -58,7 +58,7 @@ const goto = (link: string) => {
       <SingleScroll>
         <!-- Contenu pour le défilement horizontal -->
         <div v-for="item in books" :key="item" :style="{ backgroundImage: `url(${item.image})` }"
-          class="w-64 h-40 py-2 font-extrabold rounded-md flex flex-col items-center justify-between  text-brand-default  bg-cover bg-center ">
+          class="  shadow-lime-100 shadow-2xl w-64 h-40 py-2 font-extrabold rounded-md flex flex-col items-center justify-between  text-brand-default  bg-cover bg-center ">
           {{ item.title }}
           <div class=" flex justify-center lg:justify-start ">
             <button @click="goto(item.link)"

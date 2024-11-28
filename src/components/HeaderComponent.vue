@@ -13,10 +13,10 @@ const links = ['home', 'about', 'contact',]
   <header class="w-full h-16 lg:h-[84px] fixed z-50 bg-brand-default">
     <div class="flex justify-between items-center w-full max-w-[1440px] h-full px-2 md:px-20 xl:px-40 mx-auto">
       <button v-if="showMenu" class="md:hidden" @click="() => (showMenu = false)">
-        <img src="/images/icon-close.svg" alt="close" class="fill-white" />
+        <img src="/images/icon-close.svg" alt="close" class="fill-white w-4" />
       </button>
       <button v-else class="md:hidden" @click="() => (showMenu = true)">
-        <img src="/images/icon-hamburger.svg" alt="close" class="fill-white" />
+        <img src="/images/icon-hamburger.svg" alt="close" class="fill-white w-5" />
       </button>
       <router-link to="/">
         <img src="@/assets/images/logo18.png" alt="logo" class="md:w-52 w-52" />

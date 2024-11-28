@@ -11,16 +11,16 @@
   "howItWorks": "Comment ça marche ?",
   "howItWorks_desciption": "Emprunter un livre est aussi simple que de se rendre à votre bibliothèque locale, de trouver le livre que vous voulez et de l'emprunter avec votre carte de bibliothèque.",
   "howItWorks_d": {
-    "l1": "Créer un compte",
+    "l1": "Choisir un abonnement?",
     "l1_des": "pour déverrouiller un monde de connaissances. Accédez à notre vaste collection de livres, d'articles et plus encore.",
     "l2": "Visiter le catalogue",
     "l2_des": "Trouvez votre match parfait. Recherchez dans notre vaste collection de livres, d'articles et plus encore.",
     "l3": "Réserver un livre",
     "l3_des": "Réservez un livre pour le récupérer dans la succursale de votre bibliothèque préférée.",
-    "l4": "Retirer un livre",
+    "l4": "Retirer le livre",
     "l4_des": "Récupérez votre livre réservé dans la succursale de votre bibliothèque choisie."
   },
-  "price": "ABONNEMENT",
+  "price": "ABONNEMENT - PRIX",
   "price_description": "Le prix idéal pour vous, quel que soit votre profil",
   "yearly": "Annuel",
   "monthly": "Mensuel",
@@ -129,5 +129,23 @@
   "contactOurSupport": "Contactez notre support",
   "paymentSuccess": "Paiement réussi !",
   "paymentSuccessMessage": "Merci pour votre paiement. Vous pouvez maintenant emprunter des livres et explorer le catalogue.",
-  "gotoLoginPage": "Aller à la page de connexion"
+  "gotoLoginPage": "Aller à la page de connexion",
+  "feedback": {
+    "title": "Faire une plainte ou une suggestion",
+    "subtitle": "Nous apprécions vos retours. Dites-nous comment nous pouvons améliorer.",
+    "button": "suggestion",
+    "modalTitle": "Soumettez votre retour",
+    "name": "Nom",
+    "subject": "Objet",
+    "description": "Description",
+    "cancel": "Annuler",
+    "submit": "Envoyer",
+    "successMessage": "Votre retour a été soumis avec succès."
+  },
+  "questions": {
+    "title": "Vous avez une question ?",
+    "subtitle": "Nous sommes là pour vous aider ! Consultez notre",
+    "linkText": "Page des questions fréquentes",
+    "page": "pour des réponses rapides."
+  }
 }

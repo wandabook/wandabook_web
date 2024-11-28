@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import LanguageButton from './LanguageButton.vue';
 
 defineProps(['showMenu'])
 
@@ -11,15 +10,12 @@ defineEmits(['closeMenu'])
     @click.self="$emit('closeMenu')">
     <div class="w-full p-6">
       <div class="flex flex-col items-center gap-6 p-8 bg-brand-white rounded">
-        <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-lime-green"
+        <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
           @click="$emit('closeMenu')">{{ $t('home') }}</router-link>
-        <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-lime-green"
+        <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
           @click="$emit('closeMenu')">{{ $t('about') }}</router-link>
-        <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-lime-green"
+        <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
           @click="$emit('closeMenu')">{{ $t('contact') }}</router-link>
-        <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-lime-green"
-          @click="$emit('closeMenu')">{{ $t('blog') }}</router-link>
-        <LanguageButton />
       </div>
     </div>
   </div>

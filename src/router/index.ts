@@ -12,14 +12,13 @@ const router = createRouter({
       },
     },
     {
-      path: '/create_account',
-      name: 'signup',
-      component: () => import('@/views/SignUpView.vue'),
+      path: '/common_questions',
+      name: 'common-questions',
+      component: () => import('@/views/FAQView.vue'),
       meta: {
         title: '',
       },
     },
   ],
 })
-
 export default router

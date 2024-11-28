@@ -11,14 +11,14 @@ import SingleScroll from "./SingleScroll.vue";
 const articles = [
   {
     id: 1,
-    title: 'CLASSIC LITTERATURE',
+    title: 'LITTERATURE',
     content:
       "c1.content",
     cover: manga,
   },
   {
     id: 2,
-    title: 'ROMANCE HARLEQUINS',
+    title: 'HARLEQUINS',
     content:
       "c2.content",
     cover: hot_romance,
@@ -37,7 +37,7 @@ const articles = [
   },
   {
     id: 5,
-    title: 'JEUNES YOUTH 15-21',
+    title: 'ADOS 15-21',
     content:
       "c5.content",
     cover: comics,
@@ -45,7 +45,7 @@ const articles = [
 
   {
     id: 6,
-    title: 'ENFANTS KIDS 8-14',
+    title: 'ENFANT KID 8-14',
     content:
       "c6.content",
     cover: manga,
@@ -59,14 +59,14 @@ const articles = [
   },
   {
     id: 8,
-    title: 'MEDECINE INFIRMERIE',
+    title: 'MEDECINE',
     content:
       "c8.content",
     cover: manga,
   },
   {
     id: 9,
-    title: 'TECHNOLOGY SCIENCES',
+    title: 'TECHNOLOGY',
     content:
       "c9.content",
     cover: manga,

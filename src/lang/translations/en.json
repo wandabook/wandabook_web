@@ -13,7 +13,7 @@
   "howItWorks": "How it works?",
   "howItWorks_desciption": "Borrowing a book is as easy as visiting your local library, finding the book you want, and checking it out with your library card",
   "howItWorks_d": {
-    "l1": "Create account",
+    "l1": "Choose a subscription?",
     "l1_des": "to unlock a world of knowledge. Access our vast collection of books, articles, and more.",
     "l2": "Visite catalogue",
     "l2_des": "Find your perfect match. Search our vast collection of books, articles, and more.",
@@ -22,7 +22,7 @@
     "l4": "Checkout book",
     "l4_des": "Retrieve your reserved book from your chosen library branch."
   },
-  "price": "REGISTRATION",
+  "price": "REGISTRATION - PRICE",
   "price_description": "The right price for you, whoever you are",
   "yearly": "Yearly",
   "monthly": "Monthly",
@@ -135,5 +135,23 @@
   "paymentSuccessMessage": "Thank you for your payment. You can now borrow books and explore the catalog.",
   "gotoLoginPage": "Go to login page",
   "1 book": "1 book",
-  "3 books": "3 books"
+  "3 books": "3 books",
+  "feedback": {
+    "title": "Make a Complaint or Suggestion",
+    "subtitle": "We value your feedback. Let us know how we can improve.",
+    "button": "Open Feedback Form",
+    "modalTitle": "Submit Your Feedback",
+    "name": "Name",
+    "subject": "Subject",
+    "description": "Description",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "successMessage": "Your feedback has been submitted successfully."
+  },
+  "questions": {
+    "title": "Have a question?",
+    "subtitle": "We're here to help! Check out our",
+    "linkText": "Common Questions",
+    "page": "page for quick answers."
+  }
 }

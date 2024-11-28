@@ -56,8 +56,8 @@ const features = [
   </section>
   <!--Mobile-->
   <section class="w-full  relative -z-20 md:hidden">
-    <div class="w-full px-4  lg:py-24 max-w-[1440px] mx-auto">
-      <h3 class="text-xl  text-brand-dark-blue text-left mb-5 font-heading">
+    <div class="w-full px-5  lg:py-24 max-w-[1440px] mx-auto">
+      <h3 class="text-xl  text-brand-dark-blue text-left mb-5 font-heading uppercase pt-5">
         {{ $t('howItWorks') }}
       </h3>
       <p class="text-sm lg:text-body text-brand-grayish-blue font-normal text-center mb-10">
@@ -66,8 +66,11 @@ const features = [
       <div class="grid grid-cols-2 justify-between ">
         <div v-for="feature in features" :key="feature.id"
           class="flex flex-col items-center lg:items-center text-center lg:text-left">
-          <img :src="`/images/${feature.icon}`" class="mb-4 w-12" alt="online" />
-          <h4 class="text-sm  mb-4 lg:mb-6 text-center">
+          <div
+            class="relative w-10 h-10 rounded-full bg-brand-default flex items-center justify-center text-white text-lg font-bold shadow-lg">
+            <span>{{ feature.id }}</span> <!-- Remplacez 42 par le nombre souhaité -->
+          </div>
+          <h4 class="text-sm mt-2  mb-4 lg:mb-6 text-center w-24">
             {{ $t(feature.title) }}
           </h4>
           <p class="text-brand-grayish-blue font-normal text-center hidden md:block">

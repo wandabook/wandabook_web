@@ -29,7 +29,14 @@ export const createNewUser = async (data: any) => {
         data
     );
 }
-
+export const createDocumentGlobal = async (collectionId: string, data: any) => {
+    return await databases.createDocument(
+        databaseId,
+        collectionId,
+        ID.unique(),
+        data
+    );
+}
 export const getDocumentsGlobal = async (collectionId: string) => {
     return await databases.listDocuments(
         databaseId,

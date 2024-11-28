@@ -54,19 +54,6 @@
                         </p>
                         <p :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7']">{{
                             tier.description }}</p>
-                        <!--
-                        <ul role="list"
-                            :class="['text-gray-600', 'md:mt-8 mt-2 md:space-y-3 space-x-1 text-sm leading-6 sm:mt-10']">
-                            <li v-for="feature in tier.features" :key="feature" class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-3 md:w-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                </svg>
-
-                                {{ $t(feature) }}
-                            </li>
-                        </ul>
-                        -->
                         <a :aria-describedby="tier.id" @click="onSelectSubscription(tier)"
                             :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
                             {{ $t('subscribeNow') }}
@@ -79,8 +66,8 @@
     </section>
     <!--Mobile app-->
     <section class="w-full md:hidden">
-        <div class="w-full   max-w-[1440px] mx-auto">
-            <h3 class="text-xl px-6 text-left capitalize font-heading">
+        <div class="w-full max-w-[1440px] mx-auto">
+            <h3 class="text-xl px-5 text-left capitalize font-heading">
                 {{ $t('price') }}
             </h3>
             <div class="flex justify-center max-w-[14rem] m-auto mb-2  mt-2">
@@ -100,7 +87,7 @@
                         :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
                 </div>
             </div>
-            <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
+            <div class="relative isolate bg-white md:px-6 py-5 px-5">
                 <div
                     class="mx-auto mt-1 grid max-w-lg grid-cols-3 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-2">
                     <div v-for="(tier, tierIdx) in subscriptions" :key="tier.id" @click="onSelectSubscription(tier)"
@@ -113,7 +100,6 @@
                                     tier.yearly_amount,
                                 )
                             }}</span>
-                            <!--  <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ $t('year') }}</span>-->
                         </p>
                         <p class="mt-4 flex items-baseline gap-x-2" v-else>
                             <span :class="['text-gray-900', 'lg:text-5xl text-sm font-bold tracking-tight']">{{
@@ -121,17 +107,8 @@
                                     tier.monthly_amount,
                                 )
                             }}</span>
-                            <!--    <span :class="['text-gray-500', 'md:text-base  text-sm']">/{{ $t('month') }}</span> -->
                         </p>
-                        <!-- <p
-                            :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7, truncate line-clamp-3']">
-                            {{
-                                tier.description }}</p>
-                        <a :aria-describedby="tier.id" @click="onSelectSubscription(tier)"
-                            :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-5']">
-                            {{ $t('subscribeNow') }}
 
-                        </a> -->
                     </div>
                 </div>
             </div>
