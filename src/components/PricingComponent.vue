@@ -31,13 +31,13 @@
             </div>
             <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
                 <div
-                    class="mx-auto mt-1 grid max-w-lg grid-cols-2 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-2">
+                    class="mx-auto mt-1 grid max-w-lg grid-cols-3 items-center gap-y-6 lg:mt-1  lg:max-w-4xl lg:grid-cols-3 space-x-2">
                     <div v-for="(tier, tierIdx) in subscriptions" :key="tier.id"
-                        :class="['relative shadow-2xl md:mx-5', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl md:p-8 p-3 ring-1 ring-gray-900/10 sm:p-10']">
+                        :class="['relative shadow-2xl', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl md:pt-4 px-4 p-3 ring-1 ring-gray-900/10 ']">
                         <h3 :id="tier.id" :class="['text-brand-default font-extrabold uppercase leading-7']">
                             {{ $t(tier.title) }}</h3>
                         <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
-                            <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
+                            <span :class="['text-gray-900', 'md:text-2xl text-sm font-bold tracking-tight']">{{
                                 new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
                                     tier.yearly_amount,
                                 )
@@ -45,7 +45,7 @@
                             <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ $t('year') }}</span>
                         </p>
                         <p class="mt-4 flex items-baseline gap-x-2" v-else>
-                            <span :class="['text-gray-900', 'lg:text-5xl text-sm font-bold tracking-tight']">{{
+                            <span :class="['text-gray-900', 'lg:text-2xl text-sm font-bold tracking-tight']">{{
                                 new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
                                     tier.monthly_amount,
                                 )
