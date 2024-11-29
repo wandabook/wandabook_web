@@ -55,8 +55,8 @@ const goto = (link: string) => {
   </section>
   <section>
     <div class=" pt-20 pb-7 md:hidden">
-      <h3 class="text-sm text-brand-dark-blue capitalize text-center lg:text-left font-thin">
-        {{ $t('price') }}
+      <h3 class="text-xl px-4  text-left mb-4 font-heading uppercase font-extrabold">
+        {{ $t('categories') }}
       </h3>
       <SingleScroll>
         <!-- Contenu pour le défilement horizontal -->
