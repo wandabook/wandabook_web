@@ -21,12 +21,13 @@
                     </span>
                     <button
                         class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-                        :class="isAnnual ? 'text-white' : 'text-white dark:text-slate-400'" @click="isAnnual = true"
-                        :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
+                        :class="isAnnual ? 'text-white dark:text-slate-400 uppercase font-bold' : 'text-white'"
+                        @click="isAnnual = false" :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
                     <button
                         class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-                        :class="isAnnual ? 'text-white dark:text-slate-400' : 'text-white'" @click="isAnnual = false"
-                        :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
+                        :class="isAnnual ? 'text-white uppercase font-bold' : 'text-white dark:text-slate-400 '"
+                        @click="isAnnual = true" :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
+
                 </div>
             </div>
             <div class="relative isolate bg-white md:px-6 py-5 sm:py-10 lg:px-8">
