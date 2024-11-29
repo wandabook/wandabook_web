@@ -55,6 +55,9 @@ const goto = (link: string) => {
   </section>
   <section>
     <div class=" pt-20 pb-7 md:hidden">
+      <h3 class="text-sm text-brand-dark-blue capitalize text-center lg:text-left font-thin">
+        {{ $t('price') }}
+      </h3>
       <SingleScroll>
         <!-- Contenu pour le défilement horizontal -->
         <div v-for="item in books" :key="item" :style="{ backgroundImage: `url(${item.image})` }"

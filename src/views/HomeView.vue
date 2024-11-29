@@ -11,7 +11,6 @@ import ComplaintSuggestion from '@/components/ComplaintSuggestion.vue'
 
 <template>
   <HeaderComponent />
-
   <HeroComponent />
   <LatestArticlesComponent />
   <PricingComponent id="" />

@@ -17,16 +17,16 @@
                     <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
                         <span
                             class="absolute inset-0 w-1/2 bg-red-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out"
-                            :class="isAnnual ? 'translate-x-0' : 'translate-x-full'"></span>
+                            :class="isAnnual ? 'translate-x-full' : 'translate-x-0'"></span>
                     </span>
                     <button
-                        class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-                        :class="isAnnual ? 'text-white dark:text-slate-400 uppercase font-bold' : 'text-white'"
-                        @click="isAnnual = false" :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
+                        class="relative uppercase font-bold flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
+                        :class="isAnnual ? 'text-white dark:text-slate-400 ' : 'text-white'" @click="isAnnual = false"
+                        :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
                     <button
-                        class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-                        :class="isAnnual ? 'text-white uppercase font-bold' : 'text-white dark:text-slate-400 '"
-                        @click="isAnnual = true" :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
+                        class="  uppercase font-bold relative flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
+                        :class="isAnnual ? 'text-white' : 'text-white dark:text-slate-400 '" @click="isAnnual = true"
+                        :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
 
                 </div>
             </div>
@@ -75,17 +75,17 @@
                 <div class="relative flex w-full p-1 bg-brand-default dark:bg-slate-900 rounded-full">
                     <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
                         <span
-                            class="absolute inset-0 w-1/2 bg-red-500 rounded-full transform transition-transform duration-150 ease-in-out"
-                            :class="isAnnual ? 'translate-x-0' : 'translate-x-full'"></span>
+                            class="absolute inset-0 w-1/2 bg-red-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out"
+                            :class="isAnnual ? 'translate-x-full' : 'translate-x-0'"></span>
                     </span>
                     <button
-                        class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-                        :class="isAnnual ? 'text-white' : 'text-white dark:text-slate-400'" @click="isAnnual = true"
-                        :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
-                    <button
-                        class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-                        :class="isAnnual ? 'text-white dark:text-slate-400' : 'text-white'" @click="isAnnual = false"
+                        class="relative uppercase font-bold flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
+                        :class="isAnnual ? 'text-white dark:text-slate-400 ' : 'text-white'" @click="isAnnual = false"
                         :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
+                    <button
+                        class="  uppercase font-bold relative flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
+                        :class="isAnnual ? 'text-white' : 'text-white dark:text-slate-400 '" @click="isAnnual = true"
+                        :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
                 </div>
             </div>
             <div class="relative isolate bg-white md:px-6 py-5 px-5">
