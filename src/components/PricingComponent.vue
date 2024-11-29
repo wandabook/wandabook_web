@@ -306,6 +306,8 @@ const createUserAccount = async () => {
     if (confirm_pass.value === user.value.password) {
         isLoading.value = true;
         user.value.notification_email = user.value.email;
+        user.value.patron_id = selectedSubscription.value.title;
+        user.value.tags = selectedSubscription.value.title + ',' + (isAnnual ? 'One year' : "One Month");
         const result = await addNewUser(JSON.stringify(user.value));
         if (result.status === 'failed') {
             errorMessage.value = 'an error occur. please try again or contact the support'
@@ -335,6 +337,8 @@ const user = ref({
     address1: "Message",
     city: 'Yaounde',
     cni: "111112",
+    patron_id: "",
+    tags: ""
 
 });
 fetchSubscriptions();
@@ -380,7 +384,7 @@ const pay = () => {
     // console.log('import.meta.env.VITE_APP_CINET_PAY_SITE_Id', import.meta.env.VITE_APP_CINET_PAY_SITE_Id);
     window.CinetPay.setConfig({
         apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
-        site_id: import.meta.env.VITE_APP_CINET_PAY_SITE_Id, // Votre Site ID
+        site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
         notify_url: 'http://mondomaine.com/notify/',
         mode: 'PRODUCTION',
     });

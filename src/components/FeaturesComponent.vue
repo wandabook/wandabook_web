@@ -43,8 +43,11 @@ const features = [
       <div class="grid grid-cols-2 justify-between md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
         <div v-for="feature in features" :key="feature.id"
           class="flex flex-col items-center lg:items-center text-center lg:text-left">
-          <img :src="`/images/${feature.icon}`" class="mb-8" alt="online" />
-          <h4 class="text-lg md:text-xl xl:text-2xl font-normal text-brand-dark-blue mb-4 lg:mb-6 text-center">
+          <div
+            class="relative w-14 h-14 rounded-full bg-brand-default flex items-center justify-center text-white text-lg font-bold shadow-lg">
+            <span>{{ feature.id }}</span> <!-- Remplacez 42 par le nombre souhaité -->
+          </div>
+          <h4 class="text-lg  font-normal text-brand-dark-blue mb-4 lg:mb-6 text-center mt-4">
             {{ $t(feature.title) }}
           </h4>
           <p class="text-brand-grayish-blue font-normal text-center hidden md:block">
