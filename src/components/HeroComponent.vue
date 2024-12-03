@@ -56,18 +56,15 @@ const goto = (link: string) => {
   <section>
     <div class=" pt-20 pb-7 md:hidden">
       <h3 class="text-xl px-4  text-left mb-4 font-heading uppercase font-extrabold">
-        {{ $t('categories') }}
+        {{ $t('weekChoice') }}
       </h3>
       <SingleScroll>
         <!-- Contenu pour le défilement horizontal -->
         <div v-for="item in books" :key="item" :style="{ backgroundImage: `url(${item.image})` }"
-          class="  shadow-lime-100 shadow-2xl w-64 h-40 py-2 font-extrabold rounded-md flex flex-col items-center justify-between  text-brand-default  bg-cover bg-center ">
+          @click="goto(item.link)"
+          class="  shadow-lime-100 shadow-2xl w-52 h-32 py-2 font-extrabold rounded-md flex flex-col items-center justify-end  text-brand-default  bg-cover bg-center ">
           {{ item.title }}
-          <div class=" flex justify-center lg:justify-start ">
-            <button @click="goto(item.link)"
-              class="h-8 md:hidden text-sm px-4 rounded-full bg-brand-lime-red text-brand-white font-normal capitalize transition-all duration-200 ease hover:opacity-60">
-              {{ $t('view') }}</button>
-          </div>
+
         </div>
       </SingleScroll>
     </div>
