@@ -155,5 +155,9 @@
     "page": "page for quick answers."
   },
   "weekChoice": "Choice of the week",
-  "unlimited": "unlimited"
+  "unlimited": "unlimited",
+  "are_you_the_end_user": "Are you the end user?",
+  "Yes": "Yes",
+  "No": "No",
+  "enter_end_user_info": "Enter end user information"
 }

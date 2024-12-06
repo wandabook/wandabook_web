@@ -149,5 +149,9 @@
     "page": "pour des réponses rapides."
   },
   "weekChoice": "Choix de la Semaine",
-  "unlimited": "illimité"
+  "unlimited": "illimité",
+  "are_you_the_end_user": "Êtes-vous l'utilisateur final ?",
+  "Yes": "Oui",
+  "No": "Non",
+  "enter_end_user_info": "Saisissez les informations de l'utilisateur final"
 }

@@ -137,6 +137,25 @@
                                     </div>
                                     <div class="mt-1">
                                         <div class="mb-1 rounded-lg px-0 text-left">
+                                            <div class="mb-4">
+                                                <label class="block text-gray-700 font-medium mb-2">{{
+                                                    $t('are_you_the_end_user') }}</label>
+                                                <div class="flex space-x-4">
+                                                    <label class="inline-flex items-center">
+                                                        <input type="radio" v-model="end_user" value="Yes"
+                                                            class="form-radio text-indigo-600" />
+                                                        <span class="ml-2">{{ $t('Yes') }}</span>
+                                                    </label>
+                                                    <label class="inline-flex items-center">
+                                                        <input type="radio" v-model="end_user" value="No"
+                                                            class="form-radio text-indigo-600" />
+                                                        <span class="ml-2">{{ $t('No') }}</span>
+                                                    </label>
+                                                </div>
+                                                <span class="text-sm text-gray-700" v-if="end_user == 'No'">{{
+                                                    $t('enter_end_user_info')
+                                                    }}</span>
+                                            </div>
                                             <div class="flex justify-between flex-wrap">
                                                 <div class="mb-2  w-5/12"><label class="mb-2 block text-sm font-bold"
                                                         for="firstname">{{
@@ -172,14 +191,16 @@
                                                 <WInput type="text" :required="true" id="cni" v-model="user.cni" />
                                             </div>
 
-                                            <div class="mb-2"><label class="mb-2 block text-sm font-bold"
-                                                    for="password">{{ $t('password') }}</label>
+                                            <div class="mb-2" v-if="end_user === 'Yes'"><label
+                                                    class="mb-2 block text-sm font-bold" for="password">{{
+                                                        $t('password') }}</label>
                                                 <WInput type="password" :required="true"
                                                     placeholder="******************" id="password"
                                                     v-model="user.password" />
                                             </div>
-                                            <div class="mb-2"><label class="mb-2 block text-sm font-bold"
-                                                    for="confirm_password">{{ $t('confirmPassword') }}</label>
+                                            <div class="mb-2" v-if="end_user === 'Yes'"><label
+                                                    class="mb-2 block text-sm font-bold" for="confirm_password">{{
+                                                        $t('confirmPassword') }}</label>
                                                 <WInput type="password" :required="true"
                                                     placeholder="******************" v-model="confirm_pass"
                                                     id="confirm_password" />
@@ -329,6 +350,7 @@ const onSelectSubscription = (tier: any) => {
     selectedSubscription.value = tier;
 }
 const confirm_pass = ref('password1234');
+const end_user = ref('Yes')
 const user = ref({
     first_name: 'Tchio',
     last_name: 'Styves',
@@ -340,7 +362,7 @@ const user = ref({
     city: 'Yaounde',
     cni: "111112",
     patron_id: "",
-    tags: ""
+    tags: "",
 
 });
 fetchSubscriptions();
