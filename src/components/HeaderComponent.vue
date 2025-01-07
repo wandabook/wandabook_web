@@ -2,10 +2,17 @@
 import { ref } from 'vue'
 import MobileMenuComponent from './MobileMenuComponent.vue'
 import LanguageButton from './LanguageButton.vue';
+import RenewSubscriptionForm from '@/components/subscription/RenewSubscriptionForm.vue'
 
 const showMenu = ref(false)
-
-const links = ['home', 'about', 'contact',]
+const showRenew = ref(false);
+const links = ['home', 'about', 'contact',];
+const renew = () => {
+  showRenew.value = true;
+}
+const close = () => {
+  showRenew.value = false
+}
 </script>
 
 <template>
@@ -35,9 +42,14 @@ const links = ['home', 'about', 'contact',]
         <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 hidden text-white md:block">{{
           $t('signUp')
         }}</a>
+        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block" @click="renew">{{
+          $t('renew_subscription') }}</a>
       </div>
 
 
+      <template v-if="showRenew">
+        <RenewSubscriptionForm @close="close" />
+      </template>
 
       <LanguageButton class="" />
 

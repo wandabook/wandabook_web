@@ -45,3 +45,11 @@ export const getDocumentsGlobal = async (collectionId: string) => {
         ]
     );
 }
+
+export const getDocumentsWithFilerGlobal = async (collectionId: string, filters: string[]) => {
+    return await databases.listDocuments(
+        databaseId,
+        collectionId,
+        filters
+    );
+}

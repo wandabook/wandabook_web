@@ -6,7 +6,6 @@ import HeroComponent from '@/components/HeroComponent.vue'
 import LatestArticlesComponent from '@/components/LatestArticlesComponent.vue'
 import PricingComponent from '../components/PricingComponent.vue'
 import ComplaintSuggestion from '@/components/ComplaintSuggestion.vue'
-
 </script>
 
 <template>

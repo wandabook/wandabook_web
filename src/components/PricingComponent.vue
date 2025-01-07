@@ -154,7 +154,7 @@
                                                 </div>
                                                 <span class="text-sm text-gray-700" v-if="end_user == 'No'">{{
                                                     $t('enter_end_user_info')
-                                                    }}</span>
+                                                }}</span>
                                             </div>
                                             <div class="flex justify-between flex-wrap">
                                                 <div class="mb-2  w-5/12"><label class="mb-2 block text-sm font-bold"
@@ -406,7 +406,7 @@ const createWandaUser = async (barcode: any) => {
 }
 const pay = () => {
     // console.log('import.meta.env.VITE_APP_CINET_PAY_SITE_Id', import.meta.env.VITE_APP_CINET_PAY_SITE_Id);
-    /*window.CinetPay.setConfig({
+    window.CinetPay.setConfig({
         apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
         site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
         notify_url: 'http://mondomaine.com/notify/',
@@ -441,7 +441,7 @@ const pay = () => {
 
     window.CinetPay.onError((data: any) => {
         console.error('Erreur CinetPay:', data);
-    });*/
+    });
 
     createUserAccount();
 }
