@@ -53,3 +53,12 @@ export const getDocumentsWithFilerGlobal = async (collectionId: string, filters:
         filters
     );
 }
+
+export const editDocumentGlobal = async (collectionId: string, documentId: string, data: any) => {
+    return await databases.updateDocument(
+        databaseId,
+        collectionId,
+        documentId,
+        data
+    );
+}

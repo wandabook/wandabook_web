@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import WInput from '../ui/WInput.vue';
-import { getDocumentsWithFilerGlobal } from '../../lib/appwrite';
+import { editDocumentGlobal, getDocumentsWithFilerGlobal } from '../../lib/appwrite';
 import { bookCollection, patronCollection } from '../../utilities/constants';
 import { Query } from 'appwrite';
 import showAlert from '../../helpers/alert';
@@ -61,8 +61,11 @@ const pay = () => {
     window.CinetPay.waitResponse((data: { status: string }) => {
         console.log('data value', data);
         if (data.status === 'REFUSED') {
-            alert('Votre paiement a échoué');
+            showAlert("error", 'Votre paiement a échoué');
+            renewUser()
         } else if (data.status === 'ACCEPTED') {
+            showAlert('success', "payment effectué")
+            renewUser()
         }
     });
 
@@ -70,6 +73,30 @@ const pay = () => {
         console.error('Erreur CinetPay:', data);
     });
 
+}
+
+const renewUser = async () => {
+    // Get the current date
+    const now = new Date();
+
+    // Now + 1 month
+    const oneMonthLater = new Date(now);
+    oneMonthLater.setMonth(now.getMonth() + 1);
+
+    // Now + 1 year
+    const oneYearLater = new Date(now);
+    oneYearLater.setFullYear(now.getFullYear() + 1);
+    let userRecord = {
+        freeze: false,
+        lastSubcriptionDate: new Date(now),
+        endSubscriptionDate: patronInfo.value.isAnnual ? oneYearLater : oneMonthLater,
+        readCondition: true,
+        isAnnual: patronInfo.value.isAnnual
+    };
+
+    const result = await editDocumentGlobal(patronCollection, patronInfo.value.$id, userRecord);
+    console.log('result', result)
+    cancel();
 }
 const cancel = () => {
     emit('close')
