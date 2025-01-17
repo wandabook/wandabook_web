@@ -53,9 +53,18 @@ const goto = (link: string) => {
       class="lg:w-7/12 -z-10 lg:-mr-32 relative top-[30px] md:top-[-8px] lg:top-0 lg:h-[140%] xl:h-auto lg:right-[30px] xl:right-0"
       alt="mockups" />
   </section>
+  <section class=" md:hidden relative w-full pt-14 px-6 md:px-20 lg:px-0 bg-brand-default">
+
+    <img src="@/assets/default/lib.png" class="" alt="mockups" />
+    <div class="pb-5">
+      <h2 class=" text-white text-center lg:text-left text-xl">
+        {{ $t('find') }}
+      </h2>
+    </div>
+  </section>
   <section>
-    <div class=" pt-20 pb-7 md:hidden">
-      <h3 class="text-xl px-4  text-left mb-4 font-heading uppercase font-extrabold">
+    <div class=" pt-2 pb-4 md:hidden">
+      <h3 class="text-xl px-4  text-left mb-2 font-heading uppercase font-extrabold">
         {{ $t('weekChoice') }}
       </h3>
       <SingleScroll>

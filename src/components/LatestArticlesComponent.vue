@@ -140,7 +140,7 @@ const articles = [
       </div>
     </div>
   </section>
-  <section class="w-full md:hidden mb-5">
+  <section class="w-full md:hidden mb-0">
     <div class="w-full max-w-[1440px] mx-auto">
       <h3 class="text-xl px-4  text-left mb-4 font-heading uppercase font-extrabold">
         {{ $t('categories') }}

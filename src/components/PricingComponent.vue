@@ -88,7 +88,7 @@
                         :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
                 </div>
             </div>
-            <div class="relative isolate bg-white md:px-6 py-5 px-5">
+            <div class="relative isolate bg-white md:px-6 pt-2 pb-3 px-5">
                 <div
                     class="mx-auto mt-1 grid max-w-lg grid-cols-3 items-center gap-y-6 lg:mt-1 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2 space-x-2">
                     <div v-for="(tier, tierIdx) in subscriptions" :key="tier.id" @click="onSelectSubscription(tier)"
@@ -137,7 +137,7 @@
                                     </div>
                                     <div class="mt-1">
                                         <div class="mb-1 rounded-lg px-0 text-left">
-                                            <div class="mb-4">
+                                            <!-- <div class="mb-4">
                                                 <label class="block text-gray-700 font-medium mb-2">{{
                                                     $t('are_you_the_end_user') }}</label>
                                                 <div class="flex space-x-4">
@@ -155,7 +155,7 @@
                                                 <span class="text-sm text-gray-700" v-if="end_user == 'No'">{{
                                                     $t('enter_end_user_info')
                                                 }}</span>
-                                            </div>
+                                            </div> -->
                                             <div class="flex justify-between flex-wrap">
                                                 <div class="mb-2  w-5/12"><label class="mb-2 block text-sm font-bold"
                                                         for="firstname">{{
@@ -301,7 +301,7 @@ const errorMessage = ref("");
 const subscriptions = ref();
 
 const fetchSubscriptions = async () => {
-    const result = await getDocumentsGlobal(subscriptionCollection);
+    const result = await getDocumentsWithFilerGlobal(subscriptionCollection, [Query.equal('status', "active")]);
     if (result.documents != null && result.documents.length > 0) {
         subscriptions.value = result.documents;
     } else {
@@ -312,8 +312,9 @@ const fetchSubscriptions = async () => {
 
 const selectedSubscription = ref();
 import WInput from '../components/ui/WInput.vue';
-import { addNewUser, createNewUser, getDocumentsGlobal } from '../lib/appwrite';
+import { addNewUser, createNewUser, getDocumentsGlobal, getDocumentsWithFilerGlobal } from '../lib/appwrite';
 import { subscriptionCollection } from '../utilities/constants';
+import { Query } from 'appwrite';
 const redirectToLogin = () => {
     window.location.href = 'https://www.libib.com/u/wandabook' // Assuming your login route is named "login"
 };
@@ -442,7 +443,5 @@ const pay = () => {
     window.CinetPay.onError((data: any) => {
         console.error('Erreur CinetPay:', data);
     });
-
-    createUserAccount();
 }
 </script>

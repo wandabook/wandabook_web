@@ -11,8 +11,8 @@ import ComplaintSuggestion from '@/components/ComplaintSuggestion.vue'
 <template>
   <HeaderComponent />
   <HeroComponent />
-  <LatestArticlesComponent />
   <PricingComponent id="" />
+  <LatestArticlesComponent />
   <FeaturesComponent />
   <section>
     <div class="w-full px-6 md:px-5 xl:px-40 py-16 lg:py-10 max-w-[1440px] mx-auto">
