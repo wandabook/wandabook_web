@@ -12,8 +12,15 @@
       class="md:hidden relative w-full cursor-default rounded-md py-1 pl-3 text-left text-white-900 ring-gray-300 sm:text-sm sm:leading-6"
       aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
       <span class="flex items-center">
-        <img :src="selectLanguage.icon" alt="" class="h-6 w-6 flex-shrink-0 rounded-full" />
+        <img :src="selectLanguage.icon" alt="" class="h-5 w-5 flex-shrink-0 rounded-full" />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="h-5 w-5 flex-shrink-0 rounded-full">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+        <span>
+        </span>
       </span>
+
     </button>
 
     <!-- Menu déroulant -->
@@ -27,7 +34,7 @@
         <div class="flex items-center">
           <!-- Texte de l'option -->
           <span class="ml-0 block truncate font-normal">
-            {{ language.name }}
+            {{ $t(language.name) }}
           </span>
 
         </div>

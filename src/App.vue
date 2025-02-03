@@ -3,6 +3,8 @@ import { RouterView } from 'vue-router';
 import { useI18n } from "vue-i18n";
 import { useLanguageStore } from './lang/language';
 import { onMounted } from 'vue';
+import HeaderComponent from './components/HeaderComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
 const useLanguage = useLanguageStore();
 const t = useI18n({ useScope: "global" });
 console.log('useLanguage.language', useLanguage.language)
@@ -20,5 +22,8 @@ onMounted(() => {
 </script>
 
 <template>
+  <HeaderComponent />
   <RouterView />
+  <FooterComponent />
+
 </template>

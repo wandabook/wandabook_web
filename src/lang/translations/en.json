@@ -3,7 +3,6 @@
   "home": "Home",
   "about": "About",
   "connexion": "Login",
-  "contact": "Contact",
   "blog": "blog",
   "signUp": "Sign Up",
   "title_1": "Next generation",
@@ -184,5 +183,26 @@
   "duration_plan": "Duration Plan",
   "last_subscription": "Last Subscription",
   "expired_date": "Expiration Date",
-  "find": "Find us at maison dams - Yaounde"
+  "find": "Find us at maison dams - Yaounde",
+  "French": "French",
+  "English": "English",
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Wandabook - Acacias, Yaoundé",
+    "opening_hours": "Open from 8 AM to 6 PM every day except Sunday",
+    "address_label": "Address:",
+    "address": "Acacias, Yaoundé",
+    "phone_label": "Phone:",
+    "phone": "+237 699 99 99 99",
+    "email_label": "Email:",
+    "email": "contact@wandabook.cm",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_placeholder": "Your email",
+    "message_label": "Message",
+    "message_placeholder": "Your message",
+    "submit": "Send",
+    "description_label": "Description:",
+    "description": "Wandabook offers a wide range of books for all ages and interests. A quiet and peaceful space awaits you."
+  }
 }

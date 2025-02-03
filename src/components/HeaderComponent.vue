@@ -6,7 +6,11 @@ import RenewSubscriptionForm from '@/components/subscription/RenewSubscriptionFo
 
 const showMenu = ref(false)
 const showRenew = ref(false);
-const links = ['home', 'about', 'contact',];
+const links = [
+  { label: "home", link: "/" },
+  { label: "about", link: "/about" },
+  { label: "contact", link: "/contact_us" },
+];
 const renew = () => {
   showRenew.value = true;
 }
@@ -30,15 +34,15 @@ const close = () => {
       </router-link>
 
       <nav class="hidden md:flex items-center h-full gap-7 ">
-        <router-link v-for="link in links" :key="link" to="/"
+        <router-link v-for="link in links" :key="link.label" :to="link.link"
           class=" uppercase hover:text-gray-50 font-heading flex items-center h-full text-md  transition-all duration-200 ease border-b-4 border-b-transparent text-white">{{
-            $t(link) }}</router-link>
+            $t(link.label) }}</router-link>
       </nav>
 
       <div class="gap-x-4 flex uppercase justify-center align-middle self-center  ">
-        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block"
+        <!--<a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block"
           href="https://www.libib.com/login">{{
-            $t('connexion') }}</a>
+            $t('connexion') }}</a>-->
         <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 hidden text-white md:block">{{
           $t('signUp')
         }}</a>

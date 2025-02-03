@@ -53,14 +53,32 @@ const goto = (link: string) => {
       class="lg:w-7/12 -z-10 lg:-mr-32 relative top-[30px] md:top-[-8px] lg:top-0 lg:h-[140%] xl:h-auto lg:right-[30px] xl:right-0"
       alt="mockups" />
   </section>
-  <section class=" md:hidden relative w-full pt-14 px-6 md:px-20 lg:px-0 bg-brand-default">
+  <section class=" md:hidden relative w-full pt-20 mb-3">
 
-    <img src="@/assets/default/lib.png" class="" alt="mockups" />
-    <div class="pb-5">
-      <h2 class=" text-white text-center lg:text-left text-xl">
-        {{ $t('find') }}
-      </h2>
-    </div>
+    <SingleScroll>
+      <div class="w-80 h-32">
+        <img src="@/assets/default/im.png" class="h-36 w-full object-cover" alt="mockups" />
+        <div class="pb-5">
+          <h2 class=" text-black text-center lg:text-left text-sm">
+            {{ $t('find') }}
+          </h2>
+        </div>
+      </div>
+      <div class="w-80 h-32">
+        <img src="@/assets/default/bbl.jpg" class="h-36 w-full object-cover" alt="mockups" />
+
+      </div>
+      <div class="w-80 h-40">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.854068068936!2d11.485873075859022!3d3.8414877485049197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcfcf1afa0af5%3A0xad041dcc8c6d883!2sMarch%C3%A9%20Acacias!5e0!3m2!1sfr!2sde!4v1738575229069!5m2!1sfr!2sde"
+          class="h-36 w-full object-cover" style="border:0;" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+
+
+    </SingleScroll>
+
   </section>
   <section>
     <div class=" pt-2 pb-4 md:hidden">

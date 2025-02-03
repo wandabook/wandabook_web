@@ -153,5 +153,26 @@
   "are_you_the_end_user": "Êtes-vous l'utilisateur final ?",
   "Yes": "Oui",
   "No": "Non",
-  "enter_end_user_info": "Saisissez les informations de l'utilisateur final"
+  "enter_end_user_info": "Saisissez les informations de l'utilisateur final",
+  "French": "Français",
+  "English": "Anglais",
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Wandabook - Acacias, Yaoundé",
+    "opening_hours": "Ouvert de 8h à 18h tous les jours sauf le dimanche",
+    "address_label": "Adresse :",
+    "address": "Acacias, Yaoundé",
+    "phone_label": "Téléphone :",
+    "phone": "+237 699 99 99 99",
+    "email_label": "Email :",
+    "email": "contact@wandabook.cm",
+    "name_label": "Nom",
+    "name_placeholder": "Votre nom",
+    "email_placeholder": "Votre email",
+    "message_label": "Message",
+    "message_placeholder": "Votre message",
+    "submit": "Envoyer",
+    "description_label": "Description :",
+    "description": "Wandabook offre une large gamme de livres pour tous les âges et intérêts. Un espace calme et propice à la lecture vous attend."
+  }
 }
