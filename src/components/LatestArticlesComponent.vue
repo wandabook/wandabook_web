@@ -145,7 +145,7 @@ const articles = [
       <h3 class="text-xl px-4  text-left mb-4 font-heading uppercase font-extrabold">
         {{ $t('categories') }}
       </h3>
-      <div class="md:grid  grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden">
+      <div class="grid grid-cols-3  gap-1 px-4 ">
         <article v-for="article in articles" :key="article.id"
           class="w-full h-auto rounded-md bg-brand-white overflow-hidden">
           <img :src="article.cover" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
@@ -160,22 +160,21 @@ const articles = [
           </div>
         </article>
       </div>
-      <SingleScroll>
-        <!-- Contenu pour le défilement horizontal -->
-        <article v-for="article in articles" :key="article.id"
-          class="w-36 h-auto rounded-md bg-brand-white overflow-hidden">
-          <img :src="article.cover" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-          <div class="p-2 md:p-6">
-            <h4
-              class="text-sm text-body text-brand-dark-blue leading-snug font-heading mb-2 transition-all duration-200 ease hover:text-red-600 uppercase">
-              <a href="https://www.libib.com/u/wandabook ">
-                {{ article.title }}
-              </a>
-            </h4>
-            <p class="text-brand-grayish-blue text-sm hidden md:block">{{ $t(article.content) }}</p>
-          </div>
-        </article>
-      </SingleScroll>
+      <!--   <SingleScroll>
+      <article v-for="article in articles" :key="article.id"
+        class="w-36 h-auto rounded-md bg-brand-white overflow-hidden">
+        <img :src="article.cover" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+        <div class="p-2 md:p-6">
+          <h4
+            class="text-sm text-body text-brand-dark-blue leading-snug font-heading mb-2 transition-all duration-200 ease hover:text-red-600 uppercase">
+            <a href="https://www.libib.com/u/wandabook ">
+              {{ article.title }}
+            </a>
+          </h4>
+          <p class="text-brand-grayish-blue text-sm hidden md:block">{{ $t(article.content) }}</p>
+        </div>
+      </article>
+      </SingleScroll>-->
     </div>
   </section>
 </template>
