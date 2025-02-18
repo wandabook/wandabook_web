@@ -174,5 +174,9 @@
     "submit": "Envoyer",
     "description_label": "Description :",
     "description": "Wandabook offre une large gamme de livres pour tous les âges et intérêts. Un espace calme et propice à la lecture vous attend."
+  },
+  "privacy_policy": {
+    "title": "Politique de Confidentialité",
+    "content": "Nous valorisons votre confidentialité. Vos données personnelles sont sécurisées et ne sont jamais partagées avec des tiers. 1. **Collecte d'informations :** Nous collectons des informations personnelles lorsque vous vous inscrivez, passez une commande ou interagissez avec nos services. 2. **Utilisation des informations :** Vos données sont utilisées pour traiter les transactions, améliorer nos services et fournir une assistance clientèle. 3. **Protection des données :** Nous mettons en place des mesures de sécurité pour protéger vos informations contre tout accès non autorisé. 4. **Partage des informations :** Nous ne vendons, n'échangeons ni ne louons vos données personnelles. Seul le personnel autorisé peut accéder à vos informations. 5. **Cookies :** Nous utilisons des cookies pour améliorer votre expérience et suivre les statistiques d'utilisation. 6. **Vos droits :** Vous avez le droit d'accéder à vos données personnelles, de les corriger ou de les supprimer sur demande. 7. **Modifications de la politique :** Nous nous réservons le droit de mettre à jour cette politique et informerons les utilisateurs des changements importants."
   }
 }
