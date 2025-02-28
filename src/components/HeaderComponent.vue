@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import MobileMenuComponent from './MobileMenuComponent.vue'
 import LanguageButton from './LanguageButton.vue';
 import RenewSubscriptionForm from '@/components/subscription/RenewSubscriptionForm.vue'
-
+import router from '../router';
 const showMenu = ref(false)
 const showRenew = ref(false);
 const links = [
@@ -16,7 +16,18 @@ const renew = () => {
 }
 const close = () => {
   showRenew.value = false
+  location.href = location.href.replace('ac=renew', "");
 }
+
+const init = () => {
+  if (location.href.includes('ac=renew')) {
+    renew();
+  }
+}
+onMounted(() => {
+  init();
+})
+init();
 </script>
 
 <template>
