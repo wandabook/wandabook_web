@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import comics from "@/assets/categories/comics.jpg";
+import hot_romance from "@/assets/categories/hot_romance.jpeg"
+import romance_thriller from "@/assets/categories/romance_thriller.jpg"
+import marvel from "@/assets/categories/marvel.webp"
+import manga from "@/assets/categories/manga.jpg"
 import ado_15_21 from "@/assets/images/categories/ado_15_21.jpg"
 import african from "@/assets/images/categories/african.jpg"
 import Comics from "@/assets/images/categories/Comics.jpg"
