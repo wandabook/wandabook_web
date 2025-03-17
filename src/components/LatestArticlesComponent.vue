@@ -35,18 +35,20 @@ fetchCatague();
 </script>
 
 <template>
-  <img :src="ado_15_21" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="african" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="Comics" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="enfant_1_7" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="harlequins" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="kid_8_14" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="literrature" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="mangas" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="medecine" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="nobel_price" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="police_thriller" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
-  <img :src="tchnologie" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+  <div class="hidden">
+    <img :src="ado_15_21" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="african" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="Comics" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="enfant_1_7" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="harlequins" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="kid_8_14" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="literrature" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="mangas" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="medecine" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="nobel_price" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="police_thriller" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+    <img :src="tchnologie" class="w-full h-[100px] md:h-[200px] object-cover" alt="cover" />
+  </div>
   <section class="w-full bg-brand-lighter-gray hidden md:block">
     <div class="w-full px-6 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
       <h3
