@@ -177,7 +177,7 @@
                                                 <WInput type="text" :required="true" id="phone" v-model="user.phone" />
                                             </div>
                                             <div class="mb-2"><label class=" mb-2 block text-sm font-bold"
-                                                    for="address">{{ $t('address') }}</label>
+                                                    for="address">{{ $t('neighborhood') }}</label>
                                                 <WInput type="text" :required="true" id="address"
                                                     v-model="user.address1" />
                                             </div>
