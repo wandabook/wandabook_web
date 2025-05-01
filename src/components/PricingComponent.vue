@@ -447,7 +447,7 @@ const pay = () => {
         console.log('data value', data);
         if (data.status === 'REFUSED') {
             alert(t('payment_failed'));
-            createUserAccount();
+            //createUserAccount();
         } else if (data.status === 'ACCEPTED') {
             createUserAccount();
         }
