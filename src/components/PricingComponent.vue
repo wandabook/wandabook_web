@@ -338,7 +338,8 @@ const createUserAccount = async () => {
         user.value.tags = selectedSubscription.value.title + ',' + (isAnnual ? 'One year' : "One Month");
         const result = await addNewUser(JSON.stringify(user.value));
         if (result.status === 'failed') {
-            errorMessage.value = t('error_occur')
+            errorMessage.value = t('error_occur');
+            console.log('executions', result);
         } else if (result.status === 'completed') {
             const response = JSON.parse(result.responseBody);
             if (response.result && response.result.error) {
@@ -400,6 +401,7 @@ const createWandaUser = async (barcode: any) => {
     };
     try {
         const userResult = await createNewUser(userRecord);
+        console.log(userResult)
         isCreation.value = false;
         isSuccess.value = true;
     } catch (e) {
