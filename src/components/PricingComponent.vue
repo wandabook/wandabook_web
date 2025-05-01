@@ -174,7 +174,8 @@
                                             </div>
                                             <div class="mb-2"><label class=" mb-2 block text-sm font-bold"
                                                     for="phone">{{ $t('phone') }}</label>
-                                                <WInput type="text" :required="true" id="phone" v-model="user.phone" />
+                                                <WInput type="text" :required="true" id="phone" v-model="user.phone"
+                                                    :placeholder="$t('help_phone')" />
                                             </div>
                                             <div class="mb-2"><label class=" mb-2 block text-sm font-bold"
                                                     for="address">{{ $t('neighborhood') }}</label>
@@ -194,14 +195,14 @@
                                             <div class="mb-2" v-if="end_user === 'Yes'"><label
                                                     class="mb-2 block text-sm font-bold" for="password">{{
                                                         $t('password') }}</label>
-                                                <WInput type="password" :required="true"
+                                                <WInputPassword type="password" :required="true"
                                                     placeholder="******************" id="password"
                                                     v-model="user.password" />
                                             </div>
                                             <div class="mb-2" v-if="end_user === 'Yes'"><label
                                                     class="mb-2 block text-sm font-bold" for="confirm_password">{{
                                                         $t('confirmPassword') }}</label>
-                                                <WInput type="password" :required="true"
+                                                <WInputPassword type="password" :required="true"
                                                     placeholder="******************" v-model="confirm_pass"
                                                     id="confirm_password" />
                                             </div>
@@ -292,7 +293,9 @@
 </template>
 <script setup lang="ts" type="module">
 import { ref } from 'vue';
+import { useI18n } from "vue-i18n";
 
+const { t } = useI18n()
 const isAnnual = ref(false);
 const isCreation = ref(false);
 const isSuccess = ref(false);
@@ -315,6 +318,7 @@ import WInput from '../components/ui/WInput.vue';
 import { addNewUser, createNewUser, getDocumentsGlobal, getDocumentsWithFilerGlobal } from '../lib/appwrite';
 import { subscriptionCollection } from '../utilities/constants';
 import { Query } from 'appwrite';
+import WInputPassword from './ui/WInputPassword.vue';
 const redirectToLogin = () => {
     window.location.href = 'https://www.libib.com/u/wandabook' // Assuming your login route is named "login"
 };
@@ -334,11 +338,11 @@ const createUserAccount = async () => {
         user.value.tags = selectedSubscription.value.title + ',' + (isAnnual ? 'One year' : "One Month");
         const result = await addNewUser(JSON.stringify(user.value));
         if (result.status === 'failed') {
-            errorMessage.value = 'an error occur. please try again or contact the support'
+            errorMessage.value = t('error_occur')
         } else if (result.status === 'completed') {
             const response = JSON.parse(result.responseBody);
             if (response.result && response.result.error) {
-                errorMessage.value = 'an error occur. please try again or contact the support'
+                errorMessage.value = t('error_occur')
             } else {
                 await createWandaUser(response.result.barcode);
             }
@@ -400,13 +404,20 @@ const createWandaUser = async (barcode: any) => {
         isSuccess.value = true;
     } catch (e) {
         console.log("error", e);
-        errorMessage.value = 'errorOccur'
+        errorMessage.value = t('error_occur');
     }
 
 
 }
 const pay = () => {
-    // console.log('import.meta.env.VITE_APP_CINET_PAY_SITE_Id', import.meta.env.VITE_APP_CINET_PAY_SITE_Id);
+    // console.log('import.meta.env.VITE_APP_CINET_PAY_SITE_Id', import.meta.env.VITE_APP_CINET_PAY_SITE_Id);7
+    errorMessage.value = "";
+    console.log('user.value.password !== confirm_pass.value', user.value.password)
+    console.log('!== confirm_pass.value', confirm_pass.value)
+    if (user.value.password !== confirm_pass.value) {
+        errorMessage.value = t('pass_match')
+        return;
+    }
     window.CinetPay.setConfig({
         apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
         site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
@@ -424,7 +435,7 @@ const pay = () => {
         customer_email: user.value.email,
         customer_phone_number: user.value.phone,
         customer_address: user.value.address1,
-        customer_city: user.value.city,
+        customer_city: user.value.address1,
         customer_country: 'CM',
         customer_state: 'CM',
         // customer_zip_code: '06510',
@@ -433,7 +444,7 @@ const pay = () => {
     window.CinetPay.waitResponse((data: { status: string }) => {
         console.log('data value', data);
         if (data.status === 'REFUSED') {
-            alert('Votre paiement a échoué');
+            alert(t('payment_failed'));
             createUserAccount();
         } else if (data.status === 'ACCEPTED') {
             createUserAccount();
@@ -441,6 +452,7 @@ const pay = () => {
     });
 
     window.CinetPay.onError((data: any) => {
+        alert(t('error_occur'));
         console.error('Erreur CinetPay:', data);
     });
 }
