@@ -1,7 +1,7 @@
 {
   "login": "Connexion",
   "home": "Accueil",
-  "about": "À propos",
+  "about_us": "À propos",
   "connexion": "Connexion",
   "signUp": "S'inscrire",
   "title_1": "La lecture est une porte",
@@ -184,5 +184,30 @@
   "error_occur": "Une erreur s'est produite",
   "payment_failed": "Votre paiement a échoué.",
   "pass_match": "Les mots de passe ne correspondent pas.",
-  "help_phone": "Exemple : +2376XXXXXXXX"
+  "help_phone": "Exemple : +2376XXXXXXXX",
+  "book_count": "{n} livre | {n} livres",
+  "2 books": "2 Livres",
+  "5 BOOKS": "5 Livres",
+  "1 book ": "1 Livre",
+  "1 book": "1 Livre",
+  "3 books": "3 Livres",
+  "about": {
+    "title": "À propos de nous",
+    "intro1": "Bienvenue à Wandabook – votre sanctuaire de lecture à Yaoundé... Situé dans le quartier paisible des Acacias à Yaoundé, Wandabook est une bibliothèque accessible en ligne, offrant un espace serein aux lecteurs, étudiants et apprenants de tous horizons. Notre bibliothèque propose une large sélection de livres, allant des classiques appréciés aux références académiques en passant par les best-sellers modernes.",
+    "intro2": "Nous croyons au pouvoir transformateur de la lecture et nous nous efforçons de créer un environnement propice à l'éducation, à la détente et à l'exploration. Que vous soyez un jeune lecteur découvrant de nouveaux mondes ou un chercheur approfondissant ses études, Wandabook est là pour vous.",
+    "feature1Title": "Collection étendue",
+    "feature1Desc": "Romans, essais, livres pour enfants et ressources académiques.",
+    "feature2Title": "Environnement paisible",
+    "feature2Desc": "Conçu pour favoriser la concentration et la détente.",
+    "feature3Title": "Accessible à tous",
+    "feature3Desc": "Les lecteurs de toutes les générations sont les bienvenus.",
+    "feature4Title": "Heures d'ouverture",
+    "feature4Desc": "De 8h à 18h, fermé le dimanche.",
+    "addressLabel": "Adresse :",
+    "address": "Acacias, Yaoundé",
+    "phoneLabel": "Téléphone :",
+    "emailLabel": "E-mail :",
+    "imagePlaceholder": "Espace image"
+  },
+  "renew_subscription": "Réabonnement"
 }

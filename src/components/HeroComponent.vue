@@ -34,7 +34,7 @@ const goto = (link: string) => {
 
 <template>
   <section
-    class="hidden md:flex relative w-full pb-30  lg:h-[100vh] px-6 md:px-20 lg:px-0  flex-col-reverse lg:flex-row lg:justify-between items-center overflow-x-clip">
+    class="hidden md:flex relative w-full pb-30  lg:h-[100vh] px-6 md:px-20 lg:px-0  flex-col-reverse lg:flex-row lg:justify-between items-center overflow-x-clip overflow-hidden">
     <div class="absolute top-0 bottom-0 right-0 left-0 bg-brand-default -z-30"></div>
 
     <div class="lg:ml-20 xl:ml-40 2xl:ml-52 lg:w-4/12">
@@ -49,9 +49,8 @@ const goto = (link: string) => {
         <CtaComponent />
       </div>
     </div>
-    <img src="@/assets/default/lib.png"
-      class="lg:w-7/12 -z-10 lg:-mr-32 relative top-[30px] md:top-[-8px] lg:top-0 lg:h-[140%] xl:h-auto lg:right-[30px] xl:right-0"
-      alt="mockups" />
+    <img src="@/assets/default/im.png" class=" lg:w-7/12 -z-10 lg:-mr-32 relative top-[30px] md:top-[-8px] lg:top-0 lg:h-[140%] xl:h-auto
+      lg:right-[30px] xl:right-0" alt="mockups" />
   </section>
   <section class=" md:hidden relative w-full pt-20 mb-2">
 

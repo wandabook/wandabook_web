@@ -35,6 +35,14 @@ const router = createRouter({
         title: '',
       },
     },
+    {
+      path: '/about_us',
+      name: 'about_us',
+      component: () => import('@/components/AboutUs.vue'),
+      meta: {
+        title: '',
+      },
+    },
   ],
 })
 export default router

@@ -2,7 +2,7 @@
 
 
 
-    <section class="w-full hidden md:block">
+    <section class="w-full hidden md:block" id="pricing">
         <div class="w-full px-3 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
             <h3
                 class="text-[32px] lg:text-[42px] text-brand-dark-blu capitalize text-center lg:text-left mb-8 lg:mb-12 font-thin">
@@ -425,6 +425,7 @@ const pay = () => {
         site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
         notify_url: 'http://mondomaine.com/notify/',
         mode: 'PRODUCTION',
+        close_after_response: true,
     });
     window.CinetPay.getCheckout({
         transaction_id: Math.floor(Math.random() * 100000000).toString(),
@@ -440,7 +441,7 @@ const pay = () => {
         customer_city: user.value.address1,
         customer_country: 'CM',
         customer_state: 'CM',
-        // customer_zip_code: '06510',
+        customer_zip_code: '06510',
     });
 
     window.CinetPay.waitResponse((data: { status: string }) => {

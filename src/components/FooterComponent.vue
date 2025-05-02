@@ -6,6 +6,15 @@ import LogoIcon from './icons/LogoIcon.vue'
 import PinterestIcon from './icons/PinterestIcon.vue'
 import TwitterIcon from './icons/TwitterIcon.vue'
 import YoutubeIcon from './icons/YoutubeIcon.vue'
+const links = [
+  { label: "home", link: "/" },
+  { label: "about_us", link: "/about_us" },
+  { label: "contact", link: "/contact_us" },
+];
+const links1 = [
+  { label: "support", link: "/support" },
+  { label: "privacy policy", link: "/privacy_policy" },
+];
 </script>
 
 <template>
@@ -34,17 +43,17 @@ import YoutubeIcon from './icons/YoutubeIcon.vue'
           </div>
         </div>
         <div class="flex md:flex-col flex-row items-center lg:items-start gap-3 mt-8 lg:mt-0">
-          <router-link v-for="link in ['home', 'about', 'contact']" :key="link"
+          <router-link v-for="link in links" :key="link"
             class="capitalize text-brand-light-grayish-blue font-light transition-all duration-200 ease hover:text-brand-lime-green"
-            to="/">
-            {{ $t(link) }}
+            :to="link.link">
+            {{ $t(link.label) }}
           </router-link>
         </div>
         <div class="flex md:flex-col flex-row items-center lg:items-start gap-3 mt-3 lg:mt-0">
-          <router-link v-for="link in ['careers', 'support', 'privacy policy']" :key="link"
+          <router-link v-for="link in links1" :key="link"
             class="capitalize text-brand-light-grayish-blue font-light transition-all duration-200 ease hover:text-brand-lime-green"
-            to="/">
-            {{ $t(link) }}
+            :to="link.link">
+            {{ $t(link.label) }}
           </router-link>
         </div>
       </div>

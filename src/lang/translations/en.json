@@ -1,8 +1,8 @@
 {
   "login": "Login",
   "home": "Home",
-  "about": "About",
   "connexion": "Login",
+  "about_us": "About",
   "blog": "blog",
   "signUp": "Sign Up",
   "title_1": "Next generation",
@@ -213,5 +213,26 @@
   "error_occur": "An error occur. please try again or contact the support",
   "payment_failed": "Your payment has failed.",
   "pass_match": "The passwords do not match.",
-  "help_phone": "Example: +2376XXXXXXXX"
+  "help_phone": "Example: +2376XXXXXXXX",
+  "book_count": "{n} book | {n} books",
+  "2 books": "2 books",
+  "5 BOOKS": "5 BOOKS",
+  "about": {
+    "title": "About Us",
+    "intro1": "Welcome to Wandabook – Your Reading Sanctuary in Yaoundé...Located in the peaceful neighborhood of Acacias, Yaoundé, Wandabook is your local online-accessible library, offering a serene space for readers, students, and learners of all kinds. Our library houses a broad selection of books, from cherished classics to academic references and modern bestsellers.",
+    "intro2": "We believe in the transformative power of reading and strive to create an environment that supports education, relaxation, and exploration. Whether you're a young reader discovering new worlds or a researcher diving deep into studies, Wandabook is here for you.",
+    "feature1Title": "Extensive Collection",
+    "feature1Desc": "Fiction, non-fiction, children's books, and scholarly resources.",
+    "feature2Title": "Peaceful Environment",
+    "feature2Desc": "Designed for quiet focus and relaxation.",
+    "feature3Title": "Accessible for All Ages",
+    "feature3Desc": "Readers of all generations are welcome.",
+    "feature4Title": "Open Hours",
+    "feature4Desc": "8 AM to 6 PM, closed on Sundays.",
+    "addressLabel": "Address:",
+    "address": "Acacias, Yaoundé",
+    "phoneLabel": "Phone:",
+    "emailLabel": "Email:",
+    "imagePlaceholder": "Image Placeholder"
+  }
 }

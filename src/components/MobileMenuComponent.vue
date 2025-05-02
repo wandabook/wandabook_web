@@ -12,10 +12,10 @@ defineEmits(['closeMenu'])
       <div class="flex flex-col items-center gap-6 p-8 bg-brand-white rounded">
         <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
           @click="$emit('closeMenu')">{{ $t('home') }}</router-link>
-        <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
-          @click="$emit('closeMenu')">{{ $t('about') }}</router-link>
-        <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
-          @click="$emit('closeMenu')">{{ $t('contact') }}</router-link>
+        <router-link to="/about_us" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
+          @click="$emit('closeMenu')">{{ $t('about_us') }}</router-link>
+        <router-link to="/contact_us" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
+          @click="$emit('closeMenu')">{{ $t('Contact') }}</router-link>
       </div>
     </div>
   </div>

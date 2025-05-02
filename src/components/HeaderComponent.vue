@@ -3,12 +3,11 @@ import { onMounted, ref } from 'vue'
 import MobileMenuComponent from './MobileMenuComponent.vue'
 import LanguageButton from './LanguageButton.vue';
 import RenewSubscriptionForm from '@/components/subscription/RenewSubscriptionForm.vue'
-import router from '../router';
 const showMenu = ref(false)
 const showRenew = ref(false);
 const links = [
   { label: "home", link: "/" },
-  { label: "about", link: "/about" },
+  { label: "about_us", link: "/about_us" },
   { label: "contact", link: "/contact_us" },
 ];
 const renew = () => {
@@ -54,11 +53,13 @@ init();
         <!--<a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block"
           href="https://www.libib.com/login">{{
             $t('connexion') }}</a>-->
-        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 hidden text-white md:block">{{
-          $t('signUp')
-        }}</a>
-        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block" @click="renew">{{
-          $t('renew_subscription') }}</a>
+        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 hidden text-white md:block cursor-pointer"
+          href="#pricing">{{
+            $t('signUp')
+          }}</a>
+        <a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block cursor-pointer"
+          @click="renew">{{
+            $t('renew_subscription') }}</a>
       </div>
 
 
