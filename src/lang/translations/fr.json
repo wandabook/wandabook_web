@@ -209,5 +209,9 @@
     "emailLabel": "E-mail :",
     "imagePlaceholder": "Espace image"
   },
-  "renew_subscription": "Réabonnement"
+  "renew_subscription": "Réabonnement",
+  "address_used": "Cette adresse est déjà utilisée",
+  "has_account": "Un compte existe déjà pour cet e-mail",
+  "navigate_to": "Accédez au catalogue de Wandabook",
+  "PAYMENT_FAILED": "Nous n'avons pas pu traiter le paiement. Veuillez vérifier vos informations de paiement et réessayer. Si le problème persiste, contactez votre banque ou essayez un autre mode de paiement."
 }
