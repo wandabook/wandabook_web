@@ -316,7 +316,7 @@ const fetchSubscriptions = async () => {
 
 const selectedSubscription = ref();
 import WInput from '../components/ui/WInput.vue';
-import { addNewUser, createNewUser, getDocumentsGlobal, getDocumentsWithFilerGlobal } from '../lib/appwrite';
+import { addNewUser, createNewUser, getDocumentsGlobal, getDocumentsWithFilerGlobal, getPatron } from '../lib/appwrite';
 import { subscriptionCollection } from '../utilities/constants';
 import { Query } from 'appwrite';
 import WInputPassword from './ui/WInputPassword.vue';
@@ -461,7 +461,24 @@ const pay = () => {
     });
 }
 
-const payDirectly = () => {
+const payDirectly = async () => {
+    errorMessage.value = "";
+    console.log('user.value.password !== confirm_pass.value', user.value.password)
+    console.log('!== confirm_pass.value', confirm_pass.value)
+    if (user.value.password !== confirm_pass.value) {
+        errorMessage.value = t('pass_match')
+        return;
+    }
+
+    const partrons = await getPatron(JSON.stringify({ patron: user.value.email }));
+    if (partrons.status === 'completed') {
+        const rs = JSON.parse(partrons.responseBody);
+        if (rs.barcode) {
+            errorMessage.value = t('address_used')
+            return
+        }
+    }
+
     isLoading.value = true;
     // Get the current date
     const now = new Date();

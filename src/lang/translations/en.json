@@ -234,5 +234,9 @@
     "phoneLabel": "Phone:",
     "emailLabel": "Email:",
     "imagePlaceholder": "Image Placeholder"
-  }
+  },
+  "address_used": "This address is already used",
+  "has_account": "And Account already Exist for this email",
+  "navigate_to": "Navigate to wandabook catalogue",
+  "PAYMENT_FAILED": "We couldn't process. Please check your payment details and try again. If the problem persists, contact your bank or try a different payment method."
 }

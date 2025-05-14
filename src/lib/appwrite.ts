@@ -20,7 +20,28 @@ export const addNewUser = async (data: any) => {
     );
     return result;
 }
-
+export const deletePatron = async (data: any) => {
+    const result = await functions.createExecution(
+        '6724cc3e00047f95c411', // functionId
+        data, // body (optional)
+        false, // async (optional)
+        'patron', // path (optional)
+        ExecutionMethod.DELETE, // method (optional)
+        {}, // headers (optional)
+    );
+    return result;
+}
+export const getPatron = async (data: any) => {
+    const result = await functions.createExecution(
+        '6724cc3e00047f95c411', // functionId
+        data, // body (optional)
+        false, // async (optional)
+        'patron', // path (optional)
+        ExecutionMethod.GET, // method (optional)
+        {}, // headers (optional)
+    );
+    return result;
+}
 export const createNewUser = async (data: any) => {
     return databases.createDocument(
         '671bb8f9000c6e9bf6a0',
