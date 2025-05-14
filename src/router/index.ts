@@ -43,6 +43,14 @@ const router = createRouter({
         title: '',
       },
     },
+    {
+      path: '/payment/:transaction_id',
+      name: 'paymentCheck',
+      component: () => import('@/views/CheckPayment.vue'),
+      meta: {
+        title: 'Verification',
+      },
+    },
   ],
 })
 export default router

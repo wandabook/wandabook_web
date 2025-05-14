@@ -124,7 +124,7 @@
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <div
                     class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-7 sm:w-full sm:max-w-lg">
-                    <form @submit.prevent="pay">
+                    <form @submit.prevent="payDirectly">
                         <div class="bg-white px-4 sm:p-6 sm:pb-2">
                             <div class="sm:flex sm:items-start">
                                 <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
@@ -294,6 +294,7 @@
 <script setup lang="ts" type="module">
 import { ref } from 'vue';
 import { useI18n } from "vue-i18n";
+import axios from 'axios'
 
 const { t } = useI18n()
 const isAnnual = ref(false);
@@ -458,5 +459,83 @@ const pay = () => {
         alert(t('error_occur'));
         console.error('Erreur CinetPay:', data);
     });
+}
+
+const payDirectly = () => {
+    isLoading.value = true;
+    // Get the current date
+    const now = new Date();
+
+    // Now + 1 month
+    const oneMonthLater = new Date(now);
+    oneMonthLater.setMonth(now.getMonth() + 1);
+
+    // Now + 1 year
+    const oneYearLater = new Date(now);
+    oneYearLater.setFullYear(now.getFullYear() + 1);
+    const transaction_id = Math.floor(Math.random() * 100000000).toString();
+    let userRecord = {
+        first_name: user.value.first_name,
+        last_name: user.value.last_name,
+        email: user.value.email,
+        phone: user.value.phone,
+        address: user.value.address1,
+        city: user.value.city,
+        freeze: false,
+        barcode: "barcode",
+        cni: user.value.cni,
+        subscriptionPlan: selectedSubscription.value.$id,
+        lastSubcriptionDate: new Date(now),
+        endSubscriptionDate: isAnnual.value ? oneYearLater : oneMonthLater,
+        readCondition: true,
+        isAnnual: isAnnual.value,
+        notification_email: user.value.email,
+        patron_id: selectedSubscription.value.title,
+        tags: selectedSubscription.value.title + ',' + (isAnnual ? 'One year' : "One Month"),
+    };
+    var data = JSON.stringify({
+        apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
+        site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
+        notify_url: `https://wandabook.com/payment/${transaction_id}`,
+        return_url: `https://wandabook.com/payment/${transaction_id}`,
+        mode: 'PRODUCTION',
+        close_after_response: true,
+        transaction_id: transaction_id,
+        amount: 100, //isAnnual.value ? selectedSubscription.value.yearly_amount : selectedSubscription.value.monthly_amount,
+        currency: 'XAF',
+        channels: 'ALL',
+        description: `Paiement of ${selectedSubscription.value.description}`,
+        customer_name: user.value.last_name,
+        customer_surname: user.value.first_name,
+        customer_email: user.value.email,
+        customer_phone_number: user.value.phone,
+        customer_address: user.value.address1,
+        customer_city: user.value.address1,
+        customer_country: 'CM',
+        customer_state: 'CM',
+        customer_zip_code: '06510',
+        metadata: btoa(unescape(encodeURIComponent(JSON.stringify(userRecord))))
+    });
+
+    var config = {
+        method: 'post',
+        url: 'https://api-checkout.cinetpay.com/v2/payment',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        data: data
+    };
+
+    axios(config)
+        .then(function (response) {
+            console.log(JSON.stringify(response.data));
+            console.log('response.data',)
+            location.href = response.data.data.payment_url;
+            isLoading.value = false;
+        })
+        .catch(function (error) {
+            console.log(error);
+            isLoading.value = false;
+        });
 }
 </script>
