@@ -462,6 +462,8 @@ const pay = () => {
 }
 
 const payDirectly = async () => {
+    isLoading.value = true;
+
     errorMessage.value = "";
     console.log('user.value.password !== confirm_pass.value', user.value.password)
     console.log('!== confirm_pass.value', confirm_pass.value)
@@ -471,15 +473,15 @@ const payDirectly = async () => {
     }
 
     const partrons = await getPatron(JSON.stringify({ patron: user.value.email }));
+    console.log('this is the patron', partrons)
     if (partrons.status === 'completed') {
         const rs = JSON.parse(partrons.responseBody);
-        if (rs.barcode) {
+        if (rs.result.barcode) {
             errorMessage.value = t('address_used')
-            return
+            isLoading.value = false;
+            return;
         }
     }
-
-    isLoading.value = true;
     // Get the current date
     const now = new Date();
 
