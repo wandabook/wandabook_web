@@ -43,14 +43,14 @@ const links1 = [
           </div>
         </div>
         <div class="flex md:flex-col flex-row items-center lg:items-start gap-3 mt-8 lg:mt-0">
-          <router-link v-for="link in links" :key="link"
+          <router-link v-for="link in links" :key="link.label"
             class="capitalize text-brand-light-grayish-blue font-light transition-all duration-200 ease hover:text-brand-lime-green"
             :to="link.link">
             {{ $t(link.label) }}
           </router-link>
         </div>
         <div class="flex md:flex-col flex-row items-center lg:items-start gap-3 mt-3 lg:mt-0">
-          <router-link v-for="link in links1" :key="link"
+          <router-link v-for="link in links1" :key="link.label"
             class="capitalize text-brand-light-grayish-blue font-light transition-all duration-200 ease hover:text-brand-lime-green"
             :to="link.link">
             {{ $t(link.label) }}
