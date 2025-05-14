@@ -501,7 +501,7 @@ const payDirectly = () => {
         mode: 'PRODUCTION',
         close_after_response: true,
         transaction_id: transaction_id,
-        amount: 100, //isAnnual.value ? selectedSubscription.value.yearly_amount : selectedSubscription.value.monthly_amount,
+        amount: isAnnual.value ? selectedSubscription.value.yearly_amount : selectedSubscription.value.monthly_amount,
         currency: 'XAF',
         channels: 'ALL',
         description: `Paiement of ${selectedSubscription.value.description}`,
