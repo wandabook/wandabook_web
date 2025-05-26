@@ -32,7 +32,7 @@ const goto = (link: string) => {
 }
 </script>
 
-<template>
+<template><!--
   <section
     class="hidden md:flex relative w-full pb-30  lg:h-[100vh] px-6 md:px-20 lg:px-0  flex-col-reverse lg:flex-row lg:justify-between items-center overflow-x-clip overflow-hidden">
     <div class="absolute top-0 bottom-0 right-0 left-0 bg-brand-default -z-30"></div>
@@ -49,8 +49,33 @@ const goto = (link: string) => {
         <CtaComponent />
       </div>
     </div>
-    <img src="@/assets/default/im.png" class=" lg:w-7/12 -z-10 lg:-mr-32 relative top-[30px] md:top-[-8px] lg:top-0 lg:h-[140%] xl:h-auto
-      lg:right-[30px] xl:right-0" alt="mockups" />
+    <div class="lg:w-1/2 mb-10 lg:mb-0 flex justify-center">
+      <img src="@/assets/default/im.png" class="rounded-2xl shadow-lg w-full max-w-md" alt="mockups" />
+    </div>
+  </section>-->
+  <section
+    class=" hidden md:flex relative  flex-col-reverse lg:flex-row items-center justify-between bg-brand-default px-16 xl:p-5 min-h-screen">
+
+    <!-- Texte à gauche -->
+    <div class="text-white lg:w-1/2 space-y-6 px-10">
+      <h1 class="text-4xl lg:text-5xl font-bold leading-tight">
+        {{ $t('title_1') }} {{ $t('title_2') }}
+      </h1>
+      <p class="text-lg lg:text-xl">
+        {{ $t('title_description') }}
+      </p>
+      <a href="https://www.libib.com/u/wandabook"
+        class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg transition duration-300">
+        {{ $t('visiteCatalogue') }}
+      </a>
+    </div>
+
+    <!-- Image à droite -->
+    <div class="lg:w-1/2 mb-10 lg:mb-0 flex justify-center">
+      <img src="@/assets/default/avatar-removebg-preview.png" alt="Bâtiment Wandabook"
+        class="rounded-2xl w-full max-w-md">
+    </div>
+
   </section>
   <section class=" md:hidden relative w-full pt-20 mb-2">
 

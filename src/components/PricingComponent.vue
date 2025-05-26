@@ -13,19 +13,19 @@
                 {{
                     $t('price_description') }}</p>
             <div class="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-5 mt-10">
-                <div class="relative flex w-full p-1 bg-brand-default dark:bg-slate-900 rounded-full">
+                <div class="relative flex w-full p-1 bg-brand-default  rounded-full">
                     <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
                         <span
                             class="absolute inset-0 w-1/2 bg-red-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out"
                             :class="isAnnual ? 'translate-x-full' : 'translate-x-0'"></span>
                     </span>
                     <button
-                        class="relative uppercase font-bold flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-                        :class="isAnnual ? 'text-white dark:text-slate-400 ' : 'text-white'" @click="isAnnual = false"
+                        class="relative uppercase font-bold flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300  transition-colors duration-150 ease-in-out"
+                        :class="isAnnual ? 'text-white ' : 'text-white'" @click="isAnnual = false"
                         :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
                     <button
                         class="  uppercase font-bold relative flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-                        :class="isAnnual ? 'text-white' : 'text-white dark:text-slate-400 '" @click="isAnnual = true"
+                        :class="isAnnual ? 'text-white' : 'text-white'" @click="isAnnual = true"
                         :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
 
                 </div>
