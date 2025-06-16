@@ -124,7 +124,7 @@
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <div
                     class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-7 sm:w-full sm:max-w-lg">
-                    <form @submit.prevent="payDirectly">
+                    <form @submit.prevent="createWandaUser('')">
                         <div class="bg-white px-4 sm:p-6 sm:pb-2">
                             <div class="sm:flex sm:items-start">
                                 <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
@@ -384,6 +384,7 @@ const createWandaUser = async (barcode: any) => {
     // Now + 1 year
     const oneYearLater = new Date(now);
     oneYearLater.setFullYear(now.getFullYear() + 1);
+    const transaction_id = Math.floor(Math.random() * 100000000).toString();
     let userRecord = {
         first_name: user.value.first_name,
         last_name: user.value.last_name,
@@ -394,76 +395,15 @@ const createWandaUser = async (barcode: any) => {
         freeze: false,
         barcode: barcode,
         cni: user.value.cni,
+        password: user.value.password,
         subscriptionPlan: selectedSubscription.value.$id,
         lastSubcriptionDate: new Date(now),
         endSubscriptionDate: isAnnual.value ? oneYearLater : oneMonthLater,
         readCondition: true,
-        isAnnual: isAnnual.value
+        isAnnual: isAnnual.value,
+        cpm_trans_id: transaction_id,
+        status: 'Draft'
     };
-    try {
-        const userResult = await createNewUser(userRecord);
-        console.log(userResult)
-        isCreation.value = false;
-        isSuccess.value = true;
-    } catch (e) {
-        console.log("error", e);
-        errorMessage.value = t('error_occur');
-    }
-
-
-}
-const pay = () => {
-    // console.log('import.meta.env.VITE_APP_CINET_PAY_SITE_Id', import.meta.env.VITE_APP_CINET_PAY_SITE_Id);7
-    errorMessage.value = "";
-    console.log('user.value.password !== confirm_pass.value', user.value.password)
-    console.log('!== confirm_pass.value', confirm_pass.value)
-    if (user.value.password !== confirm_pass.value) {
-        errorMessage.value = t('pass_match')
-        return;
-    }
-    window.CinetPay.setConfig({
-        apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
-        site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
-        notify_url: 'http://mondomaine.com/notify/',
-        mode: 'PRODUCTION',
-        close_after_response: true,
-    });
-    window.CinetPay.getCheckout({
-        transaction_id: Math.floor(Math.random() * 100000000).toString(),
-        amount: isAnnual.value ? selectedSubscription.value.yearly_amount : selectedSubscription.value.monthly_amount,
-        currency: 'XAF',
-        channels: 'ALL',
-        description: `Paiement of ${selectedSubscription.value.description}`,
-        customer_name: user.value.last_name,
-        customer_surname: user.value.first_name,
-        customer_email: user.value.email,
-        customer_phone_number: user.value.phone,
-        customer_address: user.value.address1,
-        customer_city: user.value.address1,
-        customer_country: 'CM',
-        customer_state: 'CM',
-        customer_zip_code: '06510',
-    });
-
-    window.CinetPay.waitResponse((data: { status: string }) => {
-        console.log('data value', data);
-        if (data.status === 'REFUSED') {
-            alert(t('payment_failed'));
-            //createUserAccount();
-        } else if (data.status === 'ACCEPTED') {
-            createUserAccount();
-        }
-    });
-
-    window.CinetPay.onError((data: any) => {
-        alert(t('error_occur'));
-        console.error('Erreur CinetPay:', data);
-    });
-}
-
-const payDirectly = async () => {
-    isLoading.value = true;
-
     errorMessage.value = "";
     console.log('user.value.password !== confirm_pass.value', user.value.password)
     console.log('!== confirm_pass.value', confirm_pass.value)
@@ -482,6 +422,20 @@ const payDirectly = async () => {
             return;
         }
     }
+    try {
+        const userResult = await createNewUser(userRecord);
+        console.log(userResult)
+        isCreation.value = false;
+        //   isSuccess.value = true;
+        payDirectly(transaction_id);
+    } catch (e) {
+        console.log("error", e);
+        errorMessage.value = t('error_occur');
+    }
+}
+
+const payDirectly = async (transaction_id: any) => {
+    isLoading.value = true;
     // Get the current date
     const now = new Date();
 
@@ -492,7 +446,6 @@ const payDirectly = async () => {
     // Now + 1 year
     const oneYearLater = new Date(now);
     oneYearLater.setFullYear(now.getFullYear() + 1);
-    const transaction_id = Math.floor(Math.random() * 100000000).toString();
     let userRecord = {
         first_name: user.value.first_name,
         last_name: user.value.last_name,
@@ -515,8 +468,8 @@ const payDirectly = async () => {
     var data = JSON.stringify({
         apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
         site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
-        notify_url: `https://wandabook.com/payment/${transaction_id}`,
-        return_url: `https://wandabook.com/payment/${transaction_id}`,
+        //notify_url: `https://wandabook.com/payment/${transaction_id}`,
+        //return_url: `https://wandabook.com/payment/${transaction_id}`,
         mode: 'PRODUCTION',
         close_after_response: true,
         transaction_id: transaction_id,

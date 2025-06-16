@@ -37,7 +37,7 @@ init();
         <img src="/images/icon-close.svg" alt="close" class="fill-white w-4" />
       </button>
       <button v-else class="md:hidden" @click="() => (showMenu = true)">
-        <img src="/images/icon-hamburger.svg" alt="close" class="fill-white w-5" />
+        <img src="/images/icon-hamburger.svg" alt="close" class="fill-whitew-52" />
       </button>
       <router-link to="/">
         <img src="@/assets/images/logo18.png" alt="logo" class="md:w-52 w-52" />
@@ -54,11 +54,11 @@ init();
           <!--<a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block"
           href="https://www.libib.com/login">{{
             $t('connexion') }}</a>-->
-          <a class="uppercase hover:text-gray-50 font-heading flex items-center h-full text-md  transition-all duration-200 ease border-b-4 border-b-transparent text-white md:block cursor-pointer"
+          <a class="uppercase hover:text-gray-50 font-heading text-wrap flex items-center h-full text-xs md:text-md  transition-all duration-200 ease border-b-4 border-b-transparent text-white md:block cursor-pointer"
             href="#pricing">{{
               $t('signUp')
             }}</a>
-          <a class="uppercase hover:text-gray-50 font-heading flex items-center h-full text-md  transition-all duration-200 ease border-b-4 border-b-transparent text-white md:block cursor-pointer"
+          <a class="uppercase hover:text-gray-50 font-heading flex items-center h-full text-xs md:text-md  transition-all duration-200 ease border-b-4 border-b-transparent text-white md:block cursor-pointer"
             @click="renew">{{
               $t('renew_subscription') }}</a>
         </div>

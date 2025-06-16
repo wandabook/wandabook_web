@@ -9,14 +9,14 @@ import CtaComponent from '../components/CtaComponent.vue'
 
 <template>
   <HeroComponent />
-  <PricingComponent id="" />
-  <LatestArticlesComponent />
-  <FeaturesComponent />
   <section>
     <div class="self-center align-middle justify-center flex">
       <CtaComponent></CtaComponent>
     </div>
   </section>
+  <PricingComponent id="" />
+  <LatestArticlesComponent />
+  <FeaturesComponent />
   <section>
     <div class="w-full px-6 md:px-5 xl:px-40 py-16 lg:py-10 max-w-[1440px] mx-auto">
       <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
