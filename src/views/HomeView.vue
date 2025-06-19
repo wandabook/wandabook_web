@@ -9,7 +9,7 @@ import CtaComponent from '../components/CtaComponent.vue'
 
 <template>
   <HeroComponent />
-  <section>
+  <section class="md:hidden">
     <div class="self-center align-middle justify-center flex">
       <CtaComponent></CtaComponent>
     </div>
