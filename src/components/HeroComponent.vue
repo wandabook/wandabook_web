@@ -4,6 +4,8 @@ import CtaComponent from './CtaComponent.vue'
 import SingleScroll from './SingleScroll.vue'
 import { getDocumentsGlobal } from '../lib/appwrite';
 import { bookCollection, } from '../utilities/constants';
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 const books = ref();
 
 const fetchBooks = async () => {
@@ -39,11 +41,11 @@ const goto = (link: string) => {
 
     <div class="lg:ml-20 xl:ml-40 2xl:ml-52 lg:w-4/12">
       <h2 class=" xl:text-5xl text-white leading-[3rem] xl:leading-[4.5rem] text-center lg:text-left mb-6 text-2xl">
-        {{ $t('title_1') }} <br class="hidden lg:block" />
-        {{ $t('title_2') }}
+        {{ t('title_1') }} <br class="hidden lg:block" />
+        {{ t('title_2') }}
       </h2>
       <p class="text-white text-md lg:text-body font-normal text-center lg:text-left mb-8 hidden md:block">
-        {{ $t('title_description') }}
+        {{ t('title_description') }}
       </p>
       <div class="flex justify-center lg:justify-start mb-10">
         <CtaComponent />
@@ -59,14 +61,14 @@ const goto = (link: string) => {
     <!-- Texte à gauche -->
     <div class="text-white lg:w-1/2 space-y-6 px-10">
       <h1 class="text-4xl lg:text-5xl font-bold leading-tight">
-        {{ $t('title_1') }} {{ $t('title_2') }}
+        {{ t('title_1') }} {{ t('title_2') }}
       </h1>
       <p class="text-lg lg:text-xl">
-        {{ $t('title_description') }}
+        {{ t('title_description') }}
       </p>
       <a href="https://www.libib.com/u/wandabook"
         class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg transition duration-300">
-        {{ $t('visiteCatalogue') }}
+        {{ t('visiteCatalogue') }}
       </a>
     </div>
 
@@ -84,7 +86,7 @@ const goto = (link: string) => {
         <img src="@/assets/default/im.png" class="h-32 w-full object-cover" alt="mockups" />
         <div class="pb-5">
           <h2 class=" text-black text-center lg:text-left text-sm">
-            {{ $t('find') }}
+            {{ t('find') }}
           </h2>
         </div>
       </div>
@@ -103,7 +105,7 @@ const goto = (link: string) => {
   <section>
     <div class=" pt-2 pb-4 md:hidden">
       <h3 class="text-xl px-4  text-left mb-2 font-heading uppercase font-extrabold">
-        {{ $t('weekChoice') }}
+        {{ t('weekChoice') }}
       </h3>
       <SingleScroll>
         <!-- Contenu pour le défilement horizontal -->

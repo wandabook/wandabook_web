@@ -3,6 +3,8 @@ import { onMounted, ref } from 'vue'
 import MobileMenuComponent from './MobileMenuComponent.vue'
 import LanguageButton from './LanguageButton.vue';
 import RenewSubscriptionForm from '@/components/subscription/RenewSubscriptionForm.vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 const showMenu = ref(false)
 const showRenew = ref(false);
 const links = [
@@ -46,21 +48,21 @@ init();
         <nav class="hidden md:flex items-center h-full gap-7 ">
           <router-link v-for="link in links" :key="link.label" :to="link.link"
             class=" uppercase hover:text-gray-50 font-heading flex items-center h-full text-md  transition-all duration-200 ease border-b-4 border-b-transparent text-white">{{
-              $t(link.label) }}</router-link>
+              t(link.label) }}</router-link>
         </nav>
       </div>
       <div class="flex gap-x-4">
         <div class="gap-x-4 flex uppercase justify-center align-middle self-center  ">
           <!--<a class="uppercase md:text-sm text-xs font-heading hover:text-gray-50 text-white  md:block"
           href="https://www.libib.com/login">{{
-            $t('connexion') }}</a>-->
+            t('connexion') }}</a>-->
           <a class="uppercase hover:text-gray-50 font-heading text-wrap flex items-center h-full text-xs md:text-md  transition-all duration-200 ease border-b-4 border-b-transparent text-white md:block cursor-pointer"
             href="#pricing">{{
-              $t('signUp')
+              t('signUp')
             }}</a>
           <a class="uppercase hover:text-gray-50 font-heading flex items-center h-full text-xs md:text-md  transition-all duration-200 ease border-b-4 border-b-transparent text-white md:block cursor-pointer"
             @click="renew">{{
-              $t('renew_subscription') }}</a>
+              t('renew_subscription') }}</a>
         </div>
         <template v-if="showRenew">
           <RenewSubscriptionForm @close="close" />

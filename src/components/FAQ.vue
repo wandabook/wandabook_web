@@ -3,7 +3,7 @@
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="max-w-2xl mx-auto text-center">
                 <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-                    {{ $t('faqTitle') }}
+                    {{ t('faqTitle') }}
                 </h2>
             </div>
             <div class="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
@@ -24,10 +24,10 @@
                 </div>
             </div>
             <p class="text-center text-gray-600 textbase mt-9">
-                {{ $t('stillHaveQuestion') }}
+                {{ t('stillHaveQuestion') }}
                 <span
                     class="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover-underline">{{
-                        $t('contactOurSupport') }}
+                        t('contactOurSupport') }}
                 </span>
             </p>
         </div>
@@ -38,7 +38,7 @@
 import { onMounted } from 'vue';
 import { useI18n } from "vue-i18n";
 
-const { tm, rt } = useI18n()
+const { tm, rt,t } = useI18n()
 onMounted(() => {
     // JavaScript to toggle the answers and rotate the arrows
     document.querySelectorAll('[data-id="question"]').forEach(function (button, index) {

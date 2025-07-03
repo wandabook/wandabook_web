@@ -20,7 +20,8 @@ import { getDocumentsWithFilerGlobal } from "../lib/appwrite";
 import { catalogueCollection } from "../utilities/constants";
 import { Query } from "appwrite";
 import { ref } from "vue";
-
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 const articles = ref();
 const fetchCatague = async () => {
   const result = await getDocumentsWithFilerGlobal(catalogueCollection, [Query.equal('status', "active")]);
@@ -53,7 +54,7 @@ fetchCatague();
     <div class="w-full px-6 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
       <h3
         class="text-[32px] uppercase lg:text-[42px] text-brand-dark-blue font-normal text-center lg:text-left mb-8 lg:mb-12 font-heading">
-        {{ $t('categories') }}
+        {{ t('categories') }}
       </h3>
       <div class="md:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 hidden">
         <article v-for="article in articles" :key="article.id"
@@ -66,7 +67,7 @@ fetchCatague();
                 {{ article.title }}
               </a>
             </h4> <template v-if="article.description">
-              <p class="text-brand-grayish-blue text-sm hidden md:block">{{ $t(article.description) }}</p>
+              <p class="text-brand-grayish-blue text-sm hidden md:block">{{ t(article.description) }}</p>
             </template>
           </div>
         </article>
@@ -76,7 +77,7 @@ fetchCatague();
   <section class="w-full md:hidden mb-0">
     <div class="w-full max-w-[1440px] mx-auto">
       <h3 class="text-xl px-4  text-left mb-4 font-heading uppercase font-extrabold">
-        {{ $t('categories') }}
+        {{ t('categories') }}
       </h3>
       <div class="grid grid-cols-3  gap-1 px-4 ">
         <article v-for="article in articles" :key="article.id"
@@ -90,7 +91,7 @@ fetchCatague();
               </a>
             </h4>
             <template v-if="article.description">
-              <p class="text-brand-grayish-blue text-sm hidden md:block">{{ $t(article.description) }}</p>
+              <p class="text-brand-grayish-blue text-sm hidden md:block">{{ t(article.description) }}</p>
             </template>
           </div>
         </article>
@@ -106,7 +107,7 @@ fetchCatague();
               {{ article.title }}
             </a>
           </h4>
-          <p class="text-brand-grayish-blue text-sm hidden md:block">{{ $t(article.content) }}</p>
+          <p class="text-brand-grayish-blue text-sm hidden md:block">{{ t(article.content) }}</p>
         </div>
       </article>
       </SingleScroll>-->

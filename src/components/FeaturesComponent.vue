@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 const features = [
   {
     id: 1,
@@ -35,10 +37,10 @@ const features = [
     <div class="w-full px-6 md:px-20 xl:px-40 py-16 lg:py-24 max-w-[1440px] mx-auto">
       <h3
         class="text-[34px] lg:text-[42px] text-brand-dark-blue text-center lg:text-left leading-tight mb-5 font-heading">
-        {{ $t('howItWorks') }}
+        {{ t('howItWorks') }}
       </h3>
       <p class="text-md lg:text-body text-brand-grayish-blue font-normal text-center lg:text-left mb-14 lg:mb-20">
-        {{ $t('howItWorks_desciption') }}
+        {{ t('howItWorks_desciption') }}
       </p>
       <div class="grid grid-cols-2 justify-between md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
         <div v-for="feature in features" :key="feature.id"
@@ -48,10 +50,10 @@ const features = [
             <span>{{ feature.id }}</span> <!-- Remplacez 42 par le nombre souhaité -->
           </div>
           <h4 class="text-lg  font-normal text-brand-dark-blue mb-4 lg:mb-6 text-center mt-4">
-            {{ $t(feature.title) }}
+            {{ t(feature.title) }}
           </h4>
           <p class="text-brand-grayish-blue font-normal text-center hidden md:block">
-            {{ $t(feature.content) }}
+            {{ t(feature.content) }}
           </p>
         </div>
       </div>
@@ -61,10 +63,10 @@ const features = [
   <section class="w-full  relative -z-20 md:hidden">
     <div class="w-full px-5  lg:py-24 max-w-[1440px] mx-auto">
       <h3 class="text-xl  text-brand-dark-blue text-left mb-5 font-heading uppercase pt-5">
-        {{ $t('howItWorks') }}
+        {{ t('howItWorks') }}
       </h3>
       <p class="text-sm lg:text-body text-brand-grayish-blue font-normal text-center mb-10">
-        {{ $t('howItWorks_desciption') }}
+        {{ t('howItWorks_desciption') }}
       </p>
       <div class="grid grid-cols-2 justify-between ">
         <div v-for="feature in features" :key="feature.id"
@@ -74,10 +76,10 @@ const features = [
             <span>{{ feature.id }}</span> <!-- Remplacez 42 par le nombre souhaité -->
           </div>
           <h4 class="text-sm mt-2  mb-4 lg:mb-6 text-center w-24">
-            {{ $t(feature.title) }}
+            {{ t(feature.title) }}
           </h4>
           <p class="text-brand-grayish-blue font-normal text-center hidden md:block">
-            {{ $t(feature.content) }}
+            {{ t(feature.content) }}
           </p>
         </div>
       </div>

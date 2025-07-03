@@ -1,5 +1,6 @@
 <script setup lang="ts">
-
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 defineProps(['showMenu'])
 
 defineEmits(['closeMenu'])
@@ -11,11 +12,11 @@ defineEmits(['closeMenu'])
     <div class="w-full p-6">
       <div class="flex flex-col items-center gap-6 p-8 bg-brand-white rounded">
         <router-link to="/" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
-          @click="$emit('closeMenu')">{{ $t('home') }}</router-link>
+          @click="$emit('closeMenu')">{{ t('home') }}</router-link>
         <router-link to="/about_us" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
-          @click="$emit('closeMenu')">{{ $t('about_us') }}</router-link>
+          @click="$emit('closeMenu')">{{ t('about_us') }}</router-link>
         <router-link to="/contact_us" class="text-body text-brand-dark-blue font-normal hover:text-brand-default"
-          @click="$emit('closeMenu')">{{ $t('Contact') }}</router-link>
+          @click="$emit('closeMenu')">{{ t('Contact') }}</router-link>
       </div>
     </div>
   </div>

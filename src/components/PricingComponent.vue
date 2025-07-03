@@ -6,12 +6,12 @@
         <div class="w-full px-3 md:px-20 xl:px-40 py-24 max-w-[1440px] mx-auto">
             <h3
                 class="text-[32px] lg:text-[42px] text-brand-dark-blu capitalize text-center lg:text-left mb-8 lg:mb-12 font-thin">
-                {{ $t('price') }}
+                {{ t('price') }}
             </h3>
             <p
                 class="mt-2 md:text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl font-heading text-center lg:text-left">
                 {{
-                    $t('price_description') }}</p>
+                    t('price_description') }}</p>
             <div class="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-5 mt-10">
                 <div class="relative flex w-full p-1 bg-brand-default  rounded-full">
                     <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
@@ -22,11 +22,11 @@
                     <button
                         class="relative uppercase font-bold flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300  transition-colors duration-150 ease-in-out"
                         :class="isAnnual ? 'text-white ' : 'text-white'" @click="isAnnual = false"
-                        :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
+                        :aria-pressed="isAnnual">{{ t('monthly') }}</button>
                     <button
                         class="  uppercase font-bold relative flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
                         :class="isAnnual ? 'text-white' : 'text-white'" @click="isAnnual = true"
-                        :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
+                        :aria-pressed="isAnnual">{{ t('yearly') }}</button>
 
                 </div>
             </div>
@@ -36,14 +36,14 @@
                     <div v-for="(tier, tierIdx) in subscriptions" :key="tier.id"
                         :class="['relative shadow-2xl', 'lg:rounded-t-3xl lg:rounded-tr-3xl', 'rounded-3xl md:pt-4 px-4 p-3 ring-1 ring-gray-900/10 ']">
                         <h3 :id="tier.id" :class="['text-brand-default font-extrabold uppercase leading-7']">
-                            {{ $t(tier.title) }}</h3>
+                            {{ t(tier.title) }}</h3>
                         <p class="mt-4 flex items-baseline gap-x-2" v-if="isAnnual">
                             <span :class="['text-gray-900', 'md:text-2xl text-sm font-bold tracking-tight']">{{
                                 new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
                                     tier.yearly_amount,
                                 )
                             }}</span>
-                            <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ $t('year') }}</span>
+                            <span :class="['text-gray-500', 'md:text-base text-sm']">/{{ t('year') }}</span>
                         </p>
                         <p class="mt-4 flex items-baseline gap-x-2" v-else>
                             <span :class="['text-gray-900', 'lg:text-2xl text-sm font-bold tracking-tight']">{{
@@ -51,13 +51,13 @@
                                     tier.monthly_amount,
                                 )
                             }}</span>
-                            <span :class="['text-gray-500', 'md:text-base  text-sm']">/{{ $t('month') }}</span>
+                            <span :class="['text-gray-500', 'md:text-base  text-sm']">/{{ t('month') }}</span>
                         </p>
                         <p :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7']">{{
                             tier.description }}</p>
                         <a :aria-describedby="tier.id" @click="onSelectSubscription(tier)"
                             :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
-                            {{ $t('subscribeNow') }}
+                            {{ t('subscribeNow') }}
 
                         </a>
                     </div>
@@ -69,7 +69,7 @@
     <section class="w-full md:hidden">
         <div class="w-full max-w-[1440px] mx-auto">
             <h3 class="text-xl px-5 text-left capitalize font-heading">
-                {{ $t('price') }}
+                {{ t('price') }}
             </h3>
             <div class="flex justify-center max-w-[14rem] m-auto mb-2  mt-2">
                 <div class="relative flex w-full p-1 bg-brand-default dark:bg-slate-900 rounded-full">
@@ -81,11 +81,11 @@
                     <button
                         class="relative uppercase font-bold flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
                         :class="isAnnual ? 'text-white dark:text-slate-400 ' : 'text-white'" @click="isAnnual = false"
-                        :aria-pressed="isAnnual">{{ $t('monthly') }}</button>
+                        :aria-pressed="isAnnual">{{ t('monthly') }}</button>
                     <button
                         class="  uppercase font-bold relative flex-1 text-sm h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
                         :class="isAnnual ? 'text-white' : 'text-white dark:text-slate-400 '" @click="isAnnual = true"
-                        :aria-pressed="isAnnual">{{ $t('yearly') }}</button>
+                        :aria-pressed="isAnnual">{{ t('yearly') }}</button>
                 </div>
             </div>
             <div class="relative isolate bg-white md:px-6 pt-2 pb-3 px-5">
@@ -94,8 +94,8 @@
                     <div v-for="(tier, tierIdx) in subscriptions" :key="tier.id" @click="onSelectSubscription(tier)"
                         :class="['relative md:mx-5', 'rounded-3xl p-3 ring-1 ring-gray-900/10 sm:p-10']">
                         <h3 :id="tier.id" :class="['text-brand-default font-extrabold uppercase  text-sm']">
-                            {{ $t(tier.title) }}</h3>
-                        <div class="mt-2">{{ $t('unlimited') }}</div>
+                            {{ t(tier.title) }}</h3>
+                        <div class="mt-2">{{ t('unlimited') }}</div>
                         <p class="mt-2 flex items-baseline gap-x-2" v-if="isAnnual">
                             <span :class="['text-gray-900', 'md:text-5xl text-sm font-bold tracking-tight']">{{
                                 new Intl.NumberFormat('fr-CM', { style: 'currency', currency: 'XAF' }).format(
@@ -129,7 +129,7 @@
                             <div class="sm:flex sm:items-start">
                                 <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                                     <h3 class="text-base font-heading leading-6 text-gray-900 mb-5" id="modal-title">{{
-                                        $t('createAccount') }}</h3>
+                                        t('createAccount') }}</h3>
                                     <div class="mt-3" v-if="errorMessage">
                                         <div class="text-red-700">
                                             {{ errorMessage }}
@@ -139,69 +139,69 @@
                                         <div class="mb-1 rounded-lg px-0 text-left">
                                             <!-- <div class="mb-4">
                                                 <label class="block text-gray-700 font-medium mb-2">{{
-                                                    $t('are_you_the_end_user') }}</label>
+                                                    t('are_you_the_end_user') }}</label>
                                                 <div class="flex space-x-4">
                                                     <label class="inline-flex items-center">
                                                         <input type="radio" v-model="end_user" value="Yes"
                                                             class="form-radio text-indigo-600" />
-                                                        <span class="ml-2">{{ $t('Yes') }}</span>
+                                                        <span class="ml-2">{{ t('Yes') }}</span>
                                                     </label>
                                                     <label class="inline-flex items-center">
                                                         <input type="radio" v-model="end_user" value="No"
                                                             class="form-radio text-indigo-600" />
-                                                        <span class="ml-2">{{ $t('No') }}</span>
+                                                        <span class="ml-2">{{ t('No') }}</span>
                                                     </label>
                                                 </div>
                                                 <span class="text-sm text-gray-700" v-if="end_user == 'No'">{{
-                                                    $t('enter_end_user_info')
+                                                    t('enter_end_user_info')
                                                 }}</span>
                                             </div> -->
                                             <div class="flex justify-between flex-wrap">
                                                 <div class="mb-2  w-5/12"><label class="mb-2 block text-sm font-bold"
                                                         for="firstname">{{
-                                                            $t('firstName') }}</label>
+                                                            t('firstName') }}</label>
                                                     <WInput :required="true" id="firstname" v-model="user.first_name" />
                                                 </div>
                                                 <div class="mb-2 w-6/12"><label class="mb-2 block text-sm font-bold"
                                                         for="lastname">{{
-                                                            $t('lastName') }}</label>
+                                                            t('lastName') }}</label>
                                                     <WInput :required="true" id="lastname" v-model="user.last_name" />
                                                 </div>
                                             </div>
                                             <div class="mb-2"><label class=" mb-2 block text-sm font-bold"
-                                                    for="email">{{ $t('email') }}</label>
+                                                    for="email">{{ t('email') }}</label>
                                                 <WInput type="email" :required="true" id="email" v-model="user.email" />
                                             </div>
                                             <div class="mb-2"><label class=" mb-2 block text-sm font-bold"
-                                                    for="phone">{{ $t('phone') }}</label>
+                                                    for="phone">{{ t('phone') }}</label>
                                                 <WInput type="text" :required="true" id="phone" v-model="user.phone"
-                                                    :placeholder="$t('help_phone')" />
+                                                    :placeholder="t('help_phone')" />
                                             </div>
                                             <div class="mb-2"><label class=" mb-2 block text-sm font-bold"
-                                                    for="address">{{ $t('neighborhood') }}</label>
+                                                    for="address">{{ t('neighborhood') }}</label>
                                                 <WInput type="text" :required="true" id="address"
                                                     v-model="user.address1" />
                                             </div>
                                             <!--
                                             <div class="mb-4"><label class=" mb-2 block text-sm font-bold" for="city">{{
-                                                    $t('city') }}</label>
+                                                    t('city') }}</label>
                                                 <WInput type="text" :required="true" id="city" v-model="user.city" />
                                             </div>-->
                                             <div class="mb-2"><label class=" mb-2 block text-sm font-bold" for="cni">{{
-                                                $t('cni') }}</label>
+                                                t('cni') }}</label>
                                                 <WInput type="text" :required="true" id="cni" v-model="user.cni" />
                                             </div>
 
                                             <div class="mb-2" v-if="end_user === 'Yes'"><label
                                                     class="mb-2 block text-sm font-bold" for="password">{{
-                                                        $t('password') }}</label>
+                                                        t('password') }}</label>
                                                 <WInputPassword type="password" :required="true"
                                                     placeholder="******************" id="password"
                                                     v-model="user.password" />
                                             </div>
                                             <div class="mb-2" v-if="end_user === 'Yes'"><label
                                                     class="mb-2 block text-sm font-bold" for="confirm_password">{{
-                                                        $t('confirmPassword') }}</label>
+                                                        t('confirmPassword') }}</label>
                                                 <WInputPassword type="password" :required="true"
                                                     placeholder="******************" v-model="confirm_pass"
                                                     id="confirm_password" />
@@ -212,13 +212,13 @@
                                                         class="mr-2" :required="true" />
                                                     <div class="text-gray-800">
                                                         <p class="">
-                                                            {{ $t('acceptT') }}
+                                                            {{ t('acceptT') }}
                                                             <a href="#"
                                                                 class="cursor-pointer text-blue-500 underline">{{
-                                                                    $t('termsOfUse') }}</a>
-                                                            {{ $t('and') }}
+                                                                    t('termsOfUse') }}</a>
+                                                            {{ t('and') }}
                                                             <a href="#" class="cursor-pointer text-blue-500 underline">
-                                                                {{ $t('privacy') }}</a>
+                                                                {{ t('privacy') }}</a>
                                                         </p>
                                                     </div>
                                                 </label>
@@ -231,7 +231,7 @@
                         <div class="md:bg-gray-50 px-4 py-3 flex flex-row sm:px-6 justify-between w-full">
                             <button type="button" @click="isCreation = false"
                                 class="mt-2 inline-flex justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
-                                {{ $t('cancel') }}</button>
+                                {{ t('cancel') }}</button>
                             <button type="submit"
                                 class=" justify-center rounded-md bg-brand-default px-3 py- text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">
                                 <svg aria-hidden="true" role="status" v-if="isLoading"
@@ -244,7 +244,7 @@
                                         d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
                                         fill="currentColor" />
                                 </svg>
-                                {{ $t('createAccount') }}</button>
+                                {{ t('createAccount') }}</button>
                         </div>
                     </form>
                 </div>
@@ -271,8 +271,8 @@
                                         clip-rule="evenodd" />
                                 </svg>
                                 <div>
-                                    <h1 class="text-xl font-semibold text-green-700">{{ $t('paymentSuccess') }}</h1>
-                                    <p class="text-green-500 mt-2">{{ $t('paymentSuccessMessage') }}</p>
+                                    <h1 class="text-xl font-semibold text-green-700">{{ t('paymentSuccess') }}</h1>
+                                    <p class="text-green-500 mt-2">{{ t('paymentSuccessMessage') }}</p>
                                 </div>
                             </div>
 
@@ -280,7 +280,7 @@
                             <div class="mt-6">
                                 <button @click="redirectToLogin"
                                     class="w-full bg-brand-default text-white py-2 rounded-lg hover:bg-brand-default/80 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
-                                    {{ $t('gotoLoginPage') }}
+                                    {{ t('gotoLoginPage') }}
                                 </button>
                             </div>
                         </div>

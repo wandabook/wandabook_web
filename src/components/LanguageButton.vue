@@ -34,7 +34,7 @@
         <div class="flex items-center">
           <!-- Texte de l'option -->
           <span class="ml-0 block truncate font-normal">
-            {{ $t(language.name) }}
+            {{ t(language.name) }}
           </span>
 
         </div>
@@ -58,7 +58,8 @@ import sw from '@/assets/images/home/united-kingdom_551844.png'
 import cm from '@/assets/images/home/Flag_of_France.png'
 import { useI18n } from 'vue-i18n'
 import { useLanguageStore } from '../lang/language'
-const t = useI18n({ useScope: 'global' })
+const { t } = useI18n()
+const tr = useI18n({ useScope: 'global' })
 
 const languages = [
   {
@@ -80,9 +81,9 @@ const selectLanguage: any = computed(() => {
 const setLanguage = (lg: any) => {
   console.log('setLanguage', lg)
   show.value = !show
-  if (lg.code !== t.locale.value) {
-    t.locale.value = lg.code
-    useLanguage.set(t.locale.value)
+  if (lg.code !== tr.locale.value) {
+    tr.locale.value = lg.code
+    useLanguage.set(tr.locale.value)
   }
   console.log('useLanguage', useLanguage.locale)
 }
