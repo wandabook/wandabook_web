@@ -12,14 +12,45 @@ const router = createRouter({
       },
     },
     {
-      path: '/create_account',
-      name: 'signup',
-      component: () => import('@/views/SignUpView.vue'),
+      path: '/common_questions',
+      name: 'common-questions',
+      component: () => import('@/views/FAQView.vue'),
       meta: {
         title: '',
       },
     },
+    {
+      path: '/contact_us',
+      name: 'contact_us',
+      component: () => import('@/components/ContactUs.vue'),
+      meta: {
+        title: '',
+      },
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: () => import('@/views/PrivacyPolicy.vue'),
+      meta: {
+        title: '',
+      },
+    },
+    {
+      path: '/about_us',
+      name: 'about_us',
+      component: () => import('@/components/AboutUs.vue'),
+      meta: {
+        title: '',
+      },
+    },
+    {
+      path: '/payment/:transaction_id',
+      name: 'paymentCheck',
+      component: () => import('@/views/CheckPayment.vue'),
+      meta: {
+        title: 'Verification',
+      },
+    },
   ],
 })
-
 export default router

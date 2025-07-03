@@ -1,0 +1,217 @@
+{
+  "login": "Connexion",
+  "home": "Accueil",
+  "about_us": "À propos",
+  "connexion": "Connexion",
+  "signUp": "S'inscrire",
+  "title_1": "La lecture est une porte",
+  "title_2": "ouverte sur d'autres mondes.",
+  "title_description": "Embrassez l'avenir de l'accès au savoir avec notre bibliothèque numérique de pointe. Explorez une vaste collection de livres, d'articles et de documents de recherche, le tout à portée de main.",
+  "visiteCatalogue": "CLIQUER POUR EMPRUNTER DES LIVRES",
+  "howItWorks": "Comment ça marche ?",
+  "howItWorks_desciption": "Emprunter un livre est aussi simple que de se rendre à votre bibliothèque locale, de trouver le livre que vous voulez et de l'emprunter avec votre carte de bibliothèque.",
+  "howItWorks_d": {
+    "l1": "Choisir un abonnement?",
+    "l1_des": "pour déverrouiller un monde de connaissances. Accédez à notre vaste collection de livres, d'articles et plus encore.",
+    "l2": "Visiter le catalogue",
+    "l2_des": "Trouvez votre match parfait. Recherchez dans notre vaste collection de livres, d'articles et plus encore.",
+    "l3": "Réserver un livre",
+    "l3_des": "Réservez un livre pour le récupérer dans la succursale de votre bibliothèque préférée.",
+    "l4": "Retirer le livre",
+    "l4_des": "Récupérez votre livre réservé dans la succursale de votre bibliothèque choisie."
+  },
+  "price": "ABONNEMENT - PRIX",
+  "price_description": "Le prix idéal pour vous, quel que soit votre profil",
+  "yearly": "Annuel",
+  "monthly": "Mensuel",
+  "year": "an",
+  "month": "mois",
+  "c1": {
+    "id": 1,
+    "content": "Explorez les œuvres littéraires les plus célèbres du monde, des épopées anciennes aux chefs-d'œuvre modernes"
+  },
+  "c2": {
+    "content": "Une collection d'histoires d'amour captivantes pour les romantiques."
+  },
+  "c3": {
+    "content": "Un roman rapide et suspenseful qui suit un détective déterminé alors qu'il démêle un réseau complexe de tromperie et de danger dans une enquête policière à haut risque..."
+  },
+  "c4": {
+    "content": "Le prix Nobel est décerné chaque année dans six catégories : Physique, Chimie, Physiologie ou Médecine, Littérature, Paix et Sciences économiques. ..."
+  },
+  "c5": {
+    "content": ""
+  },
+  "c6": {
+    "content": ""
+  },
+  "c7": {
+    "content": ""
+  },
+  "c8": {
+    "content": "Livres sur l'anatomie humaine, la physiologie, la pathologie, la pharmacologie, et plus encore..."
+  },
+  "c9": {
+    "content": "L'étude des ordinateurs et des systèmes informatiques, y compris le matériel, les logiciels et les algorithmes..."
+  },
+  "c10": {
+    "content": "Vivez des aventures palpitantes, explorez des intrigues déconcertantes et assistez au combat du bien contre le mal dans ces séries de bandes dessinées captivantes..."
+  },
+  "c11": {
+    "content": "Voyagez à travers les voix et les perspectives diverses des écrivains africains..."
+  },
+  "c12": {
+    "content": ""
+  },
+  "categories": "Catégories",
+  "basic": "Basique",
+  "standard": "Standard",
+  "firstName": "Prénom",
+  "lastName": "Nom",
+  "email": "E-mail",
+  "phone": "Téléphone",
+  "address": "Adresse",
+  "city": "Ville",
+  "neighborhood": "Quartier",
+  "cni": "Numéro CNI",
+  "password": "Mot de passe",
+  "confirmPassword": "Confirmer mot de passe",
+  "createAccount": "Créer un compte",
+  "cancel": "Annuler",
+  "acceptT": "J'accepte les",
+  "termsOfUse": "conditions d'utilisation",
+  "and": "et",
+  "privacy": "politique de confidentialité",
+  "subscribeNow": "S'inscrire maintenant",
+  "faqTitle": "Explorer les questions courantes",
+  "faq": [
+    {
+      "question": "Comment m'inscrire à la bibliothèque en ligne?",
+      "response": "Pour vous inscrire, rendez-vous sur notre site web et cliquez sur le bouton 'Inscription'. Suivez les étapes pour entrer vos informations personnelles, créer un mot de passe et choisir votre plan d'abonnement. Une fois inscrit, vous pourrez vous connecter et commencer à réserver des livres."
+    },
+    {
+      "question": "Quels sont les tarifs d'abonnement?",
+      "response": "Nous offrons deux types d'abonnement : \n1. Abonnement pour 1 livre à la fois : 2000 F CFA par mois ou 20 000 F CFA par an.\n2. Abonnement pour 3 livres à la fois : 5000 F CFA par mois ou 50 000 F CFA par an. Vous pouvez emprunter autant de fois que vous voulez pendant la période d'abonnement, tant que vous respectez le nombre maximum de livres de votre plan."
+    },
+    {
+      "question": "Comment puis-je effectuer un paiement pour mon abonnement?",
+      "response": "Vous pouvez payer votre abonnement via MT Money ou Orange Money, directement depuis notre site web. Après avoir choisi votre plan d'abonnement, vous serez guidé pour effectuer le paiement en utilisant l'un de ces services de paiement mobile."
+    },
+    {
+      "question": "Comment emprunter un livre?",
+      "response": "Une fois connecté, parcourez notre catalogue de livres et choisissez ceux que vous souhaitez emprunter. Cliquez sur 'Réserver' pour chaque livre. Vous pouvez réserver jusqu'à 1 livre pour l'abonnement basique ou 3 livres pour l'abonnement premium. Les livres réservés seront prêts à être récupérés le lendemain à la bibliothèque."
+    },
+    {
+      "question": "Comment récupérer les livres réservés?",
+      "response": "Une fois votre réservation effectuée, rendez-vous à notre bibliothèque le lendemain pour récupérer vos livres. Assurez-vous d'apporter une pièce d'identité pour vérifier votre réservation lors du retrait."
+    },
+    {
+      "question": "Puis-je emprunter plusieurs fois dans le mois?",
+      "response": "Oui, vous pouvez emprunter autant de livres que vous le souhaitez pendant la période de votre abonnement, mais le nombre de livres en votre possession simultanément dépend de votre abonnement : soit 1 livre (abonnement basique) soit 3 livres (abonnement premium). Vous devez retourner les livres en cours avant d'en emprunter de nouveaux."
+    },
+    {
+      "question": "Comment retourner les livres empruntés?",
+      "response": "Pour retourner vos livres, il vous suffit de les ramener directement à notre bibliothèque. Une fois retournés, vous pouvez emprunter d'autres livres en fonction de votre abonnement."
+    },
+    {
+      "question": "Que se passe-t-il si je ne retourne pas le livre à temps?",
+      "response": "Si vous dépassez la durée autorisée pour emprunter un livre, des frais de pénalité peuvent s'appliquer. Veuillez vérifier les conditions de votre abonnement pour connaître les détails et éviter les pénalités en retournant vos livres à temps."
+    },
+    {
+      "question": "Puis-je changer mon abonnement?",
+      "response": "Oui, vous pouvez passer à un autre type d'abonnement à tout moment depuis votre compte. Les nouveaux frais seront calculés en fonction de la date de modification et vous pourrez profiter immédiatement des nouveaux avantages de votre abonnement."
+    },
+    {
+      "question": "Comment puis-je contacter le support client?",
+      "response": "Pour toute assistance, contactez notre service client via l'onglet 'Contact' sur notre site web, ou appelez-nous directement au numéro de téléphone fourni. Vous pouvez également nous envoyer un e-mail, et notre équipe vous répondra dans les plus brefs délais."
+    }
+  ],
+  "stillHaveQuestion": "Vous avez encore des questions ?",
+  "contactOurSupport": "Contactez notre support",
+  "paymentSuccess": "Paiement réussi !",
+  "paymentSuccessMessage": "Merci pour votre paiement. Vous pouvez maintenant emprunter des livres et explorer le catalogue.",
+  "gotoLoginPage": "Aller à la page de connexion",
+  "feedback": {
+    "title": "Faire une plainte ou une suggestion",
+    "subtitle": "Nous apprécions vos retours. Dites-nous comment nous pouvons nous améliorer.",
+    "button": "suggestion",
+    "modalTitle": "Soumettez votre retour",
+    "name": "Nom",
+    "subject": "Objet",
+    "description": "Description",
+    "cancel": "Annuler",
+    "submit": "Envoyer",
+    "successMessage": "Votre retour a été soumis avec succès."
+  },
+  "questions": {
+    "title": "Vous avez une question ?",
+    "subtitle": "Nous sommes là pour vous aider ! Consultez notre",
+    "linkText": "Page des questions fréquentes",
+    "page": "pour des réponses rapides."
+  },
+  "weekChoice": "Choix de la Semaine",
+  "unlimited": "illimité",
+  "are_you_the_end_user": "Êtes-vous l'utilisateur final ?",
+  "Yes": "Oui",
+  "No": "Non",
+  "find": "Retrouvez-nous au marché Acacias - Yaoundé",
+  "enter_end_user_info": "Saisissez les informations de l'utilisateur final",
+  "French": "Français",
+  "English": "Anglais",
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Wandabook - Acacias, Yaoundé",
+    "opening_hours": "Ouvert de 8h à 18h tous les jours sauf le dimanche",
+    "address_label": "Adresse :",
+    "address": "Acacias, Yaoundé",
+    "phone_label": "Téléphone :",
+    "phone": "+237 699 99 99 99",
+    "email_label": "Email :",
+    "email": "contact@wandabook.cm",
+    "name_label": "Nom",
+    "name_placeholder": "Votre nom",
+    "email_placeholder": "Votre email",
+    "message_label": "Message",
+    "message_placeholder": "Votre message",
+    "submit": "Envoyer",
+    "description_label": "Description :",
+    "description": "Wandabook offre une large gamme de livres pour tous les âges et intérêts. Un espace calme et propice à la lecture vous attend."
+  },
+  "privacy_policy": {
+    "title": "Politique de Confidentialité",
+    "content": "Nous valorisons votre confidentialité. Vos données personnelles sont sécurisées et ne sont jamais partagées avec des tiers. 1. **Collecte d'informations :** Nous collectons des informations personnelles lorsque vous vous inscrivez, passez une commande ou interagissez avec nos services. 2. **Utilisation des informations :** Vos données sont utilisées pour traiter les transactions, améliorer nos services et fournir une assistance clientèle. 3. **Protection des données :** Nous mettons en place des mesures de sécurité pour protéger vos informations contre tout accès non autorisé. 4. **Partage des informations :** Nous ne vendons, n'échangeons ni ne louons vos données personnelles. Seul le personnel autorisé peut accéder à vos informations. 5. **Cookies :** Nous utilisons des cookies pour améliorer votre expérience et suivre les statistiques d'utilisation. 6. **Vos droits :** Vous avez le droit d'accéder à vos données personnelles, de les corriger ou de les supprimer sur demande. 7. **Modifications de la politique :** Nous nous réservons le droit de mettre à jour cette politique et informerons les utilisateurs des changements importants."
+  },
+  "error_occur": "Une erreur s'est produite",
+  "payment_failed": "Votre paiement a échoué.",
+  "pass_match": "Les mots de passe ne correspondent pas.",
+  "help_phone": "Exemple : +2376XXXXXXXX",
+  "book_count": "{n} livre | {n} livres",
+  "2 books": "2 Livres",
+  "5 BOOKS": "5 Livres",
+  "1 book ": "1 Livre",
+  "1 book": "1 Livre",
+  "3 books": "3 Livres",
+  "about": {
+    "title": "À propos de nous",
+    "intro1": "Bienvenue à Wandabook – votre sanctuaire de lecture à Yaoundé... Situé dans le quartier paisible des Acacias à Yaoundé, Wandabook est une bibliothèque accessible en ligne, offrant un espace serein aux lecteurs, étudiants et apprenants de tous horizons. Notre bibliothèque propose une large sélection de livres, allant des classiques appréciés aux références académiques en passant par les best-sellers modernes.",
+    "intro2": "Nous croyons au pouvoir transformateur de la lecture et nous nous efforçons de créer un environnement propice à l'éducation, à la détente et à l'exploration. Que vous soyez un jeune lecteur découvrant de nouveaux mondes ou un chercheur approfondissant ses études, Wandabook est là pour vous.",
+    "feature1Title": "Collection étendue",
+    "feature1Desc": "Romans, essais, livres pour enfants et ressources académiques.",
+    "feature2Title": "Environnement paisible",
+    "feature2Desc": "Conçu pour favoriser la concentration et la détente.",
+    "feature3Title": "Accessible à tous",
+    "feature3Desc": "Les lecteurs de toutes les générations sont les bienvenus.",
+    "feature4Title": "Heures d'ouverture",
+    "feature4Desc": "De 8h à 18h, fermé le dimanche.",
+    "addressLabel": "Adresse :",
+    "address": "Acacias, Yaoundé",
+    "phoneLabel": "Téléphone :",
+    "emailLabel": "E-mail :",
+    "imagePlaceholder": "Espace image"
+  },
+  "renew_subscription": "Réabonnement",
+  "address_used": "Cette adresse est déjà utilisée",
+  "has_account": "Un compte existe déjà pour cet e-mail",
+  "navigate_to": "Accédez au catalogue de Wandabook",
+  "PAYMENT_FAILED": "Nous n'avons pas pu traiter le paiement. Veuillez vérifier vos informations de paiement et réessayer. Si le problème persiste, contactez votre banque ou essayez un autre mode de paiement."
+}
