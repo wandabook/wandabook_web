@@ -56,7 +56,7 @@
                         <p :class="['text-gray-600', 'md:mt-6 mt-2 md:text-base text-sm leading-7']">{{
                             tier.description }}</p>
                         <a :aria-describedby="tier.id" @click="onSelectSubscription(tier)"
-                            :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
+                            :class="['bg-brand-default text-white shadow-sm hover:bg-brand-default/80', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 cursor-pointer']">
                             {{ t('subscribeNow') }}
 
                         </a>
@@ -122,7 +122,7 @@
 
         <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                <div 
+                <div
                     class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-7 sm:w-full sm:max-w-lg">
                     <form @submit.prevent="createWandaUser('')">
                         <div class="bg-white px-4 sm:p-6 sm:pb-2">
@@ -307,7 +307,7 @@ const subscriptions = ref();
 const fetchSubscriptions = async () => {
     const result = await getDocumentsWithFilerGlobal(subscriptionCollection, [Query.equal('status', "active")]);
     if (result.documents != null && result.documents.length > 0) {
-        subscriptions.value = result.documents;
+        subscriptions.value = result.documents.sort((a, b) => a.monthly_amount - b.monthly_amount);
     } else {
         subscriptions.value = [];
     }
@@ -376,7 +376,7 @@ fetchSubscriptions();
 const createWandaUser = async (barcode: any) => {
     // Get the current date
     const now = new Date();
-
+    isLoading.value = true;
     // Now + 1 month
     const oneMonthLater = new Date(now);
     oneMonthLater.setMonth(now.getMonth() + 1);
@@ -402,21 +402,20 @@ const createWandaUser = async (barcode: any) => {
         readCondition: true,
         isAnnual: isAnnual.value,
         cpm_trans_id: transaction_id,
-        status: 'Draft'
+        status: 'Draft',
+        patron_id: selectedSubscription.value.title,
+        tags: selectedSubscription.value.title + ',' + (isAnnual ? 'One year' : "One Month"),
     };
     errorMessage.value = "";
-    console.log('user.value.password !== confirm_pass.value', user.value.password)
-    console.log('!== confirm_pass.value', confirm_pass.value)
     if (user.value.password !== confirm_pass.value) {
         errorMessage.value = t('pass_match')
         return;
     }
 
     const partrons = await getPatron(JSON.stringify({ patron: user.value.email }));
-    console.log('this is the patron', partrons)
     if (partrons.status === 'completed') {
         const rs = JSON.parse(partrons.responseBody);
-        if (rs.result.barcode) {
+        if (rs.result?.barcode) {
             errorMessage.value = t('address_used')
             isLoading.value = false;
             return;
@@ -428,9 +427,11 @@ const createWandaUser = async (barcode: any) => {
         isCreation.value = false;
         //   isSuccess.value = true;
         payDirectly(transaction_id);
+        isLoading.value=false;
     } catch (e) {
         console.log("error", e);
         errorMessage.value = t('error_occur');
+        isLoading.value=false;
     }
 }
 
