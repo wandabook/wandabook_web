@@ -6,7 +6,7 @@ import { bookCollection, patronCollection, subscriptionCollection } from '../../
 import { Query } from 'appwrite';
 import showAlert from '../../helpers/alert';
 import { useI18n } from "vue-i18n";
-import axios from 'axios';
+import axios from 'axios'
 import PricingOption from './PricingOption.vue';
 const { t } = useI18n({ useScope: "global" });
 const patronInfo = ref<any>();
@@ -59,8 +59,6 @@ const renewUser = async (transaction_id: string) => {
 const onChangeSubscription = async (tier: any, isAn: boolean) => {
     selectedSubscription.value = tier;
     isAnnual.value = isAn;
-    console.log('selectedSubscription', selectedSubscription.value);
-    console.log('isAnnual', isAnnual.value);
     const transaction_id = Math.floor(Math.random() * 100000000).toString();
     await renewUser(transaction_id);
     payDirectly(transaction_id);
@@ -87,7 +85,7 @@ const payDirectly = async (transaction_id: any) => {
         last_name: patronInfo.value.last_name,
         email: patronInfo.value.email,
         phone: patronInfo.value.phone,
-        address: patronInfo.value.address1,
+        address: patronInfo.value.address,
         city: patronInfo.value.city,
         freeze: false,
         barcode: patronInfo.value.barcode ?? "barcode",
@@ -97,15 +95,13 @@ const payDirectly = async (transaction_id: any) => {
         endSubscriptionDate: isAnnual.value ? oneYearLater : oneMonthLater,
         readCondition: true,
         isAnnual: isAnnual.value,
-        notification_email: user.value.email,
+        notification_email: patronInfo.value.email,
         patron_id: selectedSubscription.value.title,
-        tags: selectedSubscription.value.title + ',' + (isAnnual ? 'One year' : "One Month"),
+        tags: selectedSubscription.value.title + ',' + (isAnnual ? 'One year' : "One Month")
     };
     var data = JSON.stringify({
         apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
         site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
-        //notify_url: `https://wandabook.com/payment/${transaction_id}`,
-        //return_url: `https://wandabook.com/payment/${transaction_id}`,
         mode: 'PRODUCTION',
         close_after_response: true,
         transaction_id: transaction_id,
@@ -117,8 +113,8 @@ const payDirectly = async (transaction_id: any) => {
         customer_surname: patronInfo.value.first_name,
         customer_email: patronInfo.value.email,
         customer_phone_number: patronInfo.value.phone,
-        customer_address: patronInfo.value.address1,
-        customer_city: patronInfo.value.address1,
+        customer_address: patronInfo.value.address,
+        customer_city: patronInfo.value.address,
         customer_country: 'CM',
         customer_state: 'CM',
         customer_zip_code: '06510',
