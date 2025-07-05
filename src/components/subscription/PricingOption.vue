@@ -137,72 +137,13 @@ const props = defineProps({
         required: true
     }
 });
-const emits = defineEmits(['close'])
-const renewUser = async () => {
-    // Get the current date
-    const now = new Date();
+const emits = defineEmits(['close',"change"])
 
-    // Now + 1 month
-    const oneMonthLater = new Date(now);
-    oneMonthLater.setMonth(now.getMonth() + 1);
-
-    // Now + 1 year
-    const oneYearLater = new Date(now);
-    oneYearLater.setFullYear(now.getFullYear() + 1);
-    let userRecord = {
-        freeze: false,
-        lastSubcriptionDate: new Date(now),
-        endSubscriptionDate: isAnnual.value ? oneYearLater : oneMonthLater,
-        readCondition: true,
-        isAnnual: isAnnual.value,
-        subscriptionPlan: selectedSubscription.value.$id,
-    };
-    const result = await editDocumentGlobal(patronCollection, props.user.$id, userRecord);
-    emits('close');
-}
 const onSelectSubscription = (tier: any) => {
     selectedSubscription.value = tier;
-    pay();
+    emits('change', tier,isAnnual.value);
 }
 
 fetchSubscriptions();
 
-const pay = () => {
-    window.CinetPay.setConfig({
-        apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
-        site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
-        notify_url: 'http://mondomaine.com/notify/',
-        mode: 'PRODUCTION',
-    });
-    window.CinetPay.getCheckout({
-        transaction_id: Math.floor(Math.random() * 100000000).toString(),
-        amount: isAnnual.value ? selectedSubscription.value.yearly_amount : selectedSubscription.value.monthly_amount,
-        currency: 'XAF',
-        channels: 'ALL',
-        description: `change sucrption plan to ${selectedSubscription.value.description}`,
-        customer_name: props.user?.last_name,
-        customer_surname: props.user.first_name,
-        customer_email: props.user.email,
-        customer_phone_number: props.user.phone,
-        customer_address: props.user.address1,
-        customer_city: props.user.city,
-        customer_country: 'CM',
-        customer_state: 'CM',
-        // customer_zip_code: '06510',
-    });
-
-    window.CinetPay.waitResponse((data: { status: string }) => {
-        console.log('data value', data);
-        if (data.status === 'REFUSED') {
-            renewUser();
-        } else if (data.status === 'ACCEPTED') {
-            renewUser();;
-        }
-    });
-
-    window.CinetPay.onError((data: any) => {
-        console.error('Erreur CinetPay:', data);
-    });
-
-}
 </script>

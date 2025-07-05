@@ -1,12 +1,12 @@
-<script setup lang="ts">
+<script setup lang="ts" type="module">
 import { ref } from 'vue';
 import WInput from '../ui/WInput.vue';
-import { editDocumentGlobal, getDocumentsWithFilerGlobal } from '../../lib/appwrite';
-import { bookCollection, patronCollection } from '../../utilities/constants';
+import { editDocumentGlobal, getDocumentsGlobal, getDocumentsWithFilerGlobal } from '../../lib/appwrite';
+import { bookCollection, patronCollection, subscriptionCollection } from '../../utilities/constants';
 import { Query } from 'appwrite';
 import showAlert from '../../helpers/alert';
 import { useI18n } from "vue-i18n";
-import PricingComponent from '../PricingComponent.vue';
+import axios from 'axios';
 import PricingOption from './PricingOption.vue';
 const { t } = useI18n({ useScope: "global" });
 const patronInfo = ref<any>();
@@ -17,8 +17,22 @@ const user = ref({
     barcode: '',
     email: "",
 })
+
+const selectedSubscription = ref<any>();
+const isAnnual = ref(false);
 const isLoading = ref(false);
 const isChange = ref(false);
+
+const subscriptions = ref();
+const fetchSubscriptions = async () => {
+    const result = await getDocumentsGlobal(subscriptionCollection);
+    if (result.documents != null && result.documents.length > 0) {
+        subscriptions.value = result.documents;
+    } else {
+        subscriptions.value = [];
+    }
+    console.log(result);
+}
 const findAccount = async () => {
     let users = <any>[];
     isLoading.value = true;
@@ -36,52 +50,30 @@ const findAccount = async () => {
 
     isLoading.value = false;
 }
-
-const pay = () => {
-    // console.log('import.meta.env.VITE_APP_CINET_PAY_SITE_Id', import.meta.env.VITE_APP_CINET_PAY_SITE_Id);
-    window.CinetPay.setConfig({
-        apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
-        site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
-        notify_url: 'http://mondomaine.com/notify/',
-        mode: 'PRODUCTION',
-    });
-    window.CinetPay.getCheckout({
-        transaction_id: Math.floor(Math.random() * 100000000).toString(),
-        amount: patronInfo.value.subscriptionPlan?.isAnnual ? patronInfo.value.subscriptionPlan.yearly_amount : patronInfo.value.subscriptionPlan.monthly_amount,
-        currency: 'XAF',
-        channels: 'ALL',
-        description: `Paiement of ${patronInfo.value.subscriptionPlan.description}`,
-        customer_name: patronInfo.value.last_name,
-        customer_surname: patronInfo.value.first_name,
-        customer_email: patronInfo.value.email,
-        customer_phone_number: patronInfo.value.phone,
-        customer_address: patronInfo.value.address1,
-        customer_city: patronInfo.value.city,
-        customer_country: 'CM',
-        customer_state: 'CM',
-        // customer_zip_code: '06510',
-    });
-
-    window.CinetPay.waitResponse((data: { status: string }) => {
-        console.log('data value', data);
-        if (data.status === 'REFUSED') {
-            showAlert("error", 'Votre paiement a échoué');
-            renewUser()
-        } else if (data.status === 'ACCEPTED') {
-            showAlert('success', "payment effectué")
-            renewUser()
-        }
-    });
-
-    window.CinetPay.onError((data: any) => {
-        console.error('Erreur CinetPay:', data);
-    });
-
+const renewUser = async (transaction_id: string) => {
+    let userRecord = {
+        cpm_trans_id: transaction_id,
+    };
+    const result = await editDocumentGlobal(patronCollection, patronInfo.value.$id, userRecord);
+}
+const onChangeSubscription = async (tier: any, isAn: boolean) => {
+    selectedSubscription.value = tier;
+    isAnnual.value = isAn;
+    console.log('selectedSubscription', selectedSubscription.value);
+    console.log('isAnnual', isAnnual.value);
+    const transaction_id = Math.floor(Math.random() * 100000000).toString();
+    await renewUser(transaction_id);
+    payDirectly(transaction_id);
 }
 
-const renewUser = async () => {
+
+
+
+
+const payDirectly = async (transaction_id: any) => {
+    isLoading.value = true;
     // Get the current date
-    const now = new Date();
+    const now = new Date(patronInfo.value.endSubscriptionDate);
 
     // Now + 1 month
     const oneMonthLater = new Date(now);
@@ -91,17 +83,80 @@ const renewUser = async () => {
     const oneYearLater = new Date(now);
     oneYearLater.setFullYear(now.getFullYear() + 1);
     let userRecord = {
+        first_name: patronInfo.value.first_name,
+        last_name: patronInfo.value.last_name,
+        email: patronInfo.value.email,
+        phone: patronInfo.value.phone,
+        address: patronInfo.value.address1,
+        city: patronInfo.value.city,
         freeze: false,
-        lastSubcriptionDate: new Date(now),
-        endSubscriptionDate: patronInfo.value.isAnnual ? oneYearLater : oneMonthLater,
+        barcode: patronInfo.value.barcode ?? "barcode",
+        cni: patronInfo.value.cni,
+        subscriptionPlan: selectedSubscription.value.$id,
+        lastSubcriptionDate: new Date(),
+        endSubscriptionDate: isAnnual.value ? oneYearLater : oneMonthLater,
         readCondition: true,
-        isAnnual: patronInfo.value.isAnnual
+        isAnnual: isAnnual.value,
+        notification_email: user.value.email,
+        patron_id: selectedSubscription.value.title,
+        tags: selectedSubscription.value.title + ',' + (isAnnual ? 'One year' : "One Month"),
+    };
+    var data = JSON.stringify({
+        apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
+        site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
+        //notify_url: `https://wandabook.com/payment/${transaction_id}`,
+        //return_url: `https://wandabook.com/payment/${transaction_id}`,
+        mode: 'PRODUCTION',
+        close_after_response: true,
+        transaction_id: transaction_id,
+        amount: isAnnual.value ? selectedSubscription.value.yearly_amount : selectedSubscription.value.monthly_amount,
+        currency: 'XAF',
+        channels: 'ALL',
+        description: `Paiement of ${selectedSubscription.value.description}`,
+        customer_name: patronInfo.value.last_name,
+        customer_surname: patronInfo.value.first_name,
+        customer_email: patronInfo.value.email,
+        customer_phone_number: patronInfo.value.phone,
+        customer_address: patronInfo.value.address1,
+        customer_city: patronInfo.value.address1,
+        customer_country: 'CM',
+        customer_state: 'CM',
+        customer_zip_code: '06510',
+        metadata: btoa(unescape(encodeURIComponent(JSON.stringify(userRecord))))
+    });
+    console.log('data', data);
+    // Make the API call to CinetPay
+    var config = {
+        method: 'post',
+        url: 'https://api-checkout.cinetpay.com/v2/payment',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        data: data
     };
 
-    const result = await editDocumentGlobal(patronCollection, patronInfo.value.$id, userRecord);
-    console.log('result', result)
-    cancel();
+    axios(config)
+        .then(function (response) {
+            console.log(JSON.stringify(response.data));
+            console.log('response.data',)
+            location.href = response.data.data.payment_url;
+            isLoading.value = false;
+        })
+        .catch(function (error) {
+            console.log(error);
+            isLoading.value = false;
+        });
 }
+
+const renewSubscription = async () => {
+    selectedSubscription.value = subscriptions.value.find((sub: any) => sub.$id === patronInfo.value.subscriptionPlan.$id);
+    isAnnual.value = patronInfo.value.isAnnual;
+    const transaction_id = Math.floor(Math.random() * 100000000).toString();
+    await renewUser(transaction_id);
+    payDirectly(transaction_id);
+
+}
+
 const cancel = () => {
     emit('close')
 }
@@ -113,6 +168,9 @@ const done = () => {
 const redirectToLogin = () => {
     window.location.href = 'https://www.libib.com/u/wandabook' // Assuming your login route is named "login"
 };
+
+fetchSubscriptions();
+
 </script>
 
 <template>
@@ -192,7 +250,7 @@ const redirectToLogin = () => {
                                                 <div><strong>{{ t('barcode') }}:</strong> {{ patronInfo.barcode }}
                                                 </div>
                                                 <div><strong>{{ t('first_name') }}:</strong> {{ patronInfo.first_name
-                                                    }}
+                                                }}
                                                 </div>
                                                 <div><strong>{{ t('last_name') }}:</strong> {{ patronInfo.last_name }}
                                                 </div>
@@ -217,7 +275,7 @@ const redirectToLogin = () => {
                                                     }).format(
                                                         patronInfo.subscriptionPlan?.monthly_amount,
                                                     )
-                                                    }}</div>
+                                                }}</div>
                                                 <div><strong>{{ t('last_subscription') }}</strong> {{
                                                     new Intl.DateTimeFormat('fr-CM',
 
@@ -263,7 +321,7 @@ const redirectToLogin = () => {
                                         fill="currentColor" />
                                 </svg>
                                 {{ t('change_subscription_plan') }}</button>
-                            <button type="button" @click="pay"
+                            <button type="button" @click="renewSubscription"
                                 class=" justify-center rounded-md bg-brand-default px-3 py- text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">
                                 <svg aria-hidden="true" role="status" v-if="isLoading"
                                     class="inline w-4 h-4 me-3 text-white animate-spin" viewBox="0 0 100 101"
@@ -298,7 +356,7 @@ const redirectToLogin = () => {
                             </button>
                         </div>
                         <div class="bg-white py-3">
-                            <PricingOption :user="patronInfo" @close="done" />
+                            <PricingOption :user="patronInfo" @close="done" @change="onChangeSubscription" />
                         </div>
                     </div>
                 </div>

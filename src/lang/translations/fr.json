@@ -1,40 +1,41 @@
 {
   "login": "Connexion",
   "home": "Accueil",
-  "about_us": "À propos",
   "connexion": "Connexion",
+  "about_us": "À propos",
+  "blog": "Blog",
   "signUp": "S'inscrire",
-  "title_1": "La lecture est une porte",
-  "title_2": "ouverte sur d'autres mondes.",
+  "title_1": "Bibliothèque numérique",
+  "title_2": "nouvelle génération",
   "title_description": "Embrassez l'avenir de l'accès au savoir avec notre bibliothèque de pointe. Explorez une vaste collection de livres, d'articles et de documents de recherche, le tout à portée de main.",
-  "visiteCatalogue": "CLIQUER POUR EMPRUNTER DES LIVRES",
+  "visiteCatalogue": "CLIQUEZ POUR ACCÉDER À LA BIBLIOTHÈQUE DE PRÊT",
   "howItWorks": "Comment ça marche ?",
-  "howItWorks_desciption": "Emprunter un livre est aussi simple que de se rendre à votre bibliothèque locale, de trouver le livre que vous voulez et de l'emprunter avec votre carte de bibliothèque.",
+  "howItWorks_desciption": "Emprunter un livre est aussi simple que de visiter votre bibliothèque locale, de trouver le livre que vous voulez et de l'emprunter avec votre carte de bibliothèque.",
   "howItWorks_d": {
-    "l1": "Choisir un abonnement?",
-    "l1_des": "pour déverrouiller un monde de connaissances. Accédez à notre vaste collection de livres, d'articles et plus encore.",
+    "l1": "Choisir un abonnement ?",
+    "l1_des": "pour débloquer un monde de connaissances. Accédez à notre vaste collection de livres, d'articles et plus encore.",
     "l2": "Visiter le catalogue",
-    "l2_des": "Trouvez votre match parfait. Recherchez dans notre vaste collection de livres, d'articles et plus encore.",
-    "l3": "Réserver un livre",
-    "l3_des": "Réservez un livre pour le récupérer dans la succursale de votre bibliothèque préférée.",
-    "l4": "Retirer le livre",
-    "l4_des": "Récupérez votre livre réservé dans la succursale de votre bibliothèque choisie."
+    "l2_des": "Trouvez votre coup de cœur. Parcourez notre vaste collection de livres, d'articles et plus encore.",
+    "l3": "Réserver des livres",
+    "l3_des": "Placez une réservation sur un livre pour le récupérer à la succursale de bibliothèque de votre choix.",
+    "l4": "Emprunter le livre",
+    "l4_des": "Récupérez votre livre réservé à la succursale de bibliothèque choisie."
   },
-  "price": "ABONNEMENT - PRIX",
-  "price_description": "Le prix idéal pour vous, quel que soit votre profil",
+  "price": "INSCRIPTION - PRIX",
+  "price_description": "Le bon prix pour vous, qui que vous soyez",
   "yearly": "Annuel",
   "monthly": "Mensuel",
   "year": "an",
   "month": "mois",
   "c1": {
     "id": 1,
-    "content": "Explorez les œuvres littéraires les plus célèbres du monde, des épopées anciennes aux chefs-d'œuvre modernes"
+    "content": "Explorez les œuvres littéraires les plus célèbres du monde, des épopées antiques aux chefs-d'œuvre modernes."
   },
   "c2": {
     "content": "Une collection d'histoires d'amour captivantes pour les romantiques."
   },
   "c3": {
-    "content": "Un roman rapide et suspenseful qui suit un détective déterminé alors qu'il démêle un réseau complexe de tromperie et de danger dans une enquête policière à haut risque..."
+    "content": "Un roman haletant et plein de suspense qui suit un détective déterminé alors qu'il démêle un réseau complexe de tromperie et de danger dans une enquête policière à forts enjeux..."
   },
   "c4": {
     "content": "Le prix Nobel est décerné chaque année dans six catégories : Physique, Chimie, Physiologie ou Médecine, Littérature, Paix et Sciences économiques. ..."
@@ -55,10 +56,10 @@
     "content": "L'étude des ordinateurs et des systèmes informatiques, y compris le matériel, les logiciels et les algorithmes..."
   },
   "c10": {
-    "content": "Vivez des aventures palpitantes, explorez des intrigues déconcertantes et assistez au combat du bien contre le mal dans ces séries de bandes dessinées captivantes..."
+    "content": "Vivez des aventures palpitantes, explorez des intrigues époustouflantes et assistez au choc du bien et du mal dans ces séries de bandes dessinées captivantes..."
   },
   "c11": {
-    "content": "Voyagez à travers les voix et les perspectives diverses des écrivains africains..."
+    "content": "Voyagez à travers les diverses voix et perspectives des écrivains africains..."
   },
   "c12": {
     "content": ""
@@ -67,63 +68,65 @@
   "basic": "Basique",
   "standard": "Standard",
   "firstName": "Prénom",
-  "lastName": "Nom",
+  "lastName": "Nom de famille",
   "email": "E-mail",
   "phone": "Téléphone",
-  "address": "Adresse",
+  "address": "Adresse / Ville",
   "city": "Ville",
   "neighborhood": "Quartier",
-  "cni": "Numéro CNI",
+  "cni": "Numéro de carte nationale d'identité",
   "password": "Mot de passe",
-  "confirmPassword": "Confirmer mot de passe",
+  "confirmPassword": "Confirmer le mot de passe",
   "createAccount": "Créer un compte",
   "cancel": "Annuler",
   "acceptT": "J'accepte les",
   "termsOfUse": "conditions d'utilisation",
-  "and": "et",
+  "and": "et la",
   "privacy": "politique de confidentialité",
-  "subscribeNow": "S'inscrire maintenant",
-  "faqTitle": "Explorer les questions courantes",
+  "subscribeNow": "S'abonner maintenant",
+  "onBook": "1 livre",
+  "threeBooks": "3 livres",
+  "faqTitle": "Questions Fréquentes",
   "faq": [
     {
-      "question": "Comment m'inscrire à la bibliothèque en ligne?",
-      "response": "Pour vous inscrire, rendez-vous sur notre site web et cliquez sur le bouton 'Inscription'. Suivez les étapes pour entrer vos informations personnelles, créer un mot de passe et choisir votre plan d'abonnement. Une fois inscrit, vous pourrez vous connecter et commencer à réserver des livres."
+      "question": "Comment puis-je m'inscrire à la bibliothèque en ligne ?",
+      "response": "Pour vous inscrire, rendez-vous sur notre site web et cliquez sur le bouton 'S'inscrire'. Suivez les étapes pour saisir vos informations personnelles, créer un mot de passe et choisir votre plan d'abonnement. Une fois inscrit, vous pourrez vous connecter et commencer à réserver des livres."
     },
     {
-      "question": "Quels sont les tarifs d'abonnement?",
-      "response": "Nous offrons deux types d'abonnement : \n1. Abonnement pour 1 livre à la fois : 2000 F CFA par mois ou 20 000 F CFA par an.\n2. Abonnement pour 3 livres à la fois : 5000 F CFA par mois ou 50 000 F CFA par an. Vous pouvez emprunter autant de fois que vous voulez pendant la période d'abonnement, tant que vous respectez le nombre maximum de livres de votre plan."
+      "question": "Quels sont les frais d'abonnement ?",
+      "response": "Nous proposons deux types d'abonnements :\n1. Abonnement pour 1 livre à la fois : 2000 F CFA par mois ou 20 000 F CFA par an.\n2. Abonnement pour 3 livres à la fois : 5000 F CFA par mois ou 50 000 F CFA par an. Vous pouvez emprunter autant de fois que vous le souhaitez pendant la période d'abonnement, tant que vous respectez le nombre maximal de livres autorisé par votre plan."
     },
     {
-      "question": "Comment puis-je effectuer un paiement pour mon abonnement?",
-      "response": "Vous pouvez payer votre abonnement via MT Money ou Orange Money, directement depuis notre site web. Après avoir choisi votre plan d'abonnement, vous serez guidé pour effectuer le paiement en utilisant l'un de ces services de paiement mobile."
+      "question": "Comment puis-je effectuer un paiement pour mon abonnement ?",
+      "response": "Vous pouvez payer votre abonnement via MT Money ou Orange Money directement depuis notre site web. Après avoir sélectionné votre plan d'abonnement, vous serez guidé pour effectuer le paiement en utilisant l'un de ces services de paiement mobile."
     },
     {
-      "question": "Comment emprunter un livre?",
-      "response": "Une fois connecté, parcourez notre catalogue de livres et choisissez ceux que vous souhaitez emprunter. Cliquez sur 'Réserver' pour chaque livre. Vous pouvez réserver jusqu'à 1 livre pour l'abonnement basique ou 3 livres pour l'abonnement premium. Les livres réservés seront prêts à être récupérés le lendemain à la bibliothèque."
+      "question": "Comment puis-je emprunter un livre ?",
+      "response": "Une fois connecté, parcourez notre catalogue de livres et choisissez ceux que vous souhaitez emprunter. Cliquez sur 'Réserver' pour chaque livre. Vous pouvez réserver jusqu'à 1 livre avec l'abonnement de base ou 3 livres avec l'abonnement premium. Les livres réservés seront prêts à être retirés le lendemain à la bibliothèque."
     },
     {
-      "question": "Comment récupérer les livres réservés?",
-      "response": "Une fois votre réservation effectuée, rendez-vous à notre bibliothèque le lendemain pour récupérer vos livres. Assurez-vous d'apporter une pièce d'identité pour vérifier votre réservation lors du retrait."
+      "question": "Comment puis-je récupérer les livres réservés ?",
+      "response": "Une fois votre réservation effectuée, visitez notre bibliothèque le lendemain pour récupérer vos livres. Assurez-vous d'apporter une pièce d'identité pour vérification lorsque vous récupérez votre réservation."
     },
     {
-      "question": "Puis-je emprunter plusieurs fois dans le mois?",
-      "response": "Oui, vous pouvez emprunter autant de livres que vous le souhaitez pendant la période de votre abonnement, mais le nombre de livres en votre possession simultanément dépend de votre abonnement : soit 1 livre (abonnement basique) soit 3 livres (abonnement premium). Vous devez retourner les livres en cours avant d'en emprunter de nouveaux."
+      "question": "Puis-je emprunter plusieurs fois par mois ?",
+      "response": "Oui, vous pouvez emprunter autant de livres que vous le souhaitez pendant votre période d'abonnement, mais le nombre de livres que vous pouvez avoir en même temps dépend de votre abonnement : soit 1 livre (abonnement de base) soit 3 livres (abonnement premium). Vous devez retourner les livres actuels avant d'en emprunter de nouveaux."
     },
     {
-      "question": "Comment retourner les livres empruntés?",
-      "response": "Pour retourner vos livres, il vous suffit de les ramener directement à notre bibliothèque. Une fois retournés, vous pouvez emprunter d'autres livres en fonction de votre abonnement."
+      "question": "Comment puis-je retourner les livres empruntés ?",
+      "response": "Pour retourner vos livres, il suffit de les apporter directement à notre bibliothèque. Une fois retournés, vous pouvez emprunter d'autres livres selon votre abonnement."
     },
     {
-      "question": "Que se passe-t-il si je ne retourne pas le livre à temps?",
-      "response": "Si vous dépassez la durée autorisée pour emprunter un livre, des frais de pénalité peuvent s'appliquer. Veuillez vérifier les conditions de votre abonnement pour connaître les détails et éviter les pénalités en retournant vos livres à temps."
+      "question": "Que se passe-t-il si je ne retourne pas le livre à temps ?",
+      "response": "Si vous dépassez le délai d'emprunt autorisé, des frais de retard peuvent s'appliquer. Veuillez consulter les conditions de votre abonnement pour plus de détails et éviter les pénalités en retournant vos livres à temps."
     },
     {
-      "question": "Puis-je changer mon abonnement?",
-      "response": "Oui, vous pouvez passer à un autre type d'abonnement à tout moment depuis votre compte. Les nouveaux frais seront calculés en fonction de la date de modification et vous pourrez profiter immédiatement des nouveaux avantages de votre abonnement."
+      "question": "Puis-je changer mon abonnement ?",
+      "response": "Oui, vous pouvez passer à un type d'abonnement différent à tout moment depuis votre compte. Les nouveaux frais seront calculés en fonction de la date de modification, et vous pourrez immédiatement profiter des nouveaux avantages de votre abonnement."
     },
     {
-      "question": "Comment puis-je contacter le support client?",
-      "response": "Pour toute assistance, contactez notre service client via l'onglet 'Contact' sur notre site web, ou appelez-nous directement au numéro de téléphone fourni. Vous pouvez également nous envoyer un e-mail, et notre équipe vous répondra dans les plus brefs délais."
+      "question": "Comment puis-je contacter le support client ?",
+      "response": "Pour obtenir de l'aide, contactez notre support client via l'onglet 'Contact' de notre site web, ou appelez-nous directement au numéro de téléphone fourni. Vous pouvez également nous envoyer un e-mail, et notre équipe vous répondra dès que possible."
     }
   ],
   "stillHaveQuestion": "Vous avez encore des questions ?",
@@ -131,88 +134,110 @@
   "paymentSuccess": "Paiement réussi !",
   "paymentSuccessMessage": "Merci pour votre paiement. Vous pouvez maintenant emprunter des livres et explorer le catalogue.",
   "gotoLoginPage": "Aller à la page de connexion",
+  "1 book": "1 livre",
+  "3 books": "3 livres",
   "feedback": {
-    "title": "Faire une plainte ou une suggestion",
-    "subtitle": "Nous apprécions vos retours. Dites-nous comment nous pouvons nous améliorer.",
-    "button": "suggestion",
-    "modalTitle": "Soumettez votre retour",
+    "title": "Faire une réclamation ou une suggestion",
+    "subtitle": "Votre avis nous est précieux. Dites-nous comment nous pouvons nous améliorer.",
+    "button": "Ouvrir le formulaire de commentaires",
+    "modalTitle": "Soumettre vos commentaires",
     "name": "Nom",
-    "subject": "Objet",
+    "subject": "Sujet",
     "description": "Description",
     "cancel": "Annuler",
-    "submit": "Envoyer",
-    "successMessage": "Votre retour a été soumis avec succès."
+    "submit": "Soumettre",
+    "successMessage": "Vos commentaires ont été soumis avec succès."
   },
   "questions": {
     "title": "Vous avez une question ?",
-    "subtitle": "Nous sommes là pour vous aider ! Consultez notre",
-    "linkText": "Page des questions fréquentes",
+    "subtitle": "Nous sommes là pour vous aider ! Consultez notre page",
+    "linkText": "Questions Fréquentes",
     "page": "pour des réponses rapides."
   },
-  "weekChoice": "Choix de la Semaine",
+  "weekChoice": "Choix de la semaine",
   "unlimited": "illimité",
   "are_you_the_end_user": "Êtes-vous l'utilisateur final ?",
   "Yes": "Oui",
   "No": "Non",
+  "enter_end_user_info": "Saisir les informations de l'utilisateur final",
+  "barcode": "Code-barres",
+  "find_account": "Trouver le compte",
+  "renew_subscription": "Réabonnement",
+  "no_user_found": "Aucun utilisateur trouvé",
+  "renew": "Renouveler",
+  "change_subscription_plan": "Changer de plan",
+  "name": "Nom",
+  "first_name": "Prénom",
+  "middle_name": "Deuxième prénom",
+  "last_name": "Nom de famille",
+  "general_info": "Informations générales",
+  "id": "Id",
+  "status": "Statut",
+  "gender": "Sexe",
+  "birthday": "Date de naissance",
+  "currentAge": "Âge actuel",
+  "contact_information": "Informations de contact",
+  "zip": "Code postal",
+  "country": "Pays",
+  "edit": "Modifier",
+  "subcription_Plan": "Plan d'abonnement",
+  "duration_plan": "Durée du plan",
+  "last_subscription": "Dernier abonnement",
+  "expired_date": "Date d'expiration",
   "find": "Retrouvez-nous au marché Acacias - Yaoundé",
-  "enter_end_user_info": "Saisissez les informations de l'utilisateur final",
   "French": "Français",
   "English": "Anglais",
   "contact": {
-    "title": "Contactez-nous",
+    "title": "Nous contacter",
     "subtitle": "Wandabook - Acacias, Yaoundé",
     "opening_hours": "Ouvert de 8h à 18h tous les jours sauf le dimanche",
     "address_label": "Adresse :",
     "address": "Acacias, Yaoundé",
     "phone_label": "Téléphone :",
     "phone": "+237 699 99 99 99",
-    "email_label": "Email :",
+    "email_label": "E-mail :",
     "email": "contact@wandabook.cm",
     "name_label": "Nom",
     "name_placeholder": "Votre nom",
-    "email_placeholder": "Votre email",
+    "email_placeholder": "Votre e-mail",
     "message_label": "Message",
     "message_placeholder": "Votre message",
     "submit": "Envoyer",
     "description_label": "Description :",
-    "description": "Wandabook offre une large gamme de livres pour tous les âges et intérêts. Un espace calme et propice à la lecture vous attend."
+    "description": "Wandabook offre une large gamme de livres pour tous les âges et tous les intérêts. Un espace calme et paisible vous attend."
   },
   "privacy_policy": {
-    "title": "Politique de Confidentialité",
-    "content": "Nous valorisons votre confidentialité. Vos données personnelles sont sécurisées et ne sont jamais partagées avec des tiers. 1. **Collecte d'informations :** Nous collectons des informations personnelles lorsque vous vous inscrivez, passez une commande ou interagissez avec nos services. 2. **Utilisation des informations :** Vos données sont utilisées pour traiter les transactions, améliorer nos services et fournir une assistance clientèle. 3. **Protection des données :** Nous mettons en place des mesures de sécurité pour protéger vos informations contre tout accès non autorisé. 4. **Partage des informations :** Nous ne vendons, n'échangeons ni ne louons vos données personnelles. Seul le personnel autorisé peut accéder à vos informations. 5. **Cookies :** Nous utilisons des cookies pour améliorer votre expérience et suivre les statistiques d'utilisation. 6. **Vos droits :** Vous avez le droit d'accéder à vos données personnelles, de les corriger ou de les supprimer sur demande. 7. **Modifications de la politique :** Nous nous réservons le droit de mettre à jour cette politique et informerons les utilisateurs des changements importants."
+    "title": "Politique de confidentialité",
+    "content": "Nous attachons de l'importance à votre vie privée. Vos données personnelles sont conservées en toute sécurité et ne sont jamais partagées avec des tiers. 1. **Collecte d'informations :** Nous recueillons des informations personnelles lorsque vous vous inscrivez, passez une commande ou interagissez avec nos services. 2. **Utilisation des informations :** Vos données sont utilisées pour traiter les transactions, améliorer nos services et fournir un support client. 3. **Protection des données :** Nous mettons en œuvre des mesures de sécurité pour protéger vos informations contre tout accès non autorisé. 4. **Partage d'informations :** Nous ne vendons, n'échangeons ni ne louons vos données personnelles. Seul le personnel autorisé peut accéder à vos informations. 5. **Cookies :** Nous utilisons des cookies pour améliorer votre expérience et suivre les statistiques d'utilisation. 6. **Vos droits :** Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles sur demande. 7. **Modifications de la politique :** Nous nous réservons le droit de mettre à jour cette politique et informerons les utilisateurs des changements importants."
   },
-  "error_occur": "Une erreur s'est produite",
+  "error_occur": "Une erreur est survenue. Veuillez réessayer ou contacter le support.",
   "payment_failed": "Votre paiement a échoué.",
   "pass_match": "Les mots de passe ne correspondent pas.",
   "help_phone": "Exemple : +2376XXXXXXXX",
   "book_count": "{n} livre | {n} livres",
-  "2 books": "2 Livres",
-  "5 BOOKS": "5 Livres",
-  "1 book ": "1 Livre",
-  "1 book": "1 Livre",
-  "3 books": "3 Livres",
+  "2 books": "2 livres",
+  "5 BOOKS": "5 LIVRES",
   "about": {
     "title": "À propos de nous",
-    "intro1": "Bienvenue à Wandabook – votre sanctuaire de lecture à Yaoundé... Situé dans le quartier paisible des Acacias à Yaoundé, Wandabook est une bibliothèque accessible en ligne, offrant un espace serein aux lecteurs, étudiants et apprenants de tous horizons. Notre bibliothèque propose une large sélection de livres, allant des classiques appréciés aux références académiques en passant par les best-sellers modernes.",
-    "intro2": "Nous croyons au pouvoir transformateur de la lecture et nous nous efforçons de créer un environnement propice à l'éducation, à la détente et à l'exploration. Que vous soyez un jeune lecteur découvrant de nouveaux mondes ou un chercheur approfondissant ses études, Wandabook est là pour vous.",
-    "feature1Title": "Collection étendue",
-    "feature1Desc": "Romans, essais, livres pour enfants et ressources académiques.",
-    "feature2Title": "Environnement paisible",
-    "feature2Desc": "Conçu pour favoriser la concentration et la détente.",
-    "feature3Title": "Accessible à tous",
-    "feature3Desc": "Les lecteurs de toutes les générations sont les bienvenus.",
-    "feature4Title": "Heures d'ouverture",
-    "feature4Desc": "De 8h à 18h, fermé le dimanche.",
+    "intro1": "Bienvenue chez Wandabook – Votre sanctuaire de lecture à Yaoundé... Située dans le quartier paisible des Acacias, à Yaoundé, Wandabook est votre bibliothèque locale accessible en ligne, offrant un espace serein pour les lecteurs, les étudiants et les apprenants de toutes sortes. Notre bibliothèque abrite une vaste sélection de livres, des classiques chéris aux références universitaires et aux best-sellers modernes.",
+    "intro2": "Nous croyons au pouvoir transformateur de la lecture et nous nous efforçons de créer un environnement qui favorise l'éducation, la relaxation et l'exploration. Que vous soyez un jeune lecteur découvrant de nouveaux mondes ou un chercheur plongeant profondément dans des études, Wandabook est là pour vous.",
+    "feature1Title": "Vaste Collection",
+    "feature1Desc": "Fiction, non-fiction, livres pour enfants et ressources savantes.",
+    "feature2Title": "Environnement Paisible",
+    "feature2Desc": "Conçu pour une concentration et une relaxation calmes.",
+    "feature3Title": "Accessible à Tous les Âges",
+    "feature3Desc": "Les lecteurs de toutes générations sont les bienvenus.",
+    "feature4Title": "Heures d'Ouverture",
+    "feature4Desc": "8h à 18h, fermé le dimanche.",
     "addressLabel": "Adresse :",
     "address": "Acacias, Yaoundé",
     "phoneLabel": "Téléphone :",
     "emailLabel": "E-mail :",
-    "imagePlaceholder": "Espace image"
+    "imagePlaceholder": "Espace réservé à l'image"
   },
-  "renew_subscription": "Réabonnement",
   "address_used": "Cette adresse est déjà utilisée",
   "has_account": "Un compte existe déjà pour cet e-mail",
-  "navigate_to": "Accédez au catalogue de Wandabook",
-  "PAYMENT_FAILED": "Nous n'avons pas pu traiter le paiement. Veuillez vérifier vos informations de paiement et réessayer. Si le problème persiste, contactez votre banque ou essayez un autre mode de paiement.",
+  "navigate_to": "Naviguer vers le catalogue Wandabook",
+  "PAYMENT_FAILED": "Nous n'avons pas pu traiter le paiement. Veuillez vérifier vos informations de paiement et réessayer. Si le problème persiste, contactez votre banque ou essayez une autre méthode de paiement.",
   " ": " "
 }
