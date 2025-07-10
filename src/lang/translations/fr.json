@@ -239,5 +239,6 @@
   "has_account": "Un compte existe déjà pour cet e-mail",
   "navigate_to": "Naviguer vers le catalogue Wandabook",
   "PAYMENT_FAILED": "Nous n'avons pas pu traiter le paiement. Veuillez vérifier vos informations de paiement et réessayer. Si le problème persiste, contactez votre banque ou essayez une autre méthode de paiement.",
-  " ": " "
+  " ": " ",
+  "unlimited Lending": "Échange & Emprunt Illimité"
 }
