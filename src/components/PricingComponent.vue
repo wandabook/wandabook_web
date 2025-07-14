@@ -213,12 +213,11 @@
                                                     <div class="text-gray-800">
                                                         <p class="">
                                                             {{ t('acceptT') }}
-                                                            <a href="#"
-                                                                class="cursor-pointer text-blue-500 underline">{{
-                                                                    t('termsOfUse') }}</a>
-                                                            {{ t('and') }}
-                                                            <a href="#" class="cursor-pointer text-blue-500 underline">
-                                                                {{ t('privacy') }}</a>
+                                                            <a href="/privacy"
+                                                                target="_blank" class="cursor-pointer text-blue-500 underline">
+                                                                {{ t('termsOfUse') }} {{ t('and') }} {{ t('privacy')
+                                                                }}</a>
+
                                                         </p>
                                                     </div>
                                                 </label>
@@ -427,11 +426,11 @@ const createWandaUser = async (barcode: any) => {
         isCreation.value = false;
         //   isSuccess.value = true;
         payDirectly(transaction_id);
-        isLoading.value=false;
+        isLoading.value = false;
     } catch (e) {
         console.log("error", e);
         errorMessage.value = t('error_occur');
-        isLoading.value=false;
+        isLoading.value = false;
     }
 }
 
