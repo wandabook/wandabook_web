@@ -315,7 +315,7 @@ const fetchSubscriptions = async () => {
 
 const selectedSubscription = ref();
 import WInput from '../components/ui/WInput.vue';
-import { addNewUser, createNewUser, getDocumentsGlobal, getDocumentsWithFilerGlobal, getPatron } from '../lib/appwrite';
+import { addNewUser, createNewUser,  getDocumentsWithFilerGlobal, getPatron } from '../lib/appwrite';
 import { subscriptionCollection } from '../utilities/constants';
 import { Query } from 'appwrite';
 import WInputPassword from './ui/WInputPassword.vue';

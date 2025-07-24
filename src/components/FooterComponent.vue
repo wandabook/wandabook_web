@@ -7,6 +7,7 @@ import PinterestIcon from './icons/PinterestIcon.vue'
 import TwitterIcon from './icons/TwitterIcon.vue'
 import YoutubeIcon from './icons/YoutubeIcon.vue'
 import { useI18n } from 'vue-i18n'
+const facebook = import.meta.env.VITE_APP_FACEBOOK_LINK
 const { t } = useI18n()
 const links = [
   { label: "home", link: "/" },
@@ -27,9 +28,9 @@ const links1 = [
         <div class="flex flex-col justify-between items-center lg:items-start gap-8 lg:gap-14">
           <LogoIcon class="text-brand-white" />
           <div class="flex gap-4">
-            <router-link to="/">
+            <a :href="facebook" target="_blank">
               <FacebookIcon class="text-brand-white hover:text-brand-lime-green" />
-            </router-link>
+            </a>
             <router-link to="/">
               <YoutubeIcon class="text-brand-white hover:text-brand-lime-green" />
             </router-link>
