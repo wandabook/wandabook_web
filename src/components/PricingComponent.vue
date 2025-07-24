@@ -470,7 +470,7 @@ const payDirectly = async (transaction_id: any) => {
     var data = JSON.stringify({
         apikey: import.meta.env.VITE_APP_CINET_PAY_KEY, // Votre APIKEY
         site_id: parseInt(import.meta.env.VITE_APP_CINET_PAY_SITE_Id), // Votre Site ID
-        //notify_url: `https://wandabook.com/payment/${transaction_id}`,
+        notify_url: `https://cinetpay-webhook-iota.vercel.app/notification`,
         //return_url: `https://wandabook.com/payment/${transaction_id}`,
         mode: 'PRODUCTION',
         close_after_response: true,
