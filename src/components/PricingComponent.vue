@@ -319,6 +319,7 @@ import { addNewUser, createNewUser,  getDocumentsWithFilerGlobal, getPatron } fr
 import { subscriptionCollection } from '../utilities/constants';
 import { Query } from 'appwrite';
 import WInputPassword from './ui/WInputPassword.vue';
+import { callCheckPayment } from '../lib/notification';
 const redirectToLogin = () => {
     window.location.href = 'https://www.libib.com/u/wandabook' // Assuming your login route is named "login"
 };
@@ -424,6 +425,7 @@ const createWandaUser = async (barcode: any) => {
         const userResult = await createNewUser(userRecord);
         console.log(userResult)
         isCreation.value = false;
+        callCheckPayment(transaction_id);
         //   isSuccess.value = true;
         payDirectly(transaction_id);
         isLoading.value = false;
