@@ -379,7 +379,7 @@ const createWandaUser = async (barcode: any) => {
     isLoading.value = true;
     // Now + 1 month
     const oneMonthLater = new Date(now);
-    oneMonthLater.setMonth(now.getMonth() + 1);
+    oneMonthLater.setMonth(now.getMonth() + 3);
 
     // Now + 1 year
     const oneYearLater = new Date(now);
